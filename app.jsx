@@ -69,40 +69,230 @@ const createSearchIndex = (items) => {
   return index;
 };
 
-const FilterSection = ({ title, options, selected, onToggle }) => (
-  <div className="mb-6">
-    <div className="flex items-center justify-between">
-      <h3 className="text-xs font-semibold tracking-wider text-slate-500 uppercase">
-        {title}
-      </h3>
-      {selected.length > 0 && (
-        <span className="text-[11px] font-medium text-indigo-600">
-          {selected.length} selected
-        </span>
-      )}
-    </div>
-    <div className="mt-2 space-y-1 max-h-48 overflow-auto pr-2">
-      {options.length === 0 ? (
-        <p className="text-xs text-slate-400">No options</p>
-      ) : (
-        options.map((option) => (
-          <label
-            key={option}
-            className="flex cursor-pointer items-center space-x-2 text-sm text-slate-700"
-          >
-            <input
-              type="checkbox"
-              className="h-4 w-4 rounded border-slate-300 text-indigo-600 focus:ring-indigo-500"
-              checked={selected.includes(option)}
-              onChange={() => onToggle(option)}
+const LOGO_LIBRARY = {
+  CC: { small: 'abrv-logos/CC.svg', large: 'png-logos/CC.png' },
+  CIT: { small: 'abrv-logos/CIT.svg', large: 'png-logos/CIT.png' },
+  CSR: { small: 'abrv-logos/CSR.svg', large: 'png-logos/CSR.png' },
+  FIC: { small: 'abrv-logos/FIC.svg', large: 'png-logos/FIC.png' },
+  NCATS: { small: 'abrv-logos/NCATS.svg', large: 'png-logos/NCATS.png' },
+  NCCIH: { small: 'abrv-logos/NCCIH.svg', large: 'png-logos/NCCIH.png' },
+  NCI: { small: 'abrv-logos/NCI.svg', large: 'png-logos/NCI.png' },
+  NEI: { small: 'abrv-logos/NEI.svg', large: 'png-logos/NEI.png' },
+  NIEHS: { small: 'abrv-logos/NEIHS.svg', large: 'png-logos/NIEHS.png' },
+  NHGRI: { small: 'abrv-logos/NHGRI.svg', large: 'png-logos/NHGRI.png' },
+  NHLBI: { small: 'abrv-logos/NHLBI.svg', large: 'png-logos/NHLBI.png' },
+  NIA: { small: 'abrv-logos/NIA.svg', large: 'png-logos/NIA.png' },
+  NIAAA: { small: 'abrv-logos/NIAAA.svg', large: 'png-logos/NIAAA.png' },
+  NIAID: { small: 'abrv-logos/NIAID.svg', large: 'png-logos/niaid.png' },
+  NIAMS: { small: 'abrv-logos/NIAMS.svg', large: 'png-logos/NIAMSD.png' },
+  NIBIB: { small: 'abrv-logos/NIBIB.svg', large: 'png-logos/NIBIB.png' },
+  NICHD: { small: 'abrv-logos/NICHD.svg', large: 'png-logos/NICHHD.png' },
+  NIDA: { small: 'abrv-logos/NIDA.svg', large: 'png-logos/NIDA.png' },
+  NIDCD: { small: 'abrv-logos/NIDCD.svg', large: 'png-logos/NIDCD.png' },
+  NIDCR: { small: 'abrv-logos/NIDCR.svg', large: 'png-logos/NIDCR.png' },
+  NIDDK: { small: 'abrv-logos/NIDDK.svg', large: 'png-logos/NIDDK.png' },
+  NIGMS: { small: 'abrv-logos/NIGMS.svg', large: 'png-logos/NIGMS.png' },
+  NIMH: { small: 'abrv-logos/NIMH.svg', large: 'png-logos/NIMH.png' },
+  NIMHD: { small: 'abrv-logos/NIMHD.svg', large: 'png-logos/NIMHHD.png' },
+  NINDS: { small: 'abrv-logos/NINDS.svg', large: 'png-logos/NINDS.png' },
+  NINR: { small: 'abrv-logos/NINR.svg', large: 'png-logos/NINR.png' },
+  NLM: { small: 'abrv-logos/NLM.svg', large: 'png-logos/NLM.png' },
+};
+
+const getIcAssets = (ic) => {
+  const normalized = (ic || '').toUpperCase();
+  const assets = LOGO_LIBRARY[normalized] || {};
+  return {
+    code: ic,
+    small: assets.small || null,
+    large: assets.large || assets.small || null,
+  };
+};
+
+const MaintainerLogoRow = ({ ics, size = 'small' }) => {
+  if (!ics.length) {
+    return null;
+  }
+
+  return (
+    <div
+      className={`flex flex-wrap items-center ${size === 'large' ? 'gap-3' : 'gap-2'}`}
+      aria-label="Maintaining IC logos"
+    >
+      {ics.map((ic, index) => {
+        const assets = getIcAssets(ic);
+        const source = size === 'large' ? assets.large : assets.small || assets.large;
+
+        if (source) {
+          return (
+            <img
+              key={`${ic}-${index}-${size}`}
+              src={source}
+              alt={`${assets.code || 'IC'} logo`}
+              className={size === 'large' ? 'h-12 w-auto' : 'h-8 w-8'}
             />
-            <span>{option}</span>
-          </label>
-        ))
+          );
+        }
+
+        return (
+          <span
+            key={`${ic}-${index}-${size}`}
+            className={`rounded-full bg-slate-100 font-semibold text-slate-600 ${
+              size === 'large' ? 'px-3 py-1 text-sm' : 'px-2 py-0.5 text-xs'
+            }`}
+          >
+            {assets.code}
+          </span>
+        );
+      })}
+    </div>
+  );
+};
+
+const LogoFilterGrid = ({ options, selected, onToggle }) => {
+  if (!options.length) {
+    return null;
+  }
+
+  return (
+    <div>
+      <p className="text-xs font-semibold uppercase tracking-wide text-slate-500">
+        Filter by IC logo
+      </p>
+      <div className="mt-3 flex flex-wrap gap-3">
+        {options.map((option) => {
+          const assets = getIcAssets(option);
+          if (!assets.small) {
+            return null;
+          }
+          const isActive = selected.includes(option);
+          return (
+            <button
+              type="button"
+              key={option}
+              onClick={() => onToggle(option)}
+              className={`flex h-14 w-14 items-center justify-center rounded-2xl border bg-white p-2 shadow-sm transition ${
+                isActive
+                  ? 'border-indigo-500 ring-2 ring-indigo-200'
+                  : 'border-slate-200 hover:border-slate-300'
+              }`}
+            >
+              <img src={assets.small} alt={`${option} logo`} className="h-full w-full object-contain" />
+            </button>
+          );
+        })}
+      </div>
+    </div>
+  );
+};
+
+const MultiEntryInput = ({ label, placeholder, options, values, onChange }) => {
+  const [inputValue, setInputValue] = useState('');
+
+  const normalizedOptions = useMemo(
+    () => options.map((option) => ({ label: option, match: option.toLowerCase() })),
+    [options]
+  );
+
+  const addValue = (raw) => {
+    const trimmed = raw.trim();
+    if (!trimmed) {
+      return;
+    }
+
+    const match = normalizedOptions.find((option) => option.match === trimmed.toLowerCase());
+    const valueToAdd = match ? match.label : trimmed;
+    if (!values.includes(valueToAdd)) {
+      onChange([...values, valueToAdd]);
+    }
+  };
+
+  const removeValue = (value) => {
+    onChange(values.filter((item) => item !== value));
+  };
+
+  const handleKeyDown = (event) => {
+    if (event.key === 'Enter' || event.key === 'Tab') {
+      if (inputValue.trim()) {
+        event.preventDefault();
+        addValue(inputValue);
+        setInputValue('');
+      }
+    }
+
+    if (event.key === 'Backspace' && !inputValue && values.length) {
+      removeValue(values[values.length - 1]);
+    }
+  };
+
+  const suggestions = useMemo(() => {
+    if (!inputValue) {
+      return normalizedOptions
+        .map((option) => option.label)
+        .filter((option) => !values.includes(option))
+        .slice(0, 6);
+    }
+
+    const lowered = inputValue.toLowerCase();
+    return normalizedOptions
+      .filter((option) => option.match.includes(lowered) && !values.includes(option.label))
+      .map((option) => option.label)
+      .slice(0, 6);
+  }, [inputValue, normalizedOptions, values]);
+
+  return (
+    <div>
+      <label className="text-xs font-semibold uppercase tracking-wide text-slate-500">
+        {label}
+      </label>
+      <div className="mt-2 rounded-2xl border border-slate-200 bg-white">
+        <div className="flex flex-wrap gap-2 p-3">
+          {values.map((value) => (
+            <span
+              key={value}
+              className="inline-flex items-center gap-1 rounded-full bg-indigo-50 px-3 py-1 text-xs font-semibold text-indigo-700"
+            >
+              {value}
+              <button
+                type="button"
+                onClick={() => removeValue(value)}
+                className="text-indigo-500 hover:text-indigo-700"
+                aria-label={`Remove ${value}`}
+              >
+                &times;
+              </button>
+            </span>
+          ))}
+          <input
+            type="text"
+            value={inputValue}
+            onChange={(event) => setInputValue(event.target.value)}
+            onKeyDown={handleKeyDown}
+            placeholder={values.length ? 'Add more…' : placeholder}
+            className="min-w-[120px] flex-1 border-0 bg-transparent text-sm text-slate-700 focus:outline-none"
+          />
+        </div>
+      </div>
+      {suggestions.length > 0 && (
+        <div className="mt-2 flex flex-wrap gap-2 text-xs text-slate-500">
+          {suggestions.map((suggestion) => (
+            <button
+              key={suggestion}
+              type="button"
+              onClick={() => {
+                addValue(suggestion);
+                setInputValue('');
+              }}
+              className="rounded-full border border-slate-200 px-3 py-1 hover:border-indigo-300 hover:text-indigo-600"
+            >
+              {suggestion}
+            </button>
+          ))}
+        </div>
       )}
     </div>
-  </div>
-);
+  );
+};
 
 const ExternalLink = ({ label, url }) => (
   <a
@@ -132,202 +322,182 @@ const ExternalLink = ({ label, url }) => (
   </a>
 );
 
-const ResourceCard = ({ resource, onSelect, isActive }) => (
-  <div
-    className={`rounded-2xl border p-4 shadow-sm transition hover:shadow-md cursor-pointer ${
-      isActive ? 'border-indigo-400 bg-indigo-50/60' : 'border-slate-200 bg-white'
-    }`}
-    onClick={() => onSelect(resource)}
-  >
-    <div className="flex items-start justify-between">
-      <div>
-        <h3 className="text-lg font-semibold text-slate-900">{resource.name}</h3>
-        <p className="text-sm text-slate-500">
-          {resource.shortName || resource.icName || resource.icCode}
-        </p>
-      </div>
-      <span className="rounded-full bg-slate-100 px-3 py-1 text-xs font-semibold text-slate-700">
-        {resource.icCode || 'IC'}
-      </span>
-    </div>
-    <div className="mt-4 flex flex-wrap gap-2">
-      {resource.resourceTypes.slice(0, 3).map((type) => (
-        <span
-          key={type}
-          className="rounded-full bg-indigo-100 px-3 py-1 text-xs font-medium text-indigo-700"
-        >
-          {type}
-        </span>
-      ))}
-    </div>
-    {resource.domains.length > 0 && (
-      <div className="mt-3 text-xs text-slate-500">
-        {resource.domains.slice(0, 3).join(' · ')}
-        {resource.domains.length > 3 ? ` +${resource.domains.length - 3} more` : ''}
-      </div>
-    )}
-    {resource.typicalUseCases && (
-      <p className="mt-3 text-sm text-slate-600">{resource.typicalUseCases}</p>
-    )}
-    <div className="mt-4 flex flex-wrap items-center gap-2 text-xs text-slate-500">
-      {resource.costStatus && (
-        <span className="inline-flex items-center gap-1 rounded-full bg-emerald-50 px-3 py-1 font-medium text-emerald-700">
-          <span className="h-2 w-2 rounded-full bg-emerald-500" /> {resource.costStatus}
-        </span>
-      )}
-      {resource.accessModel && (
-        <span className="inline-flex items-center gap-1 rounded-full bg-blue-50 px-3 py-1 font-medium text-blue-700">
-          <span className="h-2 w-2 rounded-full bg-blue-500" /> {resource.accessModel}
-        </span>
-      )}
-    </div>
-  </div>
-);
-
-const DetailPanel = ({ resource }) => {
-  if (!resource) {
-    return (
-      <div className="rounded-2xl border border-dashed border-slate-300 bg-white p-8 text-center text-slate-500">
-        Select a resource to view details.
-      </div>
-    );
-  }
+const ResourceCard = ({ resource, onToggle, isExpanded }) => {
+  const maintainingICs = resource.maintainingICs.length
+    ? resource.maintainingICs
+    : resource.icCode
+    ? [resource.icCode]
+    : [];
 
   return (
-    <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
-      <div className="flex items-start justify-between gap-4">
-        <div>
-          <h2 className="text-2xl font-semibold text-slate-900">{resource.name}</h2>
-          <p className="text-sm text-slate-500">
-            {resource.shortName || resource.icName || resource.icCode}
-          </p>
-        </div>
-        <span className="rounded-full bg-slate-100 px-3 py-1 text-xs font-semibold text-slate-700">
-          {resource.status || 'Active'}
-        </span>
-      </div>
-
-      <div className="mt-6 grid gap-4 text-sm text-slate-700">
-        <div className="grid gap-1">
-          <span className="text-xs font-semibold uppercase tracking-wide text-slate-500">
-            Identity
-          </span>
-          <p className="font-medium text-slate-900">{resource.icName || 'Maintaining IC'}</p>
-          <p className="text-slate-500">
-            {resource.maintainingICs.length
-              ? resource.maintainingICs.join(', ')
-              : resource.icCode || 'Not specified'}
-          </p>
-        </div>
-        <div>
-          <span className="text-xs font-semibold uppercase tracking-wide text-slate-500">
-            Domains
-          </span>
-          <p>{resource.domains.join(', ') || 'Not specified'}</p>
-        </div>
-      </div>
-
-      <div className="mt-8">
-        <h3 className="text-sm font-semibold uppercase tracking-wide text-slate-500">
-          Access snapshot
-        </h3>
-        <div className="mt-3 grid gap-3 text-sm">
-          <div className="rounded-xl border border-slate-100 bg-slate-50 p-3">
-            <p className="text-xs font-semibold uppercase text-slate-500">Cost Status</p>
-            <p className="text-slate-900">{resource.costStatus || 'Not specified'}</p>
-          </div>
-          <div className="rounded-xl border border-slate-100 bg-slate-50 p-3">
-            <p className="text-xs font-semibold uppercase text-slate-500">Access Model</p>
-            <p className="text-slate-900">{resource.accessModel || 'Not specified'}</p>
-          </div>
-          <div className="rounded-xl border border-slate-100 bg-slate-50 p-3">
-            <p className="text-xs font-semibold uppercase text-slate-500">Data Sensitivity</p>
-            <p className="text-slate-900">{resource.dataSensitivity || 'Not specified'}</p>
-          </div>
-          <div className="rounded-xl border border-slate-100 bg-slate-50 p-3">
-            <p className="text-xs font-semibold uppercase text-slate-500">Requirements</p>
-            <p className="text-slate-900">
-              {resource.requiresRegistration ? 'Registration required' : 'No registration'} ·{' '}
-              {resource.requiresDua ? 'DUA required' : 'No DUA'}
+    <div
+      className={`rounded-2xl border p-5 shadow-sm transition ${
+        isExpanded ? 'border-indigo-400 bg-white shadow-md' : 'border-slate-200 bg-white hover:shadow-md'
+      }`}
+    >
+      <button
+        type="button"
+        className="flex w-full items-start justify-between gap-4 text-left"
+        onClick={() => onToggle(resource.id)}
+        aria-expanded={isExpanded}
+      >
+        <div className="space-y-2">
+          <div>
+            <h3 className="text-lg font-semibold text-slate-900">{resource.name}</h3>
+            <p className="text-sm text-slate-500">
+              {resource.shortName || resource.icName || maintainingICs.join(', ') || 'NIH Resource'}
             </p>
           </div>
+          {resource.typicalUseCases && (
+            <p className="text-sm text-slate-600">{resource.typicalUseCases}</p>
+          )}
         </div>
-      </div>
-
-      <div className="mt-8">
-        <h3 className="text-sm font-semibold uppercase tracking-wide text-slate-500">
-          Practical usage
-        </h3>
-        <dl className="mt-3 space-y-2 text-sm">
-          <div>
-            <dt className="text-slate-500">Typical use cases</dt>
-            <dd className="text-slate-900">{resource.typicalUseCases || 'Not specified'}</dd>
-          </div>
-          <div>
-            <dt className="text-slate-500">Skills required</dt>
-            <dd className="text-slate-900">
-              {resource.skillsRequired.length
-                ? resource.skillsRequired.join(', ')
-                : 'Not specified'}
-            </dd>
-          </div>
-          <div>
-            <dt className="text-slate-500">Compute / access location</dt>
-            <dd className="text-slate-900">
-              {resource.computeLocation.length
-                ? resource.computeLocation.join(', ')
-                : 'Not specified'}
-            </dd>
-          </div>
-          <div>
-            <dt className="text-slate-500">Parent / Integrations</dt>
-            <dd className="text-slate-900">
-              {resource.integrationParents.length
-                ? resource.integrationParents.join(', ')
-                : 'None'}
-            </dd>
-          </div>
-        </dl>
-      </div>
-
-      <div className="mt-8">
-        <h3 className="text-sm font-semibold uppercase tracking-wide text-slate-500">
-          Actionable links
-        </h3>
-        <div className="mt-3 flex flex-wrap gap-3">
-          <ExternalLink label="Primary URL" url={resource.primaryUrl} />
-          <ExternalLink label="Docs" url={resource.docsUrl} />
-          <ExternalLink label="API" url={resource.apiUrl} />
+        <div className="flex flex-col items-end gap-2">
+          <MaintainerLogoRow ics={maintainingICs} size="small" />
+          <span className="text-xs font-medium text-indigo-600">
+            {isExpanded ? 'Hide details' : 'View details'}
+          </span>
         </div>
+      </button>
+      <div className="mt-4 flex flex-wrap gap-2">
+        {resource.resourceTypes.slice(0, 3).map((type) => (
+          <span
+            key={type}
+            className="rounded-full bg-indigo-100 px-3 py-1 text-xs font-medium text-indigo-700"
+          >
+            {type}
+          </span>
+        ))}
       </div>
-
-      {resource.keywords.length > 0 && (
-        <div className="mt-8">
-          <h3 className="text-sm font-semibold uppercase tracking-wide text-slate-500">
-            Keywords
-          </h3>
-          <div className="mt-3 flex flex-wrap gap-2 text-xs">
-            {resource.keywords.map((keyword) => (
-              <span
-                key={keyword}
-                className="rounded-full bg-slate-100 px-3 py-1 font-medium text-slate-600"
-              >
-                {keyword}
-              </span>
-            ))}
-          </div>
+      {resource.domains.length > 0 && (
+        <div className="mt-3 text-xs text-slate-500">
+          {resource.domains.slice(0, 3).join(' · ')}
+          {resource.domains.length > 3 ? ` +${resource.domains.length - 3} more` : ''}
         </div>
       )}
+      {isExpanded && (
+        <div className="mt-6 space-y-6 border-t border-slate-200 pt-6 text-sm text-slate-700">
+          <MaintainerLogoRow ics={maintainingICs} size="large" />
 
-      {resource.notes && (
-        <div className="mt-8 rounded-xl bg-amber-50 p-4 text-sm text-amber-800">
-          <p className="font-semibold">Notes</p>
-          <p>{resource.notes}</p>
+          <div className="grid gap-4 sm:grid-cols-2">
+            <div>
+              <span className="text-xs font-semibold uppercase tracking-wide text-slate-500">
+                Domains
+              </span>
+              <p className="mt-1">{resource.domains.join(', ') || 'Not specified'}</p>
+            </div>
+            <div>
+              <span className="text-xs font-semibold uppercase tracking-wide text-slate-500">
+                Status
+              </span>
+              <p className="mt-1">{resource.status || 'Active'}</p>
+            </div>
+          </div>
+
+          <div>
+            <h4 className="text-xs font-semibold uppercase tracking-wide text-slate-500">
+              Access snapshot
+            </h4>
+            <div className="mt-3 grid gap-3 md:grid-cols-2">
+              <div className="rounded-xl border border-slate-100 bg-slate-50 p-3">
+                <p className="text-xs font-semibold uppercase text-slate-500">Cost Status</p>
+                <p className="text-slate-900">{resource.costStatus || 'Not specified'}</p>
+              </div>
+              <div className="rounded-xl border border-slate-100 bg-slate-50 p-3">
+                <p className="text-xs font-semibold uppercase text-slate-500">Access Model</p>
+                <p className="text-slate-900">{resource.accessModel || 'Not specified'}</p>
+              </div>
+              <div className="rounded-xl border border-slate-100 bg-slate-50 p-3">
+                <p className="text-xs font-semibold uppercase text-slate-500">Data Sensitivity</p>
+                <p className="text-slate-900">{resource.dataSensitivity || 'Not specified'}</p>
+              </div>
+              <div className="rounded-xl border border-slate-100 bg-slate-50 p-3">
+                <p className="text-xs font-semibold uppercase text-slate-500">Requirements</p>
+                <p className="text-slate-900">
+                  {resource.requiresRegistration ? 'Registration required' : 'No registration'} ·{' '}
+                  {resource.requiresDua ? 'DUA required' : 'No DUA'}
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <h4 className="text-xs font-semibold uppercase tracking-wide text-slate-500">
+              Practical usage
+            </h4>
+            <dl className="mt-3 space-y-2">
+              <div>
+                <dt className="text-slate-500">Typical use cases</dt>
+                <dd className="text-slate-900">{resource.typicalUseCases || 'Not specified'}</dd>
+              </div>
+              <div>
+                <dt className="text-slate-500">Skills required</dt>
+                <dd className="text-slate-900">
+                  {resource.skillsRequired.length
+                    ? resource.skillsRequired.join(', ')
+                    : 'Not specified'}
+                </dd>
+              </div>
+              <div>
+                <dt className="text-slate-500">Compute / access location</dt>
+                <dd className="text-slate-900">
+                  {resource.computeLocation.length
+                    ? resource.computeLocation.join(', ')
+                    : 'Not specified'}
+                </dd>
+              </div>
+              <div>
+                <dt className="text-slate-500">Parent / Integrations</dt>
+                <dd className="text-slate-900">
+                  {resource.integrationParents.length
+                    ? resource.integrationParents.join(', ')
+                    : 'None'}
+                </dd>
+              </div>
+            </dl>
+          </div>
+
+          <div>
+            <h4 className="text-xs font-semibold uppercase tracking-wide text-slate-500">
+              Actionable links
+            </h4>
+            <div className="mt-3 flex flex-wrap gap-3">
+              <ExternalLink label="Primary URL" url={resource.primaryUrl} />
+              <ExternalLink label="Docs" url={resource.docsUrl} />
+              <ExternalLink label="API" url={resource.apiUrl} />
+            </div>
+          </div>
+
+          {resource.keywords.length > 0 && (
+            <div>
+              <h4 className="text-xs font-semibold uppercase tracking-wide text-slate-500">
+                Keywords
+              </h4>
+              <div className="mt-3 flex flex-wrap gap-2 text-xs">
+                {resource.keywords.map((keyword) => (
+                  <span
+                    key={keyword}
+                    className="rounded-full bg-slate-100 px-3 py-1 font-medium text-slate-600"
+                  >
+                    {keyword}
+                  </span>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {resource.notes && (
+            <div className="rounded-xl bg-amber-50 p-4 text-sm text-amber-800">
+              <p className="font-semibold">Notes</p>
+              <p>{resource.notes}</p>
+            </div>
+          )}
         </div>
       )}
     </div>
   );
 };
+
 
 const App = () => {
   const [loading, setLoading] = useState(true);
@@ -338,11 +508,7 @@ const App = () => {
   const [selectedICs, setSelectedICs] = useState([]);
   const [selectedDomains, setSelectedDomains] = useState([]);
   const [selectedResourceTypes, setSelectedResourceTypes] = useState([]);
-  const [selectedDataSensitivity, setSelectedDataSensitivity] = useState([]);
-  const [selectedAccessModels, setSelectedAccessModels] = useState([]);
-  const [freeOnly, setFreeOnly] = useState(false);
-  const [openAccessOnly, setOpenAccessOnly] = useState(false);
-  const [activeResource, setActiveResource] = useState(null);
+  const [expandedResourceId, setExpandedResourceId] = useState(null);
   const indexRef = useRef(null);
 
   useEffect(() => {
@@ -408,8 +574,6 @@ const App = () => {
       ),
       domains: uniqueSorted(resources.flatMap((item) => item.domains)),
       resourceTypes: uniqueSorted(resources.flatMap((item) => item.resourceTypes)),
-      dataSensitivity: uniqueSorted(resources.map((item) => item.dataSensitivity)),
-      accessModels: uniqueSorted(resources.map((item) => item.accessModel)),
     };
   }, [resources]);
 
@@ -449,24 +613,6 @@ const App = () => {
       );
     }
 
-    if (selectedDataSensitivity.length) {
-      subset = subset.filter((item) => selectedDataSensitivity.includes(item.dataSensitivity));
-    }
-
-    if (selectedAccessModels.length) {
-      subset = subset.filter((item) => selectedAccessModels.includes(item.accessModel));
-    }
-
-    if (freeOnly) {
-      subset = subset.filter((item) => (item.costStatus || '').toLowerCase().includes('free'));
-    }
-
-    if (openAccessOnly) {
-      subset = subset.filter((item) =>
-        (item.accessModel || '').toLowerCase().includes('open access')
-      );
-    }
-
     return subset;
   }, [
     resources,
@@ -475,23 +621,19 @@ const App = () => {
     selectedICs,
     selectedDomains,
     selectedResourceTypes,
-    selectedDataSensitivity,
-    selectedAccessModels,
-    freeOnly,
-    openAccessOnly,
   ]);
 
   useEffect(() => {
     if (!filteredResources.length) {
-      setActiveResource(null);
+      setExpandedResourceId(null);
       return;
     }
 
-    setActiveResource((current) => {
-      if (current && filteredResources.some((item) => item.id === current.id)) {
+    setExpandedResourceId((current) => {
+      if (current && filteredResources.some((item) => item.id === current)) {
         return current;
       }
-      return filteredResources[0];
+      return filteredResources[0].id;
     });
   }, [filteredResources]);
 
@@ -505,10 +647,15 @@ const App = () => {
     setSelectedICs([]);
     setSelectedDomains([]);
     setSelectedResourceTypes([]);
-    setSelectedDataSensitivity([]);
-    setSelectedAccessModels([]);
-    setFreeOnly(false);
-    setOpenAccessOnly(false);
+  };
+
+  const icLogoOptions = useMemo(
+    () => filterOptions.ics.filter((ic) => Boolean(getIcAssets(ic).small)),
+    [filterOptions.ics]
+  );
+
+  const handleCardToggle = (resourceId) => {
+    setExpandedResourceId((current) => (current === resourceId ? null : resourceId));
   };
 
   if (loading) {
@@ -542,9 +689,9 @@ const App = () => {
               Search, filter, and launch NIH-supported research resources
             </h1>
             <p className="mt-2 max-w-3xl text-base text-slate-600">
-              Explore data repositories, biospecimen banks, and analysis tools. Use the instant
-              search and curated filters to zero-in on what matters: institute alignment, domain
-              focus, access model, and cost.
+              Explore data repositories, biospecimen banks, and analysis tools. Use the NIH logo
+              picker and lightweight combobox filters to focus on the institutes, domains, and
+              resource types that matter most.
             </p>
           </div>
           <div className="rounded-2xl border border-slate-200 bg-white px-4 py-3 text-right shadow-sm">
@@ -554,79 +701,56 @@ const App = () => {
         </div>
       </header>
 
-      <div className="grid gap-6 lg:grid-cols-[280px,1fr,360px]">
-        <aside className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
-          <div className="flex items-center justify-between">
-            <h2 className="text-sm font-semibold uppercase tracking-wide text-slate-500">
-              Filters
-            </h2>
-            <button
-              className="text-xs font-semibold text-indigo-600 hover:text-indigo-500"
-              onClick={clearFilters}
-            >
-              Clear all
-            </button>
-          </div>
+      <div className="grid gap-6 lg:grid-cols-12">
+        <aside className="lg:col-span-4">
+          <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+            <div className="flex items-center justify-between">
+              <h2 className="text-sm font-semibold uppercase tracking-wide text-slate-500">
+                Filters
+              </h2>
+              <button
+                className="text-xs font-semibold uppercase tracking-wide text-indigo-600 hover:text-indigo-500"
+                onClick={clearFilters}
+              >
+                Clear all
+              </button>
+            </div>
 
-          <div className="mt-4 rounded-xl bg-slate-50 p-3 text-xs text-slate-600">
-            <p className="font-semibold text-slate-800">Access focus</p>
-            <label className="mt-2 flex items-center justify-between">
-              <span>Free only</span>
-              <input
-                type="checkbox"
-                className="h-4 w-4 rounded border-slate-300 text-indigo-600 focus:ring-indigo-500"
-                checked={freeOnly}
-                onChange={(e) => setFreeOnly(e.target.checked)}
+            <div className="mt-4 space-y-6">
+              <LogoFilterGrid
+                options={icLogoOptions}
+                selected={selectedICs}
+                onToggle={(value) => toggleSelection(value, selectedICs, setSelectedICs)}
               />
-            </label>
-            <label className="mt-2 flex items-center justify-between">
-              <span>Open access only</span>
-              <input
-                type="checkbox"
-                className="h-4 w-4 rounded border-slate-300 text-indigo-600 focus:ring-indigo-500"
-                checked={openAccessOnly}
-                onChange={(e) => setOpenAccessOnly(e.target.checked)}
+
+              <MultiEntryInput
+                label="Maintaining IC"
+                placeholder="Type an IC code"
+                options={filterOptions.ics}
+                values={selectedICs}
+                onChange={setSelectedICs}
               />
-            </label>
+
+              <MultiEntryInput
+                label="Domain"
+                placeholder="Add a domain"
+                options={filterOptions.domains}
+                values={selectedDomains}
+                onChange={setSelectedDomains}
+              />
+
+              <MultiEntryInput
+                label="Resource type"
+                placeholder="Add a resource type"
+                options={filterOptions.resourceTypes}
+                values={selectedResourceTypes}
+                onChange={setSelectedResourceTypes}
+              />
+            </div>
           </div>
-
-          <FilterSection
-            title="Maintaining IC"
-            options={filterOptions.ics}
-            selected={selectedICs}
-            onToggle={(value) => toggleSelection(value, selectedICs, setSelectedICs)}
-          />
-
-          <FilterSection
-            title="Domain"
-            options={filterOptions.domains}
-            selected={selectedDomains}
-            onToggle={(value) => toggleSelection(value, selectedDomains, setSelectedDomains)}
-          />
-
-          <FilterSection
-            title="Resource type"
-            options={filterOptions.resourceTypes}
-            selected={selectedResourceTypes}
-            onToggle={(value) => toggleSelection(value, selectedResourceTypes, setSelectedResourceTypes)}
-          />
-
-          <FilterSection
-            title="Data sensitivity"
-            options={filterOptions.dataSensitivity}
-            selected={selectedDataSensitivity}
-            onToggle={(value) => toggleSelection(value, selectedDataSensitivity, setSelectedDataSensitivity)}
-          />
-
-          <FilterSection
-            title="Access model"
-            options={filterOptions.accessModels}
-            selected={selectedAccessModels}
-            onToggle={(value) => toggleSelection(value, selectedAccessModels, setSelectedAccessModels)}
-          />
         </aside>
 
-        <main className="space-y-4">
+        <main className="space-y-4 lg:col-span-8">
           <div className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
             <div className="flex flex-col gap-3 lg:flex-row lg:items-center lg:gap-4">
               <div className="flex-1">
@@ -680,17 +804,13 @@ const App = () => {
                 <ResourceCard
                   key={resource.id}
                   resource={resource}
-                  isActive={activeResource?.id === resource.id}
-                  onSelect={setActiveResource}
+                  isExpanded={expandedResourceId === resource.id}
+                  onToggle={handleCardToggle}
                 />
               ))}
             </div>
           )}
         </main>
-
-        <section className="sticky top-6 h-fit">
-          <DetailPanel resource={activeResource} />
-        </section>
       </div>
     </div>
   );
