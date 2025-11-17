@@ -6839,5 +6839,5956 @@
         "CRISP"
       ]
     }
+  },
+
+  {
+    "identity": {
+      "id": "IC_096",
+      "resource_name": "NIDA Data Share",
+      "short_name": "NIDA Data Share",
+      "ic_code": "NIDA",
+      "ic_name": "National Institute on Drug Abuse",
+      "primary_url": "https://datashare.nida.nih.gov/",
+      "docs_url": "",
+      "api_url": ""
+    },
+    "type_content": {
+      "resource_type": [
+        "Data Repository",
+        "Clinical Trial Archive"
+      ],
+      "domains": [
+        "Substance Use",
+        "Addiction Treatment"
+      ],
+      "data_types": [
+        "De-identified Clinical Trial Data",
+        "Intervention Outcomes",
+        "Survey Data"
+      ],
+      "target_populations": [
+        "Clinical Trial Participants"
+      ],
+      "organisms": [
+        "Human"
+      ]
+    },
+    "access_cost": {
+      "access_model": "Open Access (Subject to Terms)",
+      "cost_status": "Free",
+      "requires_registration": false,
+      "requires_dua": true,
+      "has_human_data": true,
+      "data_sensitivity": "De-identified Human Data"
+    },
+    "practical_usage": {
+      "compute_location": [
+        "Downloads"
+      ],
+      "requires_special_infrastructure": false,
+      "skills_required": [
+        "Statistical Analysis"
+      ],
+      "typical_use_cases": "Secondary analysis of de-identified data from completed NIDA Clinical Trials Network (CTN) studies on substance use interventions.",
+      "integration_parents": [
+        "NIDA CTN"
+      ]
+    },
+    "lifecycle_curation": {
+      "status": "Active",
+      "maintaining_ic": [
+        "NIDA"
+      ],
+      "notes": "An electronic data repository designed to share de-identified data from NIDA-funded clinical trials and studies. Access is open and free; investigators download data after agreeing to terms."
+    },
+    "tagging": {
+      "keywords": [
+        "substance use",
+        "clinical trials",
+        "addiction",
+        "secondary analysis",
+        "NIDA CTN"
+      ]
+    }
+  },
+  {
+    "identity": {
+      "id": "IC_097",
+      "resource_name": "National Addiction & HIV Data Archive Program (NAHDAP)",
+      "short_name": "NAHDAP",
+      "ic_code": "NIDA",
+      "ic_name": "National Institute on Drug Abuse",
+      "primary_url": "https://www.icpsr.umich.edu/web/NAHDAP/",
+      "docs_url": "",
+      "api_url": ""
+    },
+    "type_content": {
+      "resource_type": [
+        "Data Archive",
+        "Social Science Datasets"
+      ],
+      "domains": [
+        "Drug Use",
+        "Addiction",
+        "HIV Risk",
+        "Social/Behavioral Science"
+      ],
+      "data_types": [
+        "National Surveys (e.g., NSDUH)",
+        "Criminal Justice Data",
+        "Program Evaluation Data"
+      ],
+      "target_populations": [
+        "US Population",
+        "Substance Users"
+      ],
+      "organisms": [
+        "Human"
+      ]
+    },
+    "access_cost": {
+      "access_model": "Open Access (via ICPSR)",
+      "cost_status": "Free",
+      "requires_registration": true,
+      "requires_dua": false,
+      "has_human_data": true,
+      "data_sensitivity": "Public Use/Restricted Files"
+    },
+    "practical_usage": {
+      "compute_location": [
+        "Downloads (via ICPSR)"
+      ],
+      "requires_special_infrastructure": false,
+      "skills_required": [
+        "Survey Analysis",
+        "Social Science Methods"
+      ],
+      "typical_use_cases": "Curating and distributing social/behavioral science datasets related to drug use, addiction, and HIV risk for research or teaching purposes.",
+      "integration_parents": [
+        "ICPSR"
+      ]
+    },
+    "lifecycle_curation": {
+      "status": "Active",
+      "maintaining_ic": [
+        "NIDA",
+        "ICPSR"
+      ],
+      "notes": "A data archive at ICPSR sponsored by NIDA. All NAHDAP datasets are free to download for research or teaching; users register an ICPSR account (free for members)."
+    },
+    "tagging": {
+      "keywords": [
+        "addiction",
+        "HIV",
+        "social science",
+        "surveys",
+        "ICPSR",
+        "NAHDAP"
+      ]
+    }
+  },
+  {
+    "identity": {
+      "id": "IC_098",
+      "resource_name": "NIMH/NIDA Data Archive (NDA)",
+      "short_name": "NDA",
+      "ic_code": "NIDA",
+      "ic_name": "National Institute on Drug Abuse",
+      "primary_url": "https://nda.nih.gov/",
+      "docs_url": "",
+      "api_url": ""
+    },
+    "type_content": {
+      "resource_type": [
+        "Data Archive",
+        "Longitudinal Cohort"
+      ],
+      "domains": [
+        "Adolescent Brain Development",
+        "Substance Use",
+        "Neuroscience"
+      ],
+      "data_types": [
+        "Imaging Data (MRI)",
+        "Genetics",
+        "Neurocognitive Assessments",
+        "Clinical Data"
+      ],
+      "target_populations": [
+        "Adolescent Brain Cognitive Development (ABCD) Study Cohort"
+      ],
+      "organisms": [
+        "Human"
+      ]
+    },
+    "access_cost": {
+      "access_model": "Controlled Access",
+      "cost_status": "Free",
+      "requires_registration": true,
+      "requires_dua": true,
+      "has_human_data": true,
+      "data_sensitivity": "High (Imaging, Genetic, and Clinical)"
+    },
+    "practical_usage": {
+      "compute_location": [
+        "Secure Download"
+      ],
+      "requires_special_infrastructure": false,
+      "skills_required": [
+        "Neuroinformatics",
+        "Statistical Analysis"
+      ],
+      "typical_use_cases": "Tracking brain and behavior development in adolescents; analyzing the impact of substance use on youth development using the ABCD Study data.",
+      "integration_parents": [
+        "NIMH",
+        "ABCD Study"
+      ]
+    },
+    "lifecycle_curation": {
+      "status": "Active",
+      "maintaining_ic": [
+        "NIMH",
+        "NIDA"
+      ],
+      "notes": "NIDA contributes substantially to NDA, notably the ABCD Study data. All ABCD data are shared via NDA portal for free after request approval."
+    },
+    "tagging": {
+      "keywords": [
+        "NDA",
+        "ABCD study",
+        "adolescent brain",
+        "neuroimaging",
+        "substance use"
+      ]
+    }
+  },
+  {
+    "identity": {
+      "id": "IC_099",
+      "resource_name": "Neuroscience Information Framework (NIF)",
+      "short_name": "NIF",
+      "ic_code": "NIDA",
+      "ic_name": "National Institute on Drug Abuse",
+      "primary_url": "https://www.scicrunch.org/browse/nif",
+      "docs_url": "",
+      "api_url": ""
+    },
+    "type_content": {
+      "resource_type": [
+        "Search Engine",
+        "Metadata Repository"
+      ],
+      "domains": [
+        "Neuroscience",
+        "Drug Abuse"
+      ],
+      "data_types": [
+        "Metadata Index",
+        "Links to Experimental Data (Optogenetics, Electrophysiology)"
+      ],
+      "target_populations": [
+        "Neuroscientists"
+      ],
+      "organisms": [
+        "Model Organisms",
+        "Human"
+      ]
+    },
+    "access_cost": {
+      "access_model": "Open Access",
+      "cost_status": "Free",
+      "requires_registration": false,
+      "requires_dua": false,
+      "has_human_data": false,
+      "data_sensitivity": "Public Information/Metadata"
+    },
+    "practical_usage": {
+      "compute_location": [
+        "Web-based"
+      ],
+      "requires_special_infrastructure": false,
+      "skills_required": [
+        "Data Discovery"
+      ],
+      "typical_use_cases": "Discovering drug-abuse-related data (like optogenetics experiments) and other neuroscience resources and tools across various domains.",
+      "integration_parents": [
+        "SciCrunch"
+      ]
+    },
+    "lifecycle_curation": {
+      "status": "Active",
+      "maintaining_ic": [
+        "NIDA"
+      ],
+      "notes": "Initially funded by NIDA, NIF (now part of SciCrunch) is a dynamic search engine for neuroscience data and resources. The platform is open and free to use; indexed resources are linked for direct access."
+    },
+    "tagging": {
+      "keywords": [
+        "neuroscience",
+        "NIF",
+        "data discovery",
+        "optogenetics",
+        "electrophysiology"
+      ]
+    }
+  },
+  {
+    "identity": {
+      "id": "IC_100",
+      "resource_name": "Genetic Data Repositories (dbGaP, GEO)",
+      "short_name": "NIDA Genetics",
+      "ic_code": "NIDA",
+      "ic_name": "National Institute on Drug Abuse",
+      "primary_url": "https://www.drugabuse.gov/funding/genetic-data-repositories",
+      "docs_url": "",
+      "api_url": ""
+    },
+    "type_content": {
+      "resource_type": [
+        "Data Repository",
+        "Genomics Resource"
+      ],
+      "domains": [
+        "Addiction Genetics",
+        "Pharmacogenomics",
+        "Transcriptomics"
+      ],
+      "data_types": [
+        "Genotype Data (GWAS)",
+        "Phenotype Data",
+        "Gene Expression Data"
+      ],
+      "target_populations": [
+        "Patients with Opioid/Cocaine Use Disorder"
+      ],
+      "organisms": [
+        "Human",
+        "Animal Models"
+      ]
+    },
+    "access_cost": {
+      "access_model": "Controlled Access (dbGaP); Open Access (GEO)",
+      "cost_status": "Free",
+      "requires_registration": true,
+      "requires_dua": true,
+      "has_human_data": true,
+      "data_sensitivity": "High (Genotype and Phenotype)"
+    },
+    "practical_usage": {
+      "compute_location": [
+        "Secure Download (dbGaP/GEO)"
+      ],
+      "requires_special_infrastructure": false,
+      "skills_required": [
+        "Statistical Genetics",
+        "Bioinformatics"
+      ],
+      "typical_use_cases": "Accessing genetic data (e.g., GWAS of opioid addiction) and transcriptomic analyses of drug-exposed brain tissue for secondary research.",
+      "integration_parents": [
+        "dbGaP",
+        "NCBI GEO"
+      ]
+    },
+    "lifecycle_curation": {
+      "status": "Active",
+      "maintaining_ic": [
+        "NIDA",
+        "NLM"
+      ],
+      "notes": "NIDA supports genetics studies of addiction; resulting data is deposited in repositories like dbGaP and NCBI GEO. Approved researchers can obtain these data without cost."
+    },
+    "tagging": {
+      "keywords": [
+        "addiction genetics",
+        "GWAS",
+        "dbGaP",
+        "GEO",
+        "opioid use disorder",
+        "transcriptomics"
+      ]
+    }
+  },
+  {
+    "identity": {
+      "id": "IC_101",
+      "resource_name": "Reagent Sharing (Drug Supply Program)",
+      "short_name": "NIDA DSP",
+      "ic_code": "NIDA",
+      "ic_name": "National Institute on Drug Abuse",
+      "primary_url": "https://www.drugabuse.gov/research/nida-drug-supply-program",
+      "docs_url": "",
+      "api_url": ""
+    },
+    "type_content": {
+      "resource_type": [
+        "Reagent Repository",
+        "Biological Resource"
+      ],
+      "domains": [
+        "Drug Abuse Research",
+        "Pharmacology"
+      ],
+      "data_types": [
+        "Controlled Substances (e.g., THC, CBD)",
+        "Research-Grade Drugs"
+      ],
+      "target_populations": [
+        "Investigators with DEA licenses"
+      ],
+      "organisms": [
+        "Human (for research testing)",
+        "N/A (Chemicals)"
+      ]
+    },
+    "access_cost": {
+      "access_model": "Controlled Access",
+      "cost_status": "Free",
+      "requires_registration": true,
+      "requires_dua": false,
+      "has_human_data": false,
+      "data_sensitivity": "Controlled Substances"
+    },
+    "practical_usage": {
+      "compute_location": [
+        "Shipping/Physical Distribution"
+      ],
+      "requires_special_infrastructure": false,
+      "skills_required": [
+        "Pharmacology",
+        "Regulatory Compliance (DEA)"
+      ],
+      "typical_use_cases": "Obtaining research-grade controlled substances (e.g., marijuana components, reference standards) that are otherwise restricted, for approved research studies.",
+      "integration_parents": []
+    },
+    "lifecycle_curation": {
+      "status": "Active",
+      "maintaining_ic": [
+        "NIDA"
+      ],
+      "notes": "NIDA's Drug Supply Program provides certain controlled substances (for research) at no cost to investigators with DEA licenses for approved research studies."
+    },
+    "tagging": {
+      "keywords": [
+        "reagents",
+        "controlled substances",
+        "THC",
+        "CBD",
+        "drug supply program",
+        "pharmacology"
+      ]
+    }
+  },
+  {
+    "identity": {
+      "id": "IC_102",
+      "resource_name": "Prevention & Treatment Tools (Screening/Manuals)",
+      "short_name": "NIDA Treatment Tools",
+      "ic_code": "NIDA",
+      "ic_name": "National Institute on Drug Abuse",
+      "primary_url": "https://www.drugabuse.gov/nidamed-medical-health-professionals/screening-tools-resources",
+      "docs_url": "",
+      "api_url": ""
+    },
+    "type_content": {
+      "resource_type": [
+        "Toolkit",
+        "Screening Instrument",
+        "Intervention Manual"
+      ],
+      "domains": [
+        "Addiction Treatment",
+        "Prevention",
+        "Clinical Practice"
+      ],
+      "data_types": [
+        "Standardized Screening Forms (ASSIST)",
+        "Therapy Manuals (Motivational Interviewing)"
+      ],
+      "target_populations": [
+        "Clinicians",
+        "Researchers"
+      ],
+      "organisms": [
+        "Human"
+      ]
+    },
+    "access_cost": {
+      "access_model": "Open Access",
+      "cost_status": "Free",
+      "requires_registration": false,
+      "requires_dua": false,
+      "has_human_data": false,
+      "data_sensitivity": "Public Information"
+    },
+    "practical_usage": {
+      "compute_location": [
+        "Downloads"
+      ],
+      "requires_special_infrastructure": false,
+      "skills_required": [
+        "Clinical Practice",
+        "Counseling"
+      ],
+      "typical_use_cases": "Using validated instruments (e.g., ASSIST) to screen patients for drug use or implementing evidence-based therapy protocols in clinical settings.",
+      "integration_parents": []
+    },
+    "lifecycle_curation": {
+      "status": "Active",
+      "maintaining_ic": [
+        "NIDA"
+      ],
+      "notes": "NIDA has created free toolkits such as Standardized Screening Instruments (e.g., ASSIST) and therapy manuals for interventions (like motivational interviewing manuals), which are downloadable at no cost."
+    },
+    "tagging": {
+      "keywords": [
+        "screening tools",
+        "ASSIST",
+        "motivational interviewing",
+        "therapy manuals",
+        "prevention"
+      ]
+    }
+  },
+  {
+    "identity": {
+      "id": "IC_103",
+      "resource_name": "Software and Computational Models (NetLogo, Ontology)",
+      "short_name": "NIDA Software",
+      "ic_code": "NIDA",
+      "ic_name": "National Institute on Drug Abuse",
+      "primary_url": "https://www.drugabuse.gov/about-nida/organization/offices/office-science-policy-communications/science-policy/data-sharing-policies",
+      "docs_url": "",
+      "api_url": ""
+    },
+    "type_content": {
+      "resource_type": [
+        "Software",
+        "Computational Model",
+        "Ontology"
+      ],
+      "domains": [
+        "Modeling and Simulation",
+        "Neuroimaging",
+        "Data Harmonization"
+      ],
+      "data_types": [
+        "NetLogo Models",
+        "fMRI Task Paradigms",
+        "Ontology/Classification Tools"
+      ],
+      "target_populations": [
+        "Computational Biologists",
+        "Neuroimagers"
+      ],
+      "organisms": [
+        "Human",
+        "N/A (Models)"
+      ]
+    },
+    "access_cost": {
+      "access_model": "Open Source",
+      "cost_status": "Free",
+      "requires_registration": false,
+      "requires_dua": false,
+      "has_human_data": false,
+      "data_sensitivity": "Public Software/Models"
+    },
+    "practical_usage": {
+      "compute_location": [
+        "Downloads (GitHub, NITRC, OpenNeuro)"
+      ],
+      "requires_special_infrastructure": false,
+      "skills_required": [
+        "Computational Modeling",
+        "Neuroimaging Analysis"
+      ],
+      "typical_use_cases": "Running simulations for drug epidemic spread (NetLogo), implementing standard neuroimaging tasks (fMRI), or using tools for data harmonization (Ontology).",
+      "integration_parents": [
+        "NITRC",
+        "OpenNeuro"
+      ]
+    },
+    "lifecycle_curation": {
+      "status": "Active",
+      "maintaining_ic": [
+        "NIDA"
+      ],
+      "notes": "NIDA-funded researchers developed tools like NetLogo models for simulations, fMRI task paradigms, and addiction Ontology tools, typically released as open-source or free downloads."
+    },
+    "tagging": {
+      "keywords": [
+        "computational models",
+        "NetLogo",
+        "fMRI",
+        "ontology",
+        "open source",
+        "simulation"
+      ]
+    }
+  },
+  {
+    "identity": {
+      "id": "IC_104",
+      "resource_name": "Comparative Toxicogenomics Database (CTD)",
+      "short_name": "CTD",
+      "ic_code": "NIEHS",
+      "ic_name": "National Institute of Environmental Health Sciences",
+      "primary_url": "https://ctdbase.org/",
+      "docs_url": "",
+      "api_url": ""
+    },
+    "type_content": {
+      "resource_type": [
+        "Database",
+        "Toxicogenomics Resource"
+      ],
+      "domains": [
+        "Toxicogenomics",
+        "Environmental Health",
+        "Chemical-Gene Interactions"
+      ],
+      "data_types": [
+        "Chemical-Gene-Disease Interactions",
+        "Gene Pathways",
+        "GO Enrichments"
+      ],
+      "target_populations": [
+        "Toxicologists",
+        "Environmental Health Researchers"
+      ],
+      "organisms": [
+        "Human",
+        "Model Organisms"
+      ]
+    },
+    "access_cost": {
+      "access_model": "Open Access",
+      "cost_status": "Free",
+      "requires_registration": false,
+      "requires_dua": false,
+      "has_human_data": false,
+      "data_sensitivity": "Public Data"
+    },
+    "practical_usage": {
+      "compute_location": [
+        "Web-based",
+        "Downloads"
+      ],
+      "requires_special_infrastructure": false,
+      "skills_required": [
+        "Toxicology",
+        "Bioinformatics"
+      ],
+      "typical_use_cases": "Detailing how environmental chemicals affect gene expression and contribute to diseases; analyzing mechanistic links between pollutants and health outcomes.",
+      "integration_parents": []
+    },
+    "lifecycle_curation": {
+      "status": "Active",
+      "maintaining_ic": [
+        "NIEHS"
+      ],
+      "notes": "An NIEHS-funded public database that details chemical-gene-disease interactions. Completely open-access: anyone can search and export all data for free."
+    },
+    "tagging": {
+      "keywords": [
+        "toxicogenomics",
+        "environmental health",
+        "chemical-gene interactions",
+        "pollutants",
+        "CTD"
+      ]
+    }
+  },
+  {
+    "identity": {
+      "id": "IC_105",
+      "resource_name": "NIEHS Environmental Health Science Data Repositories",
+      "short_name": "NIEHS Data Index",
+      "ic_code": "NIEHS",
+      "ic_name": "National Institute of Environmental Health Sciences",
+      "primary_url": "https://www.niehs.nih.gov/research/scientific-data/data-resources",
+      "docs_url": "",
+      "api_url": ""
+    },
+    "type_content": {
+      "resource_type": [
+        "Resource Index",
+        "Data Catalog"
+      ],
+      "domains": [
+        "Environmental Health",
+        "Toxicogenomics",
+        "Clinical Studies"
+      ],
+      "data_types": [
+        "Links to GEO",
+        "PubChem",
+        "ClinicalTrials.gov"
+      ],
+      "target_populations": [
+        "Researchers",
+        "Grantees"
+      ],
+      "organisms": [
+        "Human",
+        "Model Organisms"
+      ]
+    },
+    "access_cost": {
+      "access_model": "Open Access (External Links)",
+      "cost_status": "Free",
+      "requires_registration": false,
+      "requires_dua": false,
+      "has_human_data": true,
+      "data_sensitivity": "Varies (Public to Controlled)"
+    },
+    "practical_usage": {
+      "compute_location": [
+        "Web-based"
+      ],
+      "requires_special_infrastructure": false,
+      "skills_required": [
+        "Data Discovery"
+      ],
+      "typical_use_cases": "Finding recommended NIH/external repositories (GEO, PubChem, ClinicalTrials.gov) where NIEHS-funded data have been deposited, ensuring compliance with data sharing policy.",
+      "integration_parents": [
+        "NCBI GEO",
+        "PubChem",
+        "ClinicalTrials.gov"
+      ]
+    },
+    "lifecycle_curation": {
+      "status": "Active",
+      "maintaining_ic": [
+        "NIEHS"
+      ],
+      "notes": "NIEHS maintains a list of recommended repositories and ensures data from its funded studies end up in these public domains. All linked resources are free for data access."
+    },
+    "tagging": {
+      "keywords": [
+        "data sharing",
+        "repositories",
+        "GEO",
+        "PubChem",
+        "toxicogenomics",
+        "environmental health"
+      ]
+    }
+  },
+  {
+    "identity": {
+      "id": "IC_106",
+      "resource_name": "Superfund Research Program (SRP) Data Portal",
+      "short_name": "SRP Data Portal",
+      "ic_code": "NIEHS",
+      "ic_name": "National Institute of Environmental Health Sciences",
+      "primary_url": "https://www.niehs.nih.gov/research/supported/centers/srp/data",
+      "docs_url": "",
+      "api_url": ""
+    },
+    "type_content": {
+      "resource_type": [
+        "Data Portal",
+        "Database"
+      ],
+      "domains": [
+        "Environmental Contamination",
+        "Remediation",
+        "Toxicology"
+      ],
+      "data_types": [
+        "Geospatial Data (Waste Sites)",
+        "Environmental Sampling Data",
+        "Toxicology Study Results"
+      ],
+      "target_populations": [
+        "Researchers",
+        "Public"
+      ],
+      "organisms": [
+        "N/A (Environmental Data)"
+      ]
+    },
+    "access_cost": {
+      "access_model": "Open Access",
+      "cost_status": "Free",
+      "requires_registration": false,
+      "requires_dua": false,
+      "has_human_data": false,
+      "data_sensitivity": "Public Information"
+    },
+    "practical_usage": {
+      "compute_location": [
+        "Web-based",
+        "Downloads"
+      ],
+      "requires_special_infrastructure": false,
+      "skills_required": [
+        "Environmental Science",
+        "GIS"
+      ],
+      "typical_use_cases": "Accessing data and publications related to environmental contamination and remediation activities at hazardous waste sites.",
+      "integration_parents": [
+        "EPA"
+      ]
+    },
+    "lifecycle_curation": {
+      "status": "Active",
+      "maintaining_ic": [
+        "NIEHS/SRP"
+      ],
+      "notes": "Provides access to data generated by Superfund Research Program grantees. The portal is open to the public, and there is no fee or restriction to obtain these data."
+    },
+    "tagging": {
+      "keywords": [
+        "Superfund",
+        "SRP",
+        "environmental contamination",
+        "toxicology",
+        "remediation",
+        "geospatial data"
+      ]
+    }
+  },
+  {
+    "identity": {
+      "id": "IC_107",
+      "resource_name": "Environmental Factor and Exposure Data (HEALS, Toolbox)",
+      "short_name": "Exposure Tools",
+      "ic_code": "NIEHS",
+      "ic_name": "National Institute of Environmental Health Sciences",
+      "primary_url": "https://www.niehs.nih.gov/research/supported/tools/exposure",
+      "docs_url": "",
+      "api_url": ""
+    },
+    "type_content": {
+      "resource_type": [
+        "Database",
+        "GIS Tool"
+      ],
+      "domains": [
+        "Environmental Exposure",
+        "Health Effects",
+        "GIS Mapping"
+      ],
+      "data_types": [
+        "Exposure Metrics",
+        "Health Effect Data",
+        "GIS Mapping Tools (e.g., Fish Consumption)"
+      ],
+      "target_populations": [
+        "Researchers",
+        "Public"
+      ],
+      "organisms": [
+        "N/A (Environmental Factors)"
+      ]
+    },
+    "access_cost": {
+      "access_model": "Open Access",
+      "cost_status": "Free",
+      "requires_registration": false,
+      "requires_dua": false,
+      "has_human_data": false,
+      "data_sensitivity": "Public Information"
+    },
+    "practical_usage": {
+      "compute_location": [
+        "Web-based",
+        "Downloads"
+      ],
+      "requires_special_infrastructure": false,
+      "skills_required": [
+        "Environmental Science",
+        "GIS Analysis"
+      ],
+      "typical_use_cases": "Querying combined exposure metrics (HEALS) or using GIS mapping tools (Exposure Science Toolbox) for fish consumption advisories and other exposure factors.",
+      "integration_parents": [
+        "HEALS Database"
+      ]
+    },
+    "lifecycle_curation": {
+      "status": "Active",
+      "maintaining_ic": [
+        "NIEHS"
+      ],
+      "notes": "Includes the Exposure Science Toolbox (free GIS mapping tools) and the HEALS database (linking exposure and health effect data). Offered as free downloads or interactive tools."
+    },
+    "tagging": {
+      "keywords": [
+        "environmental exposure",
+        "GIS",
+        "HEALS",
+        "exposure science",
+        "health effects",
+        "environmental factors"
+      ]
+    }
+  },
+  {
+    "identity": {
+      "id": "IC_108",
+      "resource_name": "Epidemiological Cohort Data (Sister Study, Ag Health Study)",
+      "short_name": "NIEHS Cohorts",
+      "ic_code": "NIEHS",
+      "ic_name": "National Institute of Environmental Health Sciences",
+      "primary_url": "https://www.niehs.nih.gov/research/atniehs/labs/epi/studies/index.cfm",
+      "docs_url": "",
+      "api_url": ""
+    },
+    "type_content": {
+      "resource_type": [
+        "Longitudinal Cohort",
+        "Epidemiological Data"
+      ],
+      "domains": [
+        "Environmental Epidemiology",
+        "Breast Cancer",
+        "Agricultural Health"
+      ],
+      "data_types": [
+        "Clinical Data",
+        "Environmental Exposure Data",
+        "Summary Statistics"
+      ],
+      "target_populations": [
+        "Sister Study Cohort",
+        "Agricultural Health Study Cohort"
+      ],
+      "organisms": [
+        "Human"
+      ]
+    },
+    "access_cost": {
+      "access_model": "Controlled Access (Individual Data); Open Access (Summary)",
+      "cost_status": "Free",
+      "requires_registration": false,
+      "requires_dua": true,
+      "has_human_data": true,
+      "data_sensitivity": "De-identified/Individual-Level Data"
+    },
+    "practical_usage": {
+      "compute_location": [
+        "Secure Download"
+      ],
+      "requires_special_infrastructure": false,
+      "skills_required": [
+        "Epidemiology",
+        "Statistical Analysis"
+      ],
+      "typical_use_cases": "Requesting de-identified data from large cohorts (e.g., Sister Study) to investigate gene-environment interactions and long-term health outcomes.",
+      "integration_parents": []
+    },
+    "lifecycle_curation": {
+      "status": "Active",
+      "maintaining_ic": [
+        "NIEHS"
+      ],
+      "notes": "Data from major NIEHS cohort studies (e.g., Sister Study, Agricultural Health Study) are available to external researchers. NIEHS does not charge for data access, though a formal request process is required."
+    },
+    "tagging": {
+      "keywords": [
+        "cohort data",
+        "epidemiology",
+        "sister study",
+        "agricultural health study",
+        "environmental health"
+      ]
+    }
+  },
+  {
+    "identity": {
+      "id": "IC_109",
+      "resource_name": "Climate Change and Health Tools",
+      "short_name": "Climate Health Tools",
+      "ic_code": "NIEHS",
+      "ic_name": "National Institute of Environmental Health Sciences",
+      "primary_url": "https://www.niehs.nih.gov/research/programs/geh/climatechange",
+      "docs_url": "",
+      "api_url": ""
+    },
+    "type_content": {
+      "resource_type": [
+        "Portal",
+        "Bibliographic Database",
+        "Risk Assessment Tool"
+      ],
+      "domains": [
+        "Climate Change",
+        "Global Environmental Health"
+      ],
+      "data_types": [
+        "Curated Literature",
+        "BRACE Framework",
+        "Risk Assessment Tools"
+      ],
+      "target_populations": [
+        "Researchers",
+        "Policy Makers"
+      ],
+      "organisms": [
+        "Human"
+      ]
+    },
+    "access_cost": {
+      "access_model": "Open Access",
+      "cost_status": "Free",
+      "requires_registration": false,
+      "requires_dua": false,
+      "has_human_data": false,
+      "data_sensitivity": "Public Information"
+    },
+    "practical_usage": {
+      "compute_location": [
+        "Web-based"
+      ],
+      "requires_special_infrastructure": false,
+      "skills_required": [
+        "Public Health",
+        "Environmental Science"
+      ],
+      "typical_use_cases": "Accessing curated literature (Literature Portal) on climate change impacts or utilizing risk assessment tools (BRACE framework) for health planning.",
+      "integration_parents": [
+        "CDC (BRACE)"
+      ]
+    },
+    "lifecycle_curation": {
+      "status": "Active",
+      "maintaining_ic": [
+        "NIEHS"
+      ],
+      "notes": "Contributes to climate and health research by developing free tools like the Climate Change and Human Health Literature Portal and supporting the BRACE framework (with CDC), which includes free risk assessment tools."
+    },
+    "tagging": {
+      "keywords": [
+        "climate change",
+        "environmental health",
+        "BRACE",
+        "risk assessment",
+        "literature portal"
+      ]
+    }
+  },
+  {
+    "identity": {
+      "id": "IC_110",
+      "resource_name": "Training and Analysis Resources (Omics, Ontology, Code)",
+      "short_name": "NIEHS Analysis",
+      "ic_code": "NIEHS",
+      "ic_name": "National Institute of Environmental Health Sciences",
+      "primary_url": "https://www.niehs.nih.gov/research/supported/tools/bioinformatics",
+      "docs_url": "",
+      "api_url": ""
+    },
+    "type_content": {
+      "resource_type": [
+        "Toolkit",
+        "Ontology",
+        "Code Repository"
+      ],
+      "domains": [
+        "Bioinformatics",
+        "Omics Analysis",
+        "Data Standardization"
+      ],
+      "data_types": [
+        "Harmonized Omics Protocols",
+        "Ontology Tools",
+        "Code Repositories (GitHub)"
+      ],
+      "target_populations": [
+        "Bioinformaticians",
+        "Data Scientists"
+      ],
+      "organisms": [
+        "N/A (Tools)"
+      ]
+    },
+    "access_cost": {
+      "access_model": "Open Source",
+      "cost_status": "Free",
+      "requires_registration": false,
+      "requires_dua": false,
+      "has_human_data": false,
+      "data_sensitivity": "Public Tools/Protocols"
+    },
+    "practical_usage": {
+      "compute_location": [
+        "Downloads (GitHub)",
+        "Web-based"
+      ],
+      "requires_special_infrastructure": false,
+      "skills_required": [
+        "Omics Data Analysis",
+        "R/Python"
+      ],
+      "typical_use_cases": "Using harmonized Omics protocols, ontology tools (EHLCC) to standardize terminology, and GitHub code repositories for analyzing environmental health data.",
+      "integration_parents": [
+        "EHLCC",
+        "GitHub"
+      ]
+    },
+    "lifecycle_curation": {
+      "status": "Active",
+      "maintaining_ic": [
+        "NIEHS"
+      ],
+      "notes": "Provides free resources such as Harmonized Omics protocols and Environmental Health Language Collaborative's (EHLCC) ontology tools. These are open-source and free to use."
+    },
+    "tagging": {
+      "keywords": [
+        "omics",
+        "bioinformatics",
+        "ontology",
+        "data analysis",
+        "open source",
+        "EHLCC"
+      ]
+    }
+  },
+  {
+    "identity": {
+      "id": "IC_111",
+      "resource_name": "Chemical Screening Data (Tox21, ToxCast)",
+      "short_name": "Tox21/ToxCast",
+      "ic_code": "NIEHS",
+      "ic_name": "National Institute of Environmental Health Sciences",
+      "primary_url": "https://www.niehs.nih.gov/research/supported/tools/tox21",
+      "docs_url": "",
+      "api_url": ""
+    },
+    "type_content": {
+      "resource_type": [
+        "Database",
+        "High-Throughput Screening Data"
+      ],
+      "domains": [
+        "Toxicology",
+        "Chemical Safety",
+        "Environmental Health"
+      ],
+      "data_types": [
+        "Assay Results",
+        "Dose-Response Curves",
+        "Chemical Activity Data"
+      ],
+      "target_populations": [
+        "Toxicologists",
+        "Regulatory Agencies"
+      ],
+      "organisms": [
+        "N/A (In Vitro)"
+      ]
+    },
+    "access_cost": {
+      "access_model": "Open Access (via external platforms)",
+      "cost_status": "Free",
+      "requires_registration": false,
+      "requires_dua": false,
+      "has_human_data": false,
+      "data_sensitivity": "Public Data"
+    },
+    "practical_usage": {
+      "compute_location": [
+        "Downloads (PubChem/EPA)"
+      ],
+      "requires_special_infrastructure": false,
+      "skills_required": [
+        "Toxicology",
+        "Data Analysis"
+      ],
+      "typical_use_cases": "Downloading high-throughput screening data (Tox21) on thousands of chemicals to predict potential human health effects and risks.",
+      "integration_parents": [
+        "PubChem",
+        "EPA ToxCast",
+        "NCATS"
+      ]
+    },
+    "lifecycle_curation": {
+      "status": "Active",
+      "maintaining_ic": [
+        "NIEHS",
+        "NCATS",
+        "EPA"
+      ],
+      "notes": "High-throughput screening data generated via the Tox21 collaboration. Assay results are made available via PubChem and the EPA's ToxCast databases for free."
+    },
+    "tagging": {
+      "keywords": [
+        "Tox21",
+        "ToxCast",
+        "chemical screening",
+        "toxicology",
+        "high-throughput",
+        "pubchem"
+      ]
+    }
+  },
+  {
+    "identity": {
+      "id": "IC_112",
+      "resource_name": "Protein Data Bank (PDB)",
+      "short_name": "PDB",
+      "ic_code": "NIGMS",
+      "ic_name": "National Institute of General Medical Sciences",
+      "primary_url": "https://www.rcsb.org/",
+      "docs_url": "",
+      "api_url": ""
+    },
+    "type_content": {
+      "resource_type": [
+        "Database",
+        "Structural Biology Repository"
+      ],
+      "domains": [
+        "Structural Biology",
+        "Biochemistry",
+        "Drug Design"
+      ],
+      "data_types": [
+        "3D Structures (Protein, Nucleic Acid)",
+        "Visualization Tools"
+      ],
+      "target_populations": [
+        "Structural Biologists",
+        "Drug Developers"
+      ],
+      "organisms": [
+        "Human",
+        "Pathogens",
+        "Model Organisms"
+      ]
+    },
+    "access_cost": {
+      "access_model": "Open Access",
+      "cost_status": "Free",
+      "requires_registration": false,
+      "requires_dua": false,
+      "has_human_data": false,
+      "data_sensitivity": "Public Data"
+    },
+    "practical_usage": {
+      "compute_location": [
+        "Web-based",
+        "Downloads"
+      ],
+      "requires_special_infrastructure": false,
+      "skills_required": [
+        "Structural Analysis",
+        "Molecular Modeling"
+      ],
+      "typical_use_cases": "Searching for and downloading 3D structures of proteins and nucleic acids for research, analysis, and drug design.",
+      "integration_parents": []
+    },
+    "lifecycle_curation": {
+      "status": "Active",
+      "maintaining_ic": [
+        "NIGMS",
+        "NSF"
+      ],
+      "notes": "A cornerstone resource for structural biology. All data are free; users download structures without login or payment. Provides free visualization/analysis tools."
+    },
+    "tagging": {
+      "keywords": [
+        "structural biology",
+        "PDB",
+        "protein structures",
+        "nucleic acids",
+        "drug design"
+      ]
+    }
+  },
+  {
+    "identity": {
+      "id": "IC_113",
+      "resource_name": "PharmGKB (Pharmacogenomics Knowledge Base)",
+      "short_name": "PharmGKB",
+      "ic_code": "NIGMS",
+      "ic_name": "National Institute of General Medical Sciences",
+      "primary_url": "https://www.pharmgkb.org/",
+      "docs_url": "",
+      "api_url": "https://api.pharmgkb.org/"
+    },
+    "type_content": {
+      "resource_type": [
+        "Knowledge Base",
+        "Database"
+      ],
+      "domains": [
+        "Pharmacogenomics",
+        "Drug Response",
+        "Genetics"
+      ],
+      "data_types": [
+        "Gene-Drug Associations",
+        "Dosing Guidelines",
+        "Curated Data"
+      ],
+      "target_populations": [
+        "Researchers",
+        "Clinicians"
+      ],
+      "organisms": [
+        "Human"
+      ]
+    },
+    "access_cost": {
+      "access_model": "Open Access",
+      "cost_status": "Free",
+      "requires_registration": false,
+      "requires_dua": false,
+      "has_human_data": true,
+      "data_sensitivity": "Public Curated Data"
+    },
+    "practical_usage": {
+      "compute_location": [
+        "Web-based",
+        "Downloads"
+      ],
+      "requires_special_infrastructure": false,
+      "skills_required": [
+        "Pharmacology",
+        "Genetics"
+      ],
+      "typical_use_cases": "Querying how genetic variation affects drug response, retrieving curated gene-drug associations, and accessing dosing guidelines.",
+      "integration_parents": [
+        "NHGRI"
+      ]
+    },
+    "lifecycle_curation": {
+      "status": "Active",
+      "maintaining_ic": [
+        "NIGMS",
+        "NHGRI"
+      ],
+      "notes": "Curated knowledgebase on how genetic variation affects drug response. Openly accessible; users query the website or download data files for free."
+    },
+    "tagging": {
+      "keywords": [
+        "pharmacogenomics",
+        "PharmGKB",
+        "drug response",
+        "genetics",
+        "dosing guidelines",
+        "curated data"
+      ]
+    }
+  },
+  {
+    "identity": {
+      "id": "IC_114",
+      "resource_name": "Human Genetic Cell Repository (Coriell)",
+      "short_name": "Coriell",
+      "ic_code": "NIGMS",
+      "ic_name": "National Institute of General Medical Sciences",
+      "primary_url": "https://www.coriell.org/1/NIGMS",
+      "docs_url": "",
+      "api_url": ""
+    },
+    "type_content": {
+      "resource_type": [
+        "Biorepository",
+        "Cell Line Repository"
+      ],
+      "domains": [
+        "Genetic Disorders",
+        "Cell Biology",
+        "Human Populations"
+      ],
+      "data_types": [
+        "Cell Lines",
+        "DNA",
+        "Phenotype Data (Associated)"
+      ],
+      "target_populations": [
+        "Patients with Genetic Disorders",
+        "Diverse Populations"
+      ],
+      "organisms": [
+        "Human"
+      ]
+    },
+    "access_cost": {
+      "access_model": "Controlled Access",
+      "cost_status": "Free (Materials); Nominal Cost (Shipping/Handling)",
+      "requires_registration": true,
+      "requires_dua": true,
+      "has_human_data": true,
+      "data_sensitivity": "Genetic Material/Clinical Data"
+    },
+    "practical_usage": {
+      "compute_location": [
+        "Shipping/Physical Distribution"
+      ],
+      "requires_special_infrastructure": false,
+      "skills_required": [
+        "Cell Culture",
+        "Molecular Biology"
+      ],
+      "typical_use_cases": "Obtaining cell lines and DNA from individuals with genetic disorders for research into rare diseases and genetic mechanisms.",
+      "integration_parents": [
+        "Coriell Institute"
+      ]
+    },
+    "lifecycle_curation": {
+      "status": "Active",
+      "maintaining_ic": [
+        "NIGMS",
+        "Coriell Institute"
+      ],
+      "notes": "Repository of cell lines (and DNA) from individuals with genetic disorders. Academic/nonprofit investigators receive cell lines for just a nominal handling fee (sometimes waived) or shipping."
+    },
+    "tagging": {
+      "keywords": [
+        "cell repository",
+        "Coriell",
+        "genetic disorders",
+        "cell lines",
+        "DNA"
+      ]
+    }
+  },
+  {
+    "identity": {
+      "id": "IC_115",
+      "resource_name": "NIGMS Biomedical Technology and Data Repositories",
+      "short_name": "NIGMS Tech",
+      "ic_code": "NIGMS",
+      "ic_name": "National Institute of General Medical Sciences",
+      "primary_url": "https://www.nigms.nih.gov/research/supported-research/research-resources",
+      "docs_url": "",
+      "api_url": ""
+    },
+    "type_content": {
+      "resource_type": [
+        "Database",
+        "Software Packages"
+      ],
+      "domains": [
+        "Biomedical Technology",
+        "Protein Sequencing",
+        "Molecular Dynamics"
+      ],
+      "data_types": [
+        "UniProt Mirrors",
+        "Molecular Dynamics Software (CHARMM, AMBER)"
+      ],
+      "target_populations": [
+        "Structural Biologists",
+        "Computational Chemists"
+      ],
+      "organisms": [
+        "N/A"
+      ]
+    },
+    "access_cost": {
+      "access_model": "Open Access (UniProt); Open-Source (Software)",
+      "cost_status": "Free",
+      "requires_registration": false,
+      "requires_dua": false,
+      "has_human_data": false,
+      "data_sensitivity": "Public Data/Software"
+    },
+    "practical_usage": {
+      "compute_location": [
+        "Web-based",
+        "Downloads"
+      ],
+      "requires_special_infrastructure": false,
+      "skills_required": [
+        "Computational Chemistry",
+        "Molecular Dynamics"
+      ],
+      "typical_use_cases": "Accessing comprehensive protein sequence databases (UniProt mirrors) and utilizing molecular dynamics simulation packages (CHARMM/AMBER) for computational modeling.",
+      "integration_parents": [
+        "UniProt"
+      ]
+    },
+    "lifecycle_curation": {
+      "status": "Active",
+      "maintaining_ic": [
+        "NIGMS"
+      ],
+      "notes": "Funds domain-specific databases (e.g., UniProt US mirrors) and open-source Molecular Dynamics simulation packages (e.g., CHARMM, AMBER) for computational research."
+    },
+    "tagging": {
+      "keywords": [
+        "molecular dynamics",
+        "UniProt",
+        "CHARMM",
+        "AMBER",
+        "computational modeling",
+        "software"
+      ]
+    }
+  },
+  {
+    "identity": {
+      "id": "IC_116",
+      "resource_name": "Model Organism Databases (MODs)",
+      "short_name": "MODs",
+      "ic_code": "NIGMS",
+      "ic_name": "National Institute of General Medical Sciences",
+      "primary_url": "https://www.nigms.nih.gov/research/supported-research/research-resources",
+      "docs_url": "",
+      "api_url": ""
+    },
+    "type_content": {
+      "resource_type": [
+        "Database",
+        "Model Organism Resource"
+      ],
+      "domains": [
+        "Basic Biology",
+        "Genetics",
+        "Developmental Biology"
+      ],
+      "data_types": [
+        "Genetic Data",
+        "Genomic Data",
+        "Phenotype Data"
+      ],
+      "target_populations": [
+        "Basic Scientists"
+      ],
+      "organisms": [
+        "Drosophila (FlyBase)",
+        "C. elegans (WormBase)",
+        "Yeast"
+      ]
+    },
+    "access_cost": {
+      "access_model": "Open Access",
+      "cost_status": "Free",
+      "requires_registration": false,
+      "requires_dua": false,
+      "has_human_data": false,
+      "data_sensitivity": "Public Data"
+    },
+    "practical_usage": {
+      "compute_location": [
+        "Web-based",
+        "Downloads"
+      ],
+      "requires_special_infrastructure": false,
+      "skills_required": [
+        "Model Organism Genetics"
+      ],
+      "typical_use_cases": "Accessing genetic and genomic data on common model species (FlyBase, WormBase) to inform research on general biological processes.",
+      "integration_parents": [
+        "FlyBase",
+        "WormBase"
+      ]
+    },
+    "lifecycle_curation": {
+      "status": "Active",
+      "maintaining_ic": [
+        "NIGMS"
+      ],
+      "notes": "Supports MODs such as FlyBase (Drosophila) and WormBase (C. elegans). These databases are entirely free to access and provide genetic and genomic data on model species."
+    },
+    "tagging": {
+      "keywords": [
+        "model organisms",
+        "FlyBase",
+        "WormBase",
+        "genetics",
+        "basic biology",
+        "MODs"
+      ]
+    }
+  },
+  {
+    "identity": {
+      "id": "IC_117",
+      "resource_name": "NIGMS Human Genetic Databases (OMIM, Alliance of Genome Resources)",
+      "short_name": "NIGMS Human Gen",
+      "ic_code": "NIGMS",
+      "ic_name": "National Institute of General Medical Sciences",
+      "primary_url": "https://www.omim.org/",
+      "docs_url": "",
+      "api_url": ""
+    },
+    "type_content": {
+      "resource_type": [
+        "Database",
+        "Knowledge Base"
+      ],
+      "domains": [
+        "Human Genetics",
+        "Disease Models"
+      ],
+      "data_types": [
+        "Genetic Disease Catalog (OMIM)",
+        "Comparative Genetics Data"
+      ],
+      "target_populations": [
+        "Researchers",
+        "Clinicians"
+      ],
+      "organisms": [
+        "Human"
+      ]
+    },
+    "access_cost": {
+      "access_model": "Open Access (Registration for OMIM)",
+      "cost_status": "Free",
+      "requires_registration": true,
+      "requires_dua": false,
+      "has_human_data": true,
+      "data_sensitivity": "Public/Curated Data"
+    },
+    "practical_usage": {
+      "compute_location": [
+        "Web-based"
+      ],
+      "requires_special_infrastructure": false,
+      "skills_required": [
+        "Medical Genetics"
+      ],
+      "typical_use_cases": "Accessing the Online Mendelian Inheritance in Man (OMIM) catalog for genetic diseases or exploring comparative genetics via the Alliance of Genome Resources.",
+      "integration_parents": [
+        "OMIM",
+        "Alliance of Genome Resources"
+      ]
+    },
+    "lifecycle_curation": {
+      "status": "Active",
+      "maintaining_ic": [
+        "NIGMS"
+      ],
+      "notes": "Historically supported OMIM (Online Mendelian Inheritance in Man) and funds the Alliance of Genome Resources. OMIM remains free for users (with registration); Alliance is an open access comparative genetics initiative."
+    },
+    "tagging": {
+      "keywords": [
+        "OMIM",
+        "human genetics",
+        "genetic disease",
+        "Alliance of Genome Resources"
+      ]
+    }
+  },
+  {
+    "identity": {
+      "id": "IC_118",
+      "resource_name": "Chemistry and Biochemistry Databases (PubChem, BindingDB)",
+      "short_name": "NIGMS Chem",
+      "ic_code": "NIGMS",
+      "ic_name": "National Institute of General Medical Sciences",
+      "primary_url": "https://pubchem.ncbi.nlm.nih.gov/",
+      "docs_url": "",
+      "api_url": ""
+    },
+    "type_content": {
+      "resource_type": [
+        "Database",
+        "Chemical Repository"
+      ],
+      "domains": [
+        "Chemistry",
+        "Biochemistry",
+        "Pharmacology"
+      ],
+      "data_types": [
+        "Chemical Structures",
+        "Bioactivity Results (PubChem)",
+        "Protein-Ligand Binding Affinities (BindingDB)"
+      ],
+      "target_populations": [
+        "Chemists",
+        "Pharmacologists"
+      ],
+      "organisms": [
+        "N/A (Chemicals/Assays)"
+      ]
+    },
+    "access_cost": {
+      "access_model": "Open Access",
+      "cost_status": "Free",
+      "requires_registration": false,
+      "requires_dua": false,
+      "has_human_data": false,
+      "data_sensitivity": "Public Data"
+    },
+    "practical_usage": {
+      "compute_location": [
+        "Web-based",
+        "Downloads"
+      ],
+      "requires_special_infrastructure": false,
+      "skills_required": [
+        "Chemistry",
+        "Drug Discovery"
+      ],
+      "typical_use_cases": "Accessing chemical structures and bioassay data via PubChem, and querying protein-ligand binding affinities via BindingDB for drug discovery and modeling.",
+      "integration_parents": [
+        "PubChem",
+        "BindingDB"
+      ]
+    },
+    "lifecycle_curation": {
+      "status": "Active",
+      "maintaining_ic": [
+        "NIGMS",
+        "NLM"
+      ],
+      "notes": "NIGMS contributes to free resources like PubChem and funds BindingDB (a database of measured protein-ligand binding affinities). Both are open-access."
+    },
+    "tagging": {
+      "keywords": [
+        "chemistry",
+        "biochemistry",
+        "PubChem",
+        "BindingDB",
+        "drug discovery",
+        "bioactivity"
+      ]
+    }
+  },
+  {
+    "identity": {
+      "id": "IC_119",
+      "resource_name": "Computational Biology Software (AutoDock, Cytoscape)",
+      "short_name": "NIGMS CompBio",
+      "ic_code": "NIGMS",
+      "ic_name": "National Institute of General Medical Sciences",
+      "primary_url": "https://www.nigms.nih.gov/research/supported-research/research-resources",
+      "docs_url": "",
+      "api_url": ""
+    },
+    "type_content": {
+      "resource_type": [
+        "Software",
+        "Computational Model"
+      ],
+      "domains": [
+        "Computational Biology",
+        "Network Biology",
+        "Molecular Docking"
+      ],
+      "data_types": [
+        "AutoDock (Docking Software)",
+        "Cytoscape (Network Visualization)"
+      ],
+      "target_populations": [
+        "Computational Biologists",
+        "Bioinformaticians"
+      ],
+      "organisms": [
+        "N/A"
+      ]
+    },
+    "access_cost": {
+      "access_model": "Open Source",
+      "cost_status": "Free",
+      "requires_registration": false,
+      "requires_dua": false,
+      "has_human_data": false,
+      "data_sensitivity": "Public Software"
+    },
+    "practical_usage": {
+      "compute_location": [
+        "Local Machine (Download)"
+      ],
+      "requires_special_infrastructure": false,
+      "skills_required": [
+        "Bioinformatics",
+        "Programming"
+      ],
+      "typical_use_cases": "Performing molecular docking simulations (AutoDock) or visualizing complex biological network interactions (Cytoscape) in research.",
+      "integration_parents": [
+        "AutoDock",
+        "Cytoscape"
+      ]
+    },
+    "lifecycle_curation": {
+      "status": "Active",
+      "maintaining_ic": [
+        "NIGMS"
+      ],
+      "notes": "NIGMS supports computational modeling that yields free tools such as AutoDock (docking simulations) and Cytoscape (network biology visualization). These are open-source and free to download and use."
+    },
+    "tagging": {
+      "keywords": [
+        "computational biology",
+        "AutoDock",
+        "Cytoscape",
+        "molecular docking",
+        "network visualization",
+        "open source"
+      ]
+    }
+  },
+  {
+    "identity": {
+      "id": "IC_120",
+      "resource_name": "Training Materials and Repositories",
+      "short_name": "NIGMS Training",
+      "ic_code": "NIGMS",
+      "ic_name": "National Institute of General Medical Sciences",
+      "primary_url": "https://www.nigms.nih.gov/training/research-education",
+      "docs_url": "",
+      "api_url": ""
+    },
+    "type_content": {
+      "resource_type": [
+        "Training Resource",
+        "Educational Material"
+      ],
+      "domains": [
+        "Quantitative Biology",
+        "Chemical Kinetics",
+        "Research Education"
+      ],
+      "data_types": [
+        "Tutorials",
+        "Simulation Models (Educational)",
+        "Curriculum Materials"
+      ],
+      "target_populations": [
+        "Students",
+        "Educators",
+        "Trainees"
+      ],
+      "organisms": [
+        "N/A"
+      ]
+    },
+    "access_cost": {
+      "access_model": "Open Access",
+      "cost_status": "Free",
+      "requires_registration": false,
+      "requires_dua": false,
+      "has_human_data": false,
+      "data_sensitivity": "Public Information"
+    },
+    "practical_usage": {
+      "compute_location": [
+        "Web-based",
+        "Downloads"
+      ],
+      "requires_special_infrastructure": false,
+      "skills_required": [
+        "Teaching/Pedagogy"
+      ],
+      "typical_use_cases": "Accessing and using tutorials on quantitative biology, chemical kinetics simulations, and other educational materials to improve biomedical education.",
+      "integration_parents": []
+    },
+    "lifecycle_curation": {
+      "status": "Active",
+      "maintaining_ic": [
+        "NIGMS"
+      ],
+      "notes": "Makes training resources available for free, including tutorials on quantitative biology and simulations for teaching chemical kinetics, accessible for educators."
+    },
+    "tagging": {
+      "keywords": [
+        "training materials",
+        "education",
+        "quantitative biology",
+        "chemical kinetics",
+        "curriculum"
+      ]
+    }
+  },
+  {
+    "identity": {
+      "id": "IC_121",
+      "resource_name": "NIMH Data Archive (NDA)",
+      "short_name": "NDA",
+      "ic_code": "NIMH",
+      "ic_name": "National Institute of Mental Health",
+      "primary_url": "https://nda.nih.gov/",
+      "docs_url": "",
+      "api_url": ""
+    },
+    "type_content": {
+      "resource_type": [
+        "Data Repository",
+        "Clinical Data Archive"
+      ],
+      "domains": [
+        "Mental Health",
+        "Autism",
+        "Suicide Prevention",
+        "Substance Use"
+      ],
+      "data_types": [
+        "Imaging Data",
+        "Genomics Data",
+        "Clinical Assessments",
+        "Behavioral Data"
+      ],
+      "target_populations": [
+        "Patients with Psychiatric Illnesses",
+        "ABCD Study Cohort"
+      ],
+      "organisms": [
+        "Human"
+      ]
+    },
+    "access_cost": {
+      "access_model": "Controlled Access",
+      "cost_status": "Free",
+      "requires_registration": true,
+      "requires_dua": true,
+      "has_human_data": true,
+      "data_sensitivity": "High (Imaging, Genetic, and Clinical)"
+    },
+    "practical_usage": {
+      "compute_location": [
+        "Secure Download"
+      ],
+      "requires_special_infrastructure": false,
+      "skills_required": [
+        "Neuroinformatics",
+        "Data Science"
+      ],
+      "typical_use_cases": "Accessing integrated, large-scale data (e.g., ABCD Study, NDAR) for research on the etiology, diagnosis, and treatment of mental illnesses.",
+      "integration_parents": [
+        "NDAR",
+        "RDoCdb",
+        "NIDA (ABCD)"
+      ]
+    },
+    "lifecycle_curation": {
+      "status": "Active",
+      "maintaining_ic": [
+        "NIMH"
+      ],
+      "notes": "A massive data repository housing research data from NIMH-funded studies, integrating NDAR and other databases. Data access is free; researchers apply for credentials and access to relevant datasets."
+    },
+    "tagging": {
+      "keywords": [
+        "NDA",
+        "mental health",
+        "autism",
+        "neuroimaging",
+        "genomics",
+        "ABCD study"
+      ]
+    }
+  },
+  {
+    "identity": {
+      "id": "IC_122",
+      "resource_name": "NIMH Repository & Genomics Resource (NIMH-RGR)",
+      "short_name": "NIMH-RGR",
+      "ic_code": "NIMH",
+      "ic_name": "National Institute of Mental Health",
+      "primary_url": "https://www.nimhgenetics.org/",
+      "docs_url": "",
+      "api_url": ""
+    },
+    "type_content": {
+      "resource_type": [
+        "Biorepository",
+        "Genomics Resource"
+      ],
+      "domains": [
+        "Psychiatric Genetics",
+        "Biomaterials"
+      ],
+      "data_types": [
+        "DNA",
+        "Cell Lines",
+        "Biomaterials",
+        "Associated Clinical Data"
+      ],
+      "target_populations": [
+        "Patients with Schizophrenia, Bipolar Disorder, Autism"
+      ],
+      "organisms": [
+        "Human"
+      ]
+    },
+    "access_cost": {
+      "access_model": "Controlled Access",
+      "cost_status": "Free (Samples); Nominal Cost (Shipping/Minimal Processing)",
+      "requires_registration": true,
+      "requires_dua": true,
+      "has_human_data": true,
+      "data_sensitivity": "Genetic Material/Clinical Data"
+    },
+    "practical_usage": {
+      "compute_location": [
+        "Shipping/Physical Distribution"
+      ],
+      "requires_special_infrastructure": false,
+      "skills_required": [
+        "Psychiatric Genetics",
+        "Molecular Biology"
+      ],
+      "typical_use_cases": "Obtaining well-characterized patient samples (DNA, cell lines) for schizophrenia, bipolar disorder, and autism research to accelerate psychiatric genetics.",
+      "integration_parents": []
+    },
+    "lifecycle_curation": {
+      "status": "Active",
+      "maintaining_ic": [
+        "NIMH"
+      ],
+      "notes": "A biorepository offering DNA, cell lines, and other biomaterials from individuals with mental illnesses. No-cost distribution of samples; NIMH covers the cost of biospecimens."
+    },
+    "tagging": {
+      "keywords": [
+        "psychiatric genetics",
+        "schizophrenia",
+        "bipolar disorder",
+        "DNA",
+        "cell lines",
+        "biorepository"
+      ]
+    }
+  },
+  {
+    "identity": {
+      "id": "IC_123",
+      "resource_name": "NIH NeuroBioBank",
+      "short_name": "NeuroBioBank",
+      "ic_code": "NIMH",
+      "ic_name": "National Institute of Mental Health",
+      "primary_url": "https://www.nihdatabank.org/",
+      "docs_url": "",
+      "api_url": ""
+    },
+    "type_content": {
+      "resource_type": [
+        "Biorepository",
+        "Tissue Bank"
+      ],
+      "domains": [
+        "Neuroscience",
+        "Psychiatric Disorders",
+        "Neurological Disorders"
+      ],
+      "data_types": [
+        "Post-mortem Human Brain Specimens",
+        "Associated Clinical Data"
+      ],
+      "target_populations": [
+        "Donors with Psychiatric/Neurodevelopmental Disorders"
+      ],
+      "organisms": [
+        "Human"
+      ]
+    },
+    "access_cost": {
+      "access_model": "Controlled Access",
+      "cost_status": "Free (Tissue); Nominal Cost (Shipping)",
+      "requires_registration": true,
+      "requires_dua": true,
+      "has_human_data": true,
+      "data_sensitivity": "Sensitive (Human Tissue)"
+    },
+    "practical_usage": {
+      "compute_location": [
+        "Shipping/Physical Distribution"
+      ],
+      "requires_special_infrastructure": true,
+      "skills_required": [
+        "Neuropathology",
+        "Molecular Biology"
+      ],
+      "typical_use_cases": "Obtaining post-mortem human brain tissue specimens for research on the underlying biology of psychiatric and neurodevelopmental disorders.",
+      "integration_parents": [
+        "NINDS",
+        "NICHD"
+      ]
+    },
+    "lifecycle_curation": {
+      "status": "Active",
+      "maintaining_ic": [
+        "NIMH",
+        "NINDS"
+      ],
+      "notes": "A network of brain tissue repositories providing post-mortem human brain specimens. Tissue requests are free (aside from shipping) to encourage research on brain disorders."
+    },
+    "tagging": {
+      "keywords": [
+        "brain tissue",
+        "neuroscience",
+        "post-mortem",
+        "psychiatric disorders",
+        "NeuroBioBank"
+      ]
+    }
+  },
+  {
+    "identity": {
+      "id": "IC_124",
+      "resource_name": "Clinical Trials Datasets (STARD, CATIE, STEP-BD)",
+      "short_name": "NIMH CT Data",
+      "ic_code": "NIMH",
+      "ic_name": "National Institute of Mental Health",
+      "primary_url": "https://www.nimh.nih.gov/research/research-steps/join-a-study/research-datasets",
+      "docs_url": "",
+      "api_url": ""
+    },
+    "type_content": {
+      "resource_type": [
+        "Clinical Trial Archive",
+        "Datasets"
+      ],
+      "domains": [
+        "Depression",
+        "Schizophrenia",
+        "Bipolar Disorder"
+      ],
+      "data_types": [
+        "De-identified Clinical Data",
+        "Outcomes Data",
+        "Longitudinal Data"
+      ],
+      "target_populations": [
+        "Trial Participants"
+      ],
+      "organisms": [
+        "Human"
+      ]
+    },
+    "access_cost": {
+      "access_model": "Controlled Access",
+      "cost_status": "Free",
+      "requires_registration": true,
+      "requires_dua": true,
+      "has_human_data": true,
+      "data_sensitivity": "De-identified Human Data"
+    },
+    "practical_usage": {
+      "compute_location": [
+        "Secure Download"
+      ],
+      "requires_special_infrastructure": false,
+      "skills_required": [
+        "Clinical Epidemiology",
+        "Statistical Analysis"
+      ],
+      "typical_use_cases": "Performing secondary analysis on data from large, completed NIMH clinical trials (e.g., STARD, CATIE) to study treatment efficacy and outcomes.",
+      "integration_parents": [
+        "NDA"
+      ]
+    },
+    "lifecycle_curation": {
+      "status": "Active",
+      "maintaining_ic": [
+        "NIMH"
+      ],
+      "notes": "NIMH ensures data from its large clinical trials (STARD, CATIE, STEP-BD) are shared. Datasets are available for download by qualified researchers at no cost (via NDA/NIH archives)."
+    },
+    "tagging": {
+      "keywords": [
+        "clinical trials",
+        "STARD",
+        "CATIE",
+        "depression",
+        "schizophrenia",
+        "secondary analysis"
+      ]
+    }
+  },
+  {
+    "identity": {
+      "id": "IC_125",
+      "resource_name": "Common Data Elements (CDEs)",
+      "short_name": "CDEs",
+      "ic_code": "NIMH",
+      "ic_name": "National Institute of Mental Health",
+      "primary_url": "https://www.nimh.nih.gov/funding/clinical-research-toolkit/common-data-elements-cde",
+      "docs_url": "",
+      "api_url": ""
+    },
+    "type_content": {
+      "resource_type": [
+        "Terminology Standard",
+        "Measurement Tool"
+      ],
+      "domains": [
+        "Mental Health Research",
+        "Data Harmonization"
+      ],
+      "data_types": [
+        "Standardized Definitions",
+        "Questionnaires (PHQ-9, ASD Instruments)"
+      ],
+      "target_populations": [
+        "Researchers",
+        "Clinicians"
+      ],
+      "organisms": [
+        "Human"
+      ]
+    },
+    "access_cost": {
+      "access_model": "Open Access",
+      "cost_status": "Free",
+      "requires_registration": false,
+      "requires_dua": false,
+      "has_human_data": false,
+      "data_sensitivity": "Public Information"
+    },
+    "practical_usage": {
+      "compute_location": [
+        "Web-based",
+        "Downloads"
+      ],
+      "requires_special_infrastructure": false,
+      "skills_required": [
+        "Study Design",
+        "Clinical Assessment"
+      ],
+      "typical_use_cases": "Adopting standard instruments (like PHQ-9 depression scale) and definitions in research protocols to ensure data consistency and comparability.",
+      "integration_parents": [
+        "NIH CDE Repository"
+      ]
+    },
+    "lifecycle_curation": {
+      "status": "Active",
+      "maintaining_ic": [
+        "NIMH"
+      ],
+      "notes": "NIMH CDEs for mental health domains (suicide, autism, depression scales). Instruments and definitions are available on the NIMH website or NIH CDE repository for free use."
+    },
+    "tagging": {
+      "keywords": [
+        "CDEs",
+        "data harmonization",
+        "mental health",
+        "questionnaires",
+        "PHQ-9",
+        "autism"
+      ]
+    }
+  },
+  {
+    "identity": {
+      "id": "IC_126",
+      "resource_name": "NIMH Clinical Research Toolbox",
+      "short_name": "NIMH Toolbox",
+      "ic_code": "NIMH",
+      "ic_name": "National Institute of Mental Health",
+      "primary_url": "https://www.nimh.nih.gov/funding/clinical-research-toolkit",
+      "docs_url": "",
+      "api_url": ""
+    },
+    "type_content": {
+      "resource_type": [
+        "Toolkit",
+        "Guidance Document"
+      ],
+      "domains": [
+        "Clinical Research Methods",
+        "Regulatory Compliance"
+      ],
+      "data_types": [
+        "Templates (Protocol, Consent, DMPs)",
+        "Guidance Documents"
+      ],
+      "target_populations": [
+        "Clinical Investigators"
+      ],
+      "organisms": [
+        "Human"
+      ]
+    },
+    "access_cost": {
+      "access_model": "Open Access",
+      "cost_status": "Free",
+      "requires_registration": false,
+      "requires_dua": false,
+      "has_human_data": false,
+      "data_sensitivity": "Public Information"
+    },
+    "practical_usage": {
+      "compute_location": [
+        "Web-based",
+        "Downloads"
+      ],
+      "requires_special_infrastructure": false,
+      "skills_required": [
+        "Study Management",
+        "Regulatory Affairs"
+      ],
+      "typical_use_cases": "Using free templates and guidance (e.g., protocol templates, data management plans) to improve the quality and compliance of mental health research studies.",
+      "integration_parents": []
+    },
+    "lifecycle_curation": {
+      "status": "Active",
+      "maintaining_ic": [
+        "NIMH"
+      ],
+      "notes": "A collection of free templates and guidance documents for investigators (e.g., human subjects protection, DMPs). Accessible on the NIMH website without restriction or cost."
+    },
+    "tagging": {
+      "keywords": [
+        "clinical research",
+        "toolkit",
+        "protocols",
+        "templates",
+        "regulatory compliance"
+      ]
+    }
+  },
+  {
+    "identity": {
+      "id": "IC_127",
+      "resource_name": "Software and Computational Resources (AFNI, Connectome Workbench)",
+      "short_name": "NIMH Software",
+      "ic_code": "NIMH",
+      "ic_name": "National Institute of Mental Health",
+      "primary_url": "https://www.nimh.nih.gov/research/research-steps/join-a-study/research-datasets",
+      "docs_url": "",
+      "api_url": ""
+    },
+    "type_content": {
+      "resource_type": [
+        "Software",
+        "Computational Tool"
+      ],
+      "domains": [
+        "Neuroimaging Analysis",
+        "Neuroinformatics"
+      ],
+      "data_types": [
+        "AFNI (MRI Analysis)",
+        "Connectome Workbench (Visualization)"
+      ],
+      "target_populations": [
+        "Neuroimagers",
+        "Computational Scientists"
+      ],
+      "organisms": [
+        "Human",
+        "Animal Models"
+      ]
+    },
+    "access_cost": {
+      "access_model": "Open Source",
+      "cost_status": "Free",
+      "requires_registration": false,
+      "requires_dua": false,
+      "has_human_data": false,
+      "data_sensitivity": "Public Software"
+    },
+    "practical_usage": {
+      "compute_location": [
+        "Local Machine (Download)"
+      ],
+      "requires_special_infrastructure": false,
+      "skills_required": [
+        "Neuroimaging Analysis",
+        "Programming"
+      ],
+      "typical_use_cases": "Performing fMRI data analysis (AFNI) or visualizing connectome data (Connectome Workbench) for neuroscience research.",
+      "integration_parents": [
+        "AFNI",
+        "Connectome Workbench"
+      ]
+    },
+    "lifecycle_curation": {
+      "status": "Active",
+      "maintaining_ic": [
+        "NIMH"
+      ],
+      "notes": "Produces tools like AFNI (Analysis of Functional NeuroImages)—MRI analysis software that is open-source and freely downloadable. Also supports Connectome Workbench."
+    },
+    "tagging": {
+      "keywords": [
+        "AFNI",
+        "fMRI",
+        "neuroimaging",
+        "connectome",
+        "open source",
+        "computational neuroscience"
+      ]
+    }
+  },
+  {
+    "identity": {
+      "id": "IC_128",
+      "resource_name": "Outreach and Education (Research Methods Resources)",
+      "short_name": "NIMH Outreach",
+      "ic_code": "NIMH",
+      "ic_name": "National Institute of Mental Health",
+      "primary_url": "https://www.nimh.nih.gov/research/research-steps",
+      "docs_url": "",
+      "api_url": ""
+    },
+    "type_content": {
+      "resource_type": [
+        "Educational Material",
+        "E-learning"
+      ],
+      "domains": [
+        "Research Methods",
+        "Statistics",
+        "Mental Health Science"
+      ],
+      "data_types": [
+        "Online Tutorials",
+        "Guides"
+      ],
+      "target_populations": [
+        "Researchers",
+        "Trainees"
+      ],
+      "organisms": [
+        "N/A"
+      ]
+    },
+    "access_cost": {
+      "access_model": "Open Access",
+      "cost_status": "Free",
+      "requires_registration": false,
+      "requires_dua": false,
+      "has_human_data": false,
+      "data_sensitivity": "Public Information"
+    },
+    "practical_usage": {
+      "compute_location": [
+        "Web-based"
+      ],
+      "requires_special_infrastructure": false,
+      "skills_required": [
+        "None"
+      ],
+      "typical_use_cases": "Accessing free e-learning resources on research design and statistical methods to improve rigor in mental health studies.",
+      "integration_parents": []
+    },
+    "lifecycle_curation": {
+      "status": "Active",
+      "maintaining_ic": [
+        "NIMH"
+      ],
+      "notes": "Offers free e-learning resources on research design and statistical methods (like the 'Research Methods Resources' online). Available without cost or login."
+    },
+    "tagging": {
+      "keywords": [
+        "research methods",
+        "e-learning",
+        "statistics",
+        "outreach",
+        "training"
+      ]
+    }
+  },
+  {
+    "identity": {
+      "id": "IC_129",
+      "resource_name": "HDPulse (Health Disparities Pulse) Data Portal",
+      "short_name": "HDPulse",
+      "ic_code": "NIMHD",
+      "ic_name": "National Institute on Minority Health and Health Disparities",
+      "primary_url": "https://www.nimhd.nih.gov/resources/hdpulse",
+      "docs_url": "",
+      "api_url": ""
+    },
+    "type_content": {
+      "resource_type": [
+        "Data Portal",
+        "Interactive Maps",
+        "Intervention Repository"
+      ],
+      "domains": [
+        "Minority Health",
+        "Health Disparities",
+        "Public Health"
+      ],
+      "data_types": [
+        "Health Metrics (Prevalence, Risk Factors)",
+        "Socio-demographics",
+        "Intervention Programs"
+      ],
+      "target_populations": [
+        "Minority Populations",
+        "US Population Subgroups"
+      ],
+      "organisms": [
+        "Human"
+      ]
+    },
+    "access_cost": {
+      "access_model": "Open Access",
+      "cost_status": "Free",
+      "requires_registration": false,
+      "requires_dua": false,
+      "has_human_data": true,
+      "data_sensitivity": "Aggregate/Public Use"
+    },
+    "practical_usage": {
+      "compute_location": [
+        "Web-based"
+      ],
+      "requires_special_infrastructure": false,
+      "skills_required": [
+        "None"
+      ],
+      "typical_use_cases": "Accessing and visualizing health disparity statistics by race/ethnicity, geography, and socio-demographics; identifying evidence-based interventions to address disparities.",
+      "integration_parents": []
+    },
+    "lifecycle_curation": {
+      "status": "Active",
+      "maintaining_ic": [
+        "NIMHD"
+      ],
+      "notes": "A NIMHD-developed web portal providing data (Data Portal) and tools for exploring minority health and health disparities. All features are free with no login required."
+    },
+    "tagging": {
+      "keywords": [
+        "health disparities",
+        "HDPulse",
+        "minority health",
+        "interactive maps",
+        "interventions"
+      ]
+    }
+  },
+  {
+    "identity": {
+      "id": "IC_130",
+      "resource_name": "NIMHD Minority Health Research Framework Tool",
+      "short_name": "NIMHD Framework",
+      "ic_code": "NIMHD",
+      "ic_name": "National Institute on Minority Health and Health Disparities",
+      "primary_url": "https://www.nimhd.nih.gov/about/overview/research-framework.html",
+      "docs_url": "",
+      "api_url": ""
+    },
+    "type_content": {
+      "resource_type": [
+        "Framework",
+        "Guidance Document",
+        "Tool"
+      ],
+      "domains": [
+        "Health Disparities Research",
+        "Multi-level Factors"
+      ],
+      "data_types": [
+        "Conceptual Framework",
+        "Measures Catalogue (Potential)"
+      ],
+      "target_populations": [
+        "Researchers",
+        "Grantees"
+      ],
+      "organisms": [
+        "Human"
+      ]
+    },
+    "access_cost": {
+      "access_model": "Open Access",
+      "cost_status": "Free",
+      "requires_registration": false,
+      "requires_dua": false,
+      "has_human_data": false,
+      "data_sensitivity": "Public Information"
+    },
+    "practical_usage": {
+      "compute_location": [
+        "Web-based"
+      ],
+      "requires_special_infrastructure": false,
+      "skills_required": [
+        "Study Design"
+      ],
+      "typical_use_cases": "Designing studies that address multi-level disparity factors (biological, behavioral, socio-cultural, environmental, health system) using a standardized framework.",
+      "integration_parents": []
+    },
+    "lifecycle_curation": {
+      "status": "Active",
+      "maintaining_ic": [
+        "NIMHD"
+      ],
+      "notes": "Provides a conceptual framework for factors influencing health disparities. Aims to provide tools (e.g., measures catalogue) to help investigators design multi-level disparity studies."
+    },
+    "tagging": {
+      "keywords": [
+        "health disparities",
+        "framework",
+        "study design",
+        "multi-level factors",
+        "minority health"
+      ]
+    }
+  },
+  {
+    "identity": {
+      "id": "IC_131",
+      "resource_name": "Data on Minority Health (External/Compiled)",
+      "short_name": "Minority Health Data",
+      "ic_code": "NIMHD",
+      "ic_name": "National Institute on Minority Health and Health Disparities",
+      "primary_url": "https://www.nimhd.nih.gov/resources/",
+      "docs_url": "",
+      "api_url": ""
+    },
+    "type_content": {
+      "resource_type": [
+        "Data Index",
+        "Compiled Reports",
+        "Infographics"
+      ],
+      "domains": [
+        "Health Disparities",
+        "Socioeconomic Factors"
+      ],
+      "data_types": [
+        "Links to CDC/Census Data",
+        "Compiled Chartbooks"
+      ],
+      "target_populations": [
+        "Minority Populations",
+        "Small Minority Populations"
+      ],
+      "organisms": [
+        "Human"
+      ]
+    },
+    "access_cost": {
+      "access_model": "Open Access (Via External Partners)",
+      "cost_status": "Free",
+      "requires_registration": false,
+      "requires_dua": false,
+      "has_human_data": true,
+      "data_sensitivity": "Aggregate/Public Use"
+    },
+    "practical_usage": {
+      "compute_location": [
+        "Downloads"
+      ],
+      "requires_special_infrastructure": false,
+      "skills_required": [
+        "Data Discovery"
+      ],
+      "typical_use_cases": "Accessing and compiling public data (CDC, Census) to analyze health behaviors and socioeconomic factors in minority communities; finding data on small minority populations.",
+      "integration_parents": [
+        "CDC REACH",
+        "US Census"
+      ]
+    },
+    "lifecycle_curation": {
+      "status": "Active",
+      "maintaining_ic": [
+        "NIMHD"
+      ],
+      "notes": "NIMHD partners with agencies to make disparity data accessible. NIMHD often compiles such data into chartbooks or infographics for researchers, downloadable for free."
+    },
+    "tagging": {
+      "keywords": [
+        "minority health data",
+        "health disparities",
+        "CDC",
+        "census data",
+        "compiled data"
+      ]
+    }
+  },
+  {
+    "identity": {
+      "id": "IC_132",
+      "resource_name": "NIMHD Centers' Resources (Tools/Dashboards)",
+      "short_name": "NIMHD Centers",
+      "ic_code": "NIMHD",
+      "ic_name": "National Institute on Minority Health and Health Disparities",
+      "primary_url": "https://www.nimhd.nih.gov/programs/extramural/centers-of-excellence/",
+      "docs_url": "",
+      "api_url": ""
+    },
+    "type_content": {
+      "resource_type": [
+        "Toolkit",
+        "GIS Platform",
+        "Data Dashboard"
+      ],
+      "domains": [
+        "Social Determinants of Health",
+        "Rural Health Disparities"
+      ],
+      "data_types": [
+        "Neighborhood Social Vulnerability Index",
+        "GIS Mapping Tools"
+      ],
+      "target_populations": [
+        "Researchers",
+        "Community Organizations"
+      ],
+      "organisms": [
+        "N/A"
+      ]
+    },
+    "access_cost": {
+      "access_model": "Open Access",
+      "cost_status": "Free",
+      "requires_registration": false,
+      "requires_dua": false,
+      "has_human_data": false,
+      "data_sensitivity": "Public Tools/Indices"
+    },
+    "practical_usage": {
+      "compute_location": [
+        "Web-based"
+      ],
+      "requires_special_infrastructure": false,
+      "skills_required": [
+        "GIS Analysis",
+        "Public Health"
+      ],
+      "typical_use_cases": "Utilizing tools (e.g., Neighborhood Social Vulnerability Index) or data dashboards developed by NIMHD-funded Centers of Excellence to study local health disparities.",
+      "integration_parents": []
+    },
+    "lifecycle_curation": {
+      "status": "Active",
+      "maintaining_ic": [
+        "NIMHD"
+      ],
+      "notes": "Centers of Excellence develop toolkits and data resources (e.g., Neighborhood Social Vulnerability Index tool) that are shared publicly online through NIMHD or center websites."
+    },
+    "tagging": {
+      "keywords": [
+        "centers of excellence",
+        "social determinants of health",
+        "GIS mapping",
+        "rural health",
+        "data dashboard"
+      ]
+    }
+  },
+  {
+    "identity": {
+      "id": "IC_133",
+      "resource_name": "Intervention Repository (HDPulse Intervention Portal)",
+      "short_name": "NIMHD Interventions",
+      "ic_code": "NIMHD",
+      "ic_name": "National Institute on Minority Health and Health Disparities",
+      "primary_url": "https://www.nimhd.nih.gov/resources/hdpulse/interventions",
+      "docs_url": "",
+      "api_url": ""
+    },
+    "type_content": {
+      "resource_type": [
+        "Repository",
+        "Knowledge Base"
+      ],
+      "domains": [
+        "Intervention Science",
+        "Health Disparities"
+      ],
+      "data_types": [
+        "Intervention Summaries",
+        "Program Materials"
+      ],
+      "target_populations": [
+        "Community Organizations",
+        "Researchers",
+        "Public Health"
+      ],
+      "organisms": [
+        "Human"
+      ]
+    },
+    "access_cost": {
+      "access_model": "Open Access",
+      "cost_status": "Free",
+      "requires_registration": false,
+      "requires_dua": false,
+      "has_human_data": false,
+      "data_sensitivity": "Public Information"
+    },
+    "practical_usage": {
+      "compute_location": [
+        "Web-based"
+      ],
+      "requires_special_infrastructure": false,
+      "skills_required": [
+        "Program Planning"
+      ],
+      "typical_use_cases": "Searching for evidence-based interventions by topic or minority population to address specific health disparities in community settings.",
+      "integration_parents": [
+        "HDPulse"
+      ]
+    },
+    "lifecycle_curation": {
+      "status": "Active",
+      "maintaining_ic": [
+        "NIMHD"
+      ],
+      "notes": "The HDPulse Intervention Portal is a repository of disparity-intervention programs. Users can search interventions and find descriptions/materials. It is freely available to translate research into practice."
+    },
+    "tagging": {
+      "keywords": [
+        "interventions",
+        "HDPulse",
+        "health disparities",
+        "evidence-based programs",
+        "community health"
+      ]
+    }
+  },
+  {
+    "identity": {
+      "id": "IC_134",
+      "resource_name": "Training Materials (Cultural Competency, Curriculum)",
+      "short_name": "NIMHD Training",
+      "ic_code": "NIMHD",
+      "ic_name": "National Institute on Minority Health and Health Disparities",
+      "primary_url": "https://www.nimhd.nih.gov/programs/extramural/training/",
+      "docs_url": "",
+      "api_url": ""
+    },
+    "type_content": {
+      "resource_type": [
+        "Educational Material",
+        "Training Module",
+        "Curriculum"
+      ],
+      "domains": [
+        "Cultural Competency",
+        "Health Disparities Science",
+        "Unconscious Bias"
+      ],
+      "data_types": [
+        "Unconscious Bias Modules",
+        "Course Syllabi",
+        "Guides"
+      ],
+      "target_populations": [
+        "Academics",
+        "Students",
+        "Researchers"
+      ],
+      "organisms": [
+        "N/A"
+      ]
+    },
+    "access_cost": {
+      "access_model": "Open Access",
+      "cost_status": "Free",
+      "requires_registration": false,
+      "requires_dua": false,
+      "has_human_data": false,
+      "data_sensitivity": "Public Information"
+    },
+    "practical_usage": {
+      "compute_location": [
+        "Downloads"
+      ],
+      "requires_special_infrastructure": false,
+      "skills_required": [
+        "Teaching/Pedagogy"
+      ],
+      "typical_use_cases": "Downloading and using free cultural competency training tools and health disparity science curricula (e.g., Unconscious Bias modules) in academic and research settings.",
+      "integration_parents": []
+    },
+    "lifecycle_curation": {
+      "status": "Active",
+      "maintaining_ic": [
+        "NIMHD"
+      ],
+      "notes": "Provides free cultural competency training tools and health disparity science curricula (e.g., Unconscious Bias training module). These are free to download and use in academic settings."
+    },
+    "tagging": {
+      "keywords": [
+        "training materials",
+        "cultural competency",
+        "unconscious bias",
+        "health disparities science",
+        "curriculum"
+      ]
+    }
+  },
+  {
+    "identity": {
+      "id": "IC_135",
+      "resource_name": "Language Access (Multilingual Health Resources)",
+      "short_name": "NIMHD Language",
+      "ic_code": "NIMHD",
+      "ic_name": "National Institute on Minority Health and Health Disparities",
+      "primary_url": "https://www.nimhd.nih.gov/resources/patient-community-resources.html",
+      "docs_url": "",
+      "api_url": ""
+    },
+    "type_content": {
+      "resource_type": [
+        "Resource Index",
+        "Educational Material"
+      ],
+      "domains": [
+        "Community Health",
+        "Health Literacy"
+      ],
+      "data_types": [
+        "Multilingual Health Materials",
+        "Translated Information"
+      ],
+      "target_populations": [
+        "Community Health Workers",
+        "Non-English Speakers"
+      ],
+      "organisms": [
+        "Human"
+      ]
+    },
+    "access_cost": {
+      "access_model": "Open Access",
+      "cost_status": "Free",
+      "requires_registration": false,
+      "requires_dua": false,
+      "has_human_data": false,
+      "data_sensitivity": "Public Information"
+    },
+    "practical_usage": {
+      "compute_location": [
+        "Web-based"
+      ],
+      "requires_special_infrastructure": false,
+      "skills_required": [
+        "None"
+      ],
+      "typical_use_cases": "Compiling and accessing NIH multilingual health resources (e.g., Spanish-language materials) for use with non-English-speaking populations and community outreach.",
+      "integration_parents": [
+        "NIH"
+      ]
+    },
+    "lifecycle_curation": {
+      "status": "Active",
+      "maintaining_ic": [
+        "NIMHD"
+      ],
+      "notes": "Compiles multilingual health resources from NIH (like Spanish-language health materials) on its site. These are free for community health workers and researchers focusing on non-English-speaking populations."
+    },
+    "tagging": {
+      "keywords": [
+        "language access",
+        "multilingual resources",
+        "community health",
+        "health literacy",
+        "Spanish"
+      ]
+    }
+  },
+  {
+    "identity": {
+      "id": "IC_136",
+      "resource_name": "FITBIR (Federal Interagency Traumatic Brain Injury Research informatics system)",
+      "short_name": "FITBIR",
+      "ic_code": "NINDS",
+      "ic_name": "National Institute of Neurological Disorders and Stroke",
+      "primary_url": "https://fitbir.nih.gov/",
+      "docs_url": "",
+      "api_url": ""
+    },
+    "type_content": {
+      "resource_type": [
+        "Data Repository",
+        "Informatics System"
+      ],
+      "domains": [
+        "Traumatic Brain Injury (TBI)",
+        "Neuroscience"
+      ],
+      "data_types": [
+        "Clinical Data",
+        "Neuroimaging Data",
+        "Outcome Assessments"
+      ],
+      "target_populations": [
+        "TBI Patients"
+      ],
+      "organisms": [
+        "Human"
+      ]
+    },
+    "access_cost": {
+      "access_model": "Controlled Access",
+      "cost_status": "Free",
+      "requires_registration": true,
+      "requires_dua": true,
+      "has_human_data": true,
+      "data_sensitivity": "De-identified Individual-Level Data"
+    },
+    "practical_usage": {
+      "compute_location": [
+        "Secure Download"
+      ],
+      "requires_special_infrastructure": false,
+      "skills_required": [
+        "Neuroinformatics",
+        "TBI Research"
+      ],
+      "typical_use_cases": "Querying and downloading de-identified patient-level data (neuroimaging, outcomes) from multiple TBI studies in a harmonized format for pooled analysis.",
+      "integration_parents": [
+        "DOD"
+      ]
+    },
+    "lifecycle_curation": {
+      "status": "Active",
+      "maintaining_ic": [
+        "NINDS",
+        "DOD"
+      ],
+      "notes": "A collaborative data repository for TBI studies. Researchers can request an account to query and download de-identified data. There are no fees to use the system or obtain data."
+    },
+    "tagging": {
+      "keywords": [
+        "TBI",
+        "traumatic brain injury",
+        "data repository",
+        "neuroimaging",
+        "FITBIR"
+      ]
+    }
+  },
+  {
+    "identity": {
+      "id": "IC_137",
+      "resource_name": "NIH NeuroBioBank",
+      "short_name": "NeuroBioBank",
+      "ic_code": "NINDS",
+      "ic_name": "National Institute of Neurological Disorders and Stroke",
+      "primary_url": "https://www.nihdatabank.org/",
+      "docs_url": "",
+      "api_url": ""
+    },
+    "type_content": {
+      "resource_type": [
+        "Biorepository",
+        "Tissue Bank"
+      ],
+      "domains": [
+        "Neurological Disorders",
+        "Neuroscience",
+        "Neuropathology"
+      ],
+      "data_types": [
+        "Post-mortem Human Brain Tissue",
+        "Spinal Cord Tissue",
+        "Associated Donor Data"
+      ],
+      "target_populations": [
+        "Donors with Parkinson's, ALS, Epilepsy"
+      ],
+      "organisms": [
+        "Human"
+      ]
+    },
+    "access_cost": {
+      "access_model": "Controlled Access",
+      "cost_status": "Free (Tissue); Nominal Cost (Shipping)",
+      "requires_registration": true,
+      "requires_dua": true,
+      "has_human_data": true,
+      "data_sensitivity": "Sensitive (Human Tissue)"
+    },
+    "practical_usage": {
+      "compute_location": [
+        "Shipping/Physical Distribution"
+      ],
+      "requires_special_infrastructure": true,
+      "skills_required": [
+        "Neuropathology",
+        "Molecular Biology"
+      ],
+      "typical_use_cases": "Obtaining post-mortem human brain tissue specimens for research on the underlying biology of neurological disorders (e.g., Parkinson's, ALS, epilepsy).",
+      "integration_parents": [
+        "NIMH",
+        "NICHD"
+      ]
+    },
+    "lifecycle_curation": {
+      "status": "Active",
+      "maintaining_ic": [
+        "NINDS",
+        "NIMH"
+      ],
+      "notes": "NINDS is a major participant in the NeuroBioBank. Provides post-mortem human brain tissue for neurological disorders. Tissue requests are free (aside from shipping)."
+    },
+    "tagging": {
+      "keywords": [
+        "brain tissue",
+        "neuroscience",
+        "neurological disorders",
+        "Parkinson's",
+        "ALS",
+        "NeuroBioBank"
+      ]
+    }
+  },
+  {
+    "identity": {
+      "id": "IC_138",
+      "resource_name": "Common Data Elements (CDE) Project",
+      "short_name": "NINDS CDEs",
+      "ic_code": "NINDS",
+      "ic_name": "National Institute of Neurological Disorders and Stroke",
+      "primary_url": "https://www.commondataelements.nih.gov/NINDS/Default.aspx",
+      "docs_url": "",
+      "api_url": ""
+    },
+    "type_content": {
+      "resource_type": [
+        "Terminology Standard",
+        "Template Resource"
+      ],
+      "domains": [
+        "Neurological Diseases",
+        "Clinical Trials",
+        "Data Harmonization"
+      ],
+      "data_types": [
+        "Data Dictionaries",
+        "Case Report Forms (CRFs)",
+        "Guidelines"
+      ],
+      "target_populations": [
+        "Researchers",
+        "Study Coordinators"
+      ],
+      "organisms": [
+        "Human"
+      ]
+    },
+    "access_cost": {
+      "access_model": "Open Access",
+      "cost_status": "Free",
+      "requires_registration": false,
+      "requires_dua": false,
+      "has_human_data": false,
+      "data_sensitivity": "Public Information"
+    },
+    "practical_usage": {
+      "compute_location": [
+        "Downloads",
+        "Web-based"
+      ],
+      "requires_special_infrastructure": false,
+      "skills_required": [
+        "Study Design",
+        "Clinical Operations"
+      ],
+      "typical_use_cases": "Adopting standardized data definitions and forms (CRFs) for neurological studies (stroke, epilepsy, TBI) to ensure data compatibility and increase research efficiency.",
+      "integration_parents": [
+        "NIH CDE Repository"
+      ]
+    },
+    "lifecycle_curation": {
+      "status": "Active",
+      "maintaining_ic": [
+        "NINDS"
+      ],
+      "notes": "NINDS leads the development of CDEs for many neurological diseases. The CDE website provides data dictionaries and CRFs—all freely downloadable. Open-access resource that increases research efficiency at zero cost."
+    },
+    "tagging": {
+      "keywords": [
+        "CDEs",
+        "common data elements",
+        "neurological disorders",
+        "stroke",
+        "epilepsy",
+        "data harmonization"
+      ]
+    }
+  },
+  {
+    "identity": {
+      "id": "IC_139",
+      "resource_name": "NINDS Biorepositories and Genetics Resources",
+      "short_name": "NINDS BioR",
+      "ic_code": "NINDS",
+      "ic_name": "National Institute of Neurological Disorders and Stroke",
+      "primary_url": "https://www.ninds.nih.gov/About-NINDS/Organization/Research-Resources/Biorepositories-Genetics-Resources",
+      "docs_url": "",
+      "api_url": ""
+    },
+    "type_content": {
+      "resource_type": [
+        "Biorepository",
+        "Genetics Resource"
+      ],
+      "domains": [
+        "Neurological Disorders",
+        "Genetics"
+      ],
+      "data_types": [
+        "DNA",
+        "Cell Lines",
+        "Clinical Data (Associated)"
+      ],
+      "target_populations": [
+        "Patients with Huntington's, Parkinson's, Ataxias"
+      ],
+      "organisms": [
+        "Human"
+      ]
+    },
+    "access_cost": {
+      "access_model": "Controlled Access",
+      "cost_status": "Free (Materials); Nominal Cost (Handling/Shipping)",
+      "requires_registration": true,
+      "requires_dua": true,
+      "has_human_data": true,
+      "data_sensitivity": "Sensitive Genetic/Clinical Data"
+    },
+    "practical_usage": {
+      "compute_location": [
+        "Shipping/Physical Distribution"
+      ],
+      "requires_special_infrastructure": false,
+      "skills_required": [
+        "Molecular Biology",
+        "Genetic Research"
+      ],
+      "typical_use_cases": "Obtaining DNA and cell lines from patients with neurological diseases (e.g., Huntington's, Parkinson's) to advance genetic research.",
+      "integration_parents": [
+        "Coriell Cell Repositories"
+      ]
+    },
+    "lifecycle_curation": {
+      "status": "Active",
+      "maintaining_ic": [
+        "NINDS"
+      ],
+      "notes": "NINDS facilitates sharing of DNA, cell lines, and clinical data via its own program (e.g., ALS Biorepository) and the Coriell Cell Repositories. Samples are provided free or at nominal cost."
+    },
+    "tagging": {
+      "keywords": [
+        "biorepositories",
+        "genetics",
+        "DNA",
+        "Huntington's",
+        "Parkinson's",
+        "Coriell"
+      ]
+    }
+  },
+  {
+    "identity": {
+      "id": "IC_140",
+      "resource_name": "Clinical Trial Data & Biomarker Repositories (PDBP)",
+      "short_name": "NINDS CT/Bio",
+      "ic_code": "NINDS",
+      "ic_name": "National Institute of Neurological Disorders and Stroke",
+      "primary_url": "https://pdbp.ninds.nih.gov/",
+      "docs_url": "",
+      "api_url": ""
+    },
+    "type_content": {
+      "resource_type": [
+        "Data Repository",
+        "Biomarker Repository"
+      ],
+      "domains": [
+        "Parkinson's Disease (PD)",
+        "Stroke",
+        "Clinical Trials"
+      ],
+      "data_types": [
+        "Clinical Data",
+        "Imaging",
+        "Bio-sample Metadata (PDBP)",
+        "Genetics Data (dbGaP)"
+      ],
+      "target_populations": [
+        "PD Patients",
+        "Stroke/Neuro-COVID Registries"
+      ],
+      "organisms": [
+        "Human"
+      ]
+    },
+    "access_cost": {
+      "access_model": "Controlled Access",
+      "cost_status": "Free",
+      "requires_registration": true,
+      "requires_dua": true,
+      "has_human_data": true,
+      "data_sensitivity": "De-identified Clinical/Biomarker Data"
+    },
+    "practical_usage": {
+      "compute_location": [
+        "Web-based Portal",
+        "Secure Download"
+      ],
+      "requires_special_infrastructure": false,
+      "skills_required": [
+        "Biomarker Discovery",
+        "Clinical Research"
+      ],
+      "typical_use_cases": "Accessing de-identified clinical, imaging, and bio-sample metadata from the Parkinson's Disease Biomarkers Program (PDBP) for secondary analysis and biomarker discovery.",
+      "integration_parents": [
+        "FITBIR",
+        "NDA",
+        "dbGaP"
+      ]
+    },
+    "lifecycle_curation": {
+      "status": "Active",
+      "maintaining_ic": [
+        "NINDS"
+      ],
+      "notes": "NINDS shares data from its clinical trials and biomarker studies (e.g., PDBP). Data are available to qualified researchers through a web portal without cost (registration and approval required)."
+    },
+    "tagging": {
+      "keywords": [
+        "clinical trial data",
+        "biomarkers",
+        "Parkinson's Disease",
+        "stroke",
+        "neuro-COVID",
+        "PDBP"
+      ]
+    }
+  },
+  {
+    "identity": {
+      "id": "IC_141",
+      "resource_name": "NITRC (Neuroimaging Tools & Resources Clearinghouse)",
+      "short_name": "NITRC",
+      "ic_code": "NINDS",
+      "ic_name": "National Institute of Neurological Disorders and Stroke",
+      "primary_url": "https://www.nitrc.org/",
+      "docs_url": "",
+      "api_url": ""
+    },
+    "type_content": {
+      "resource_type": [
+        "Software Repository",
+        "Data Clearinghouse"
+      ],
+      "domains": [
+        "Neuroimaging",
+        "Neuroinformatics"
+      ],
+      "data_types": [
+        "Open-Source Software (MRI, EEG)",
+        "Neuroimaging Datasets"
+      ],
+      "target_populations": [
+        "Neuroimaging Researchers",
+        "Bioinformaticians"
+      ],
+      "organisms": [
+        "Human",
+        "Animal Models"
+      ]
+    },
+    "access_cost": {
+      "access_model": "Open Access",
+      "cost_status": "Free",
+      "requires_registration": false,
+      "requires_dua": false,
+      "has_human_data": true,
+      "data_sensitivity": "De-identified/Public Use"
+    },
+    "practical_usage": {
+      "compute_location": [
+        "Downloads"
+      ],
+      "requires_special_infrastructure": false,
+      "skills_required": [
+        "Neuroimaging Analysis",
+        "Software Development"
+      ],
+      "typical_use_cases": "Downloading and utilizing free, open-source software tools and test datasets for MRI, EEG, and other neuroimaging data analysis.",
+      "integration_parents": [
+        "NIMH"
+      ]
+    },
+    "lifecycle_curation": {
+      "status": "Active",
+      "maintaining_ic": [
+        "NINDS",
+        "NIH"
+      ],
+      "notes": "A repository of neuroimaging analysis software, toolsets, and databases. Hosts hundreds of free, open-source tools and datasets. Users download software and data without charge."
+    },
+    "tagging": {
+      "keywords": [
+        "neuroimaging",
+        "NITRC",
+        "open source software",
+        "MRI",
+        "EEG",
+        "neuroinformatics"
+      ]
+    }
+  },
+  {
+    "identity": {
+      "id": "IC_142",
+      "resource_name": "Training & Informational Resources",
+      "short_name": "NINDS Training",
+      "ic_code": "NINDS",
+      "ic_name": "National Institute of Neurological Disorders and Stroke",
+      "primary_url": "https://www.ninds.nih.gov/Funding/Training/Training-and-Career-Development-Resources",
+      "docs_url": "",
+      "api_url": ""
+    },
+    "type_content": {
+      "resource_type": [
+        "Training Course",
+        "Educational Material"
+      ],
+      "domains": [
+        "Clinical Trials Methods",
+        "Outcome Measures",
+        "Patient Education"
+      ],
+      "data_types": [
+        "Online Course (IPPCR)",
+        "NIH Stroke Scale Materials"
+      ],
+      "target_populations": [
+        "Researchers",
+        "Clinicians"
+      ],
+      "organisms": [
+        "Human"
+      ]
+    },
+    "access_cost": {
+      "access_model": "Open Access",
+      "cost_status": "Free",
+      "requires_registration": false,
+      "requires_dua": false,
+      "has_human_data": false,
+      "data_sensitivity": "Public Information"
+    },
+    "practical_usage": {
+      "compute_location": [
+        "Web-based",
+        "Downloads"
+      ],
+      "requires_special_infrastructure": false,
+      "skills_required": [
+        "Clinical Research Methods"
+      ],
+      "typical_use_cases": "Accessing the free online Clinical Trials Methods course or obtaining common metrics (e.g., NIH Stroke Scale materials) for clinical study design and outcome measurement.",
+      "integration_parents": []
+    },
+    "lifecycle_curation": {
+      "status": "Active",
+      "maintaining_ic": [
+        "NINDS"
+      ],
+      "notes": "Offers free resources like the Clinical Trials Methods course online and common metrics for outcome measures (e.g., NIH Stroke Scale materials). Obtainable from NINDS websites at no cost."
+    },
+    "tagging": {
+      "keywords": [
+        "training",
+        "clinical trials methods",
+        "NIH Stroke Scale",
+        "outcome measures",
+        "neurological disorders"
+      ]
+    }
+  },
+  {
+    "identity": {
+      "id": "IC_143",
+      "resource_name": "NINR Data Sharing and Archive (via NIH Repositories)",
+      "short_name": "NINR Data",
+      "ic_code": "NINR",
+      "ic_name": "National Institute of Nursing Research",
+      "primary_url": "https://www.ninr.nih.gov/research-and-training/research-priorities/data-sharing",
+      "docs_url": "",
+      "api_url": ""
+    },
+    "type_content": {
+      "resource_type": [
+        "Data Index",
+        "Repository Guidance"
+      ],
+      "domains": [
+        "Nursing Research",
+        "Clinical Science"
+      ],
+      "data_types": [
+        "Links to dbGaP/NDA/DASH",
+        "Genomic Data",
+        "Behavioral Data"
+      ],
+      "target_populations": [
+        "NINR Grantees"
+      ],
+      "organisms": [
+        "Human"
+      ]
+    },
+    "access_cost": {
+      "access_model": "Open Access (Via External NIH Repositories)",
+      "cost_status": "Free",
+      "requires_registration": true,
+      "requires_dua": true,
+      "has_human_data": true,
+      "data_sensitivity": "Varies (De-identified to Controlled)"
+    },
+    "practical_usage": {
+      "compute_location": [
+        "NIH Data Archives"
+      ],
+      "requires_special_infrastructure": false,
+      "skills_required": [
+        "Data Management",
+        "Statistical Analysis"
+      ],
+      "typical_use_cases": "Accessing nursing research data (genomic, behavioral) deposited in NIH-wide platforms like dbGaP, NDA, or NICHD DASH for secondary analysis.",
+      "integration_parents": [
+        "dbGaP",
+        "NDA",
+        "DASH"
+      ]
+    },
+    "lifecycle_curation": {
+      "status": "Active",
+      "maintaining_ic": [
+        "NINR"
+      ],
+      "notes": "NINR does not maintain a standalone repository but encourages grantees to use NIH repositories (dbGaP, NDA, DASH). All are accessible at no cost."
+    },
+    "tagging": {
+      "keywords": [
+        "data sharing",
+        "nursing research",
+        "dbGaP",
+        "NDA",
+        "data archive"
+      ]
+    }
+  },
+  {
+    "identity": {
+      "id": "IC_144",
+      "resource_name": "Symptom Science Library",
+      "short_name": "Symptom Science",
+      "ic_code": "NINR",
+      "ic_name": "National Institute of Nursing Research",
+      "primary_url": "https://www.ninr.nih.gov/research-and-training/intramural-research/symptom-science",
+      "docs_url": "",
+      "api_url": ""
+    },
+    "type_content": {
+      "resource_type": [
+        "Datasets",
+        "Resource Index"
+      ],
+      "domains": [
+        "Symptom Science",
+        "Pain",
+        "Fatigue",
+        "Palliative Care"
+      ],
+      "data_types": [
+        "De-identified Intramural Data",
+        "Symptom Cluster Data"
+      ],
+      "target_populations": [
+        "Patients with Chronic Symptoms"
+      ],
+      "organisms": [
+        "Human"
+      ]
+    },
+    "access_cost": {
+      "access_model": "Controlled Access (Intramural); Open Access (Shared Data)",
+      "cost_status": "Free",
+      "requires_registration": false,
+      "requires_dua": true,
+      "has_human_data": true,
+      "data_sensitivity": "De-identified Clinical Data"
+    },
+    "practical_usage": {
+      "compute_location": [
+        "NIH Repositories",
+        "Downloads (by request)"
+      ],
+      "requires_special_infrastructure": false,
+      "skills_required": [
+        "Symptom Research",
+        "Statistical Analysis"
+      ],
+      "typical_use_cases": "Accessing de-identified intramural study data (e.g., symptom cluster trials) for secondary analysis in symptom science research.",
+      "integration_parents": []
+    },
+    "lifecycle_curation": {
+      "status": "Active",
+      "maintaining_ic": [
+        "NINR"
+      ],
+      "notes": "NINR's focus on symptom science (pain, fatigue) leads to data sharing. De-identified data from intramural studies are shared via NIH repositories or by request at no charge."
+    },
+    "tagging": {
+      "keywords": [
+        "symptom science",
+        "pain",
+        "fatigue",
+        "palliative care",
+        "datasets"
+      ]
+    }
+  },
+  {
+    "identity": {
+      "id": "IC_145",
+      "resource_name": "Patient-Reported Outcome Measures (PROMIS, NIH Toolbox)",
+      "short_name": "NINR PROMs",
+      "ic_code": "NINR",
+      "ic_name": "National Institute of Nursing Research",
+      "primary_url": "https://www.healthmeasures.net/explore-measurement-systems/promis",
+      "docs_url": "",
+      "api_url": ""
+    },
+    "type_content": {
+      "resource_type": [
+        "Measurement Tool",
+        "Questionnaire"
+      ],
+      "domains": [
+        "Patient-Reported Outcomes (PROs)",
+        "Symptom Assessment",
+        "Health Metrics"
+      ],
+      "data_types": [
+        "PROMIS Fatigue Scale",
+        "NIH Toolbox Emotion Measures"
+      ],
+      "target_populations": [
+        "Researchers",
+        "Clinicians"
+      ],
+      "organisms": [
+        "Human"
+      ]
+    },
+    "access_cost": {
+      "access_model": "Open Access (Registration for Account)",
+      "cost_status": "Free",
+      "requires_registration": true,
+      "requires_dua": false,
+      "has_human_data": false,
+      "data_sensitivity": "Public Instruments"
+    },
+    "practical_usage": {
+      "compute_location": [
+        "Web-based",
+        "Downloads"
+      ],
+      "requires_special_infrastructure": false,
+      "skills_required": [
+        "Outcome Measurement",
+        "Psychometrics"
+      ],
+      "typical_use_cases": "Using validated patient-reported outcome measures (PROMs) like PROMIS and NIH Toolbox for consistent outcome measurement in nursing and clinical research.",
+      "integration_parents": [
+        "PROMIS",
+        "NIH Toolbox"
+      ]
+    },
+    "lifecycle_curation": {
+      "status": "Active",
+      "maintaining_ic": [
+        "NINR",
+        "NIH Common Fund"
+      ],
+      "notes": "NINR uses tools from PROMIS and NIH Toolbox. These tools are free for researchers (some require a free account on HealthMeasures.net)."
+    },
+    "tagging": {
+      "keywords": [
+        "PROMIS",
+        "NIH Toolbox",
+        "patient-reported outcomes",
+        "PROMs",
+        "questionnaires"
+      ]
+    }
+  },
+  {
+    "identity": {
+      "id": "IC_146",
+      "resource_name": "End-of-Life and Palliative Care Resources",
+      "short_name": "NINR Palliative",
+      "ic_code": "NINR",
+      "ic_name": "National Institute of Nursing Research",
+      "primary_url": "https://www.ninr.nih.gov/research-and-training/research-priorities/palliative-care-end-of-life",
+      "docs_url": "",
+      "api_url": ""
+    },
+    "type_content": {
+      "resource_type": [
+        "Toolkit",
+        "Guidelines",
+        "Educational Material"
+      ],
+      "domains": [
+        "Palliative Care",
+        "End-of-Life Research"
+      ],
+      "data_types": [
+        "Recommended Competencies",
+        "Assessment Tools",
+        "Trial Data (Expected)"
+      ],
+      "target_populations": [
+        "Healthcare Researchers",
+        "Practitioners"
+      ],
+      "organisms": [
+        "Human"
+      ]
+    },
+    "access_cost": {
+      "access_model": "Open Access",
+      "cost_status": "Free",
+      "requires_registration": false,
+      "requires_dua": false,
+      "has_human_data": true,
+      "data_sensitivity": "De-identified Data (Shared Trials)"
+    },
+    "practical_usage": {
+      "compute_location": [
+        "Web-based",
+        "NIH Repositories"
+      ],
+      "requires_special_infrastructure": false,
+      "skills_required": [
+        "Palliative Care Practice",
+        "Research Methods"
+      ],
+      "typical_use_cases": "Accessing guidelines, competencies, and toolkits (e.g., 'Conversations Matter') to improve end-of-life care and obtain trial data for secondary analysis.",
+      "integration_parents": []
+    },
+    "lifecycle_curation": {
+      "status": "Active",
+      "maintaining_ic": [
+        "NINR"
+      ],
+      "notes": "NINR provides free resources such as 'Peaceful Death: Recommended Competencies and Guidelines' and 'Palliative Care: Conversations Matter' toolkits. Trial data are expected to be shared via NIH repositories, making them freely available."
+    },
+    "tagging": {
+      "keywords": [
+        "palliative care",
+        "end-of-life",
+        "guidelines",
+        "toolkits",
+        "clinical research"
+      ]
+    }
+  },
+  {
+    "identity": {
+      "id": "IC_147",
+      "resource_name": "Nursing Research Instrument Library (Disseminated Instruments)",
+      "short_name": "NINR Instruments",
+      "ic_code": "NINR",
+      "ic_name": "National Institute of Nursing Research",
+      "primary_url": "https://www.ninr.nih.gov/research-and-training/research-priorities",
+      "docs_url": "",
+      "api_url": ""
+    },
+    "type_content": {
+      "resource_type": [
+        "Measurement Tool",
+        "Questionnaire"
+      ],
+      "domains": [
+        "Self-Management",
+        "Caregiving Burden",
+        "Symptom Assessment"
+      ],
+      "data_types": [
+        "Surveys",
+        "Scales",
+        "Protocols (in publications)"
+      ],
+      "target_populations": [
+        "Researchers",
+        "NINR Grantees"
+      ],
+      "organisms": [
+        "Human"
+      ]
+    },
+    "access_cost": {
+      "access_model": "Open Access (Via Publication)",
+      "cost_status": "Free",
+      "requires_registration": false,
+      "requires_dua": false,
+      "has_human_data": false,
+      "data_sensitivity": "Public Instruments"
+    },
+    "practical_usage": {
+      "compute_location": [
+        "Downloads (from publications)"
+      ],
+      "requires_special_infrastructure": false,
+      "skills_required": [
+        "Research Methods"
+      ],
+      "typical_use_cases": "Locating and using measurement tools (e.g., caregiving burden scales) published by NINR-funded studies for reuse in new research protocols.",
+      "integration_parents": []
+    },
+    "lifecycle_curation": {
+      "status": "Active (Dissemination)",
+      "maintaining_ic": [
+        "NINR"
+      ],
+      "notes": "No formal NINR library, but NINR encourages investigators to publish their measurement tools (surveys for self-management, caregiving burden scales) on project websites or in publications, making them available at no cost."
+    },
+    "tagging": {
+      "keywords": [
+        "measurement tools",
+        "questionnaires",
+        "self-management",
+        "caregiving burden",
+        "nursing research"
+      ]
+    }
+  },
+  {
+    "identity": {
+      "id": "IC_148",
+      "resource_name": "NINR Centers of Excellence Outputs (Training/Data)",
+      "short_name": "NINR Centers",
+      "ic_code": "NINR",
+      "ic_name": "National Institute of Nursing Research",
+      "primary_url": "https://www.ninr.nih.gov/research-and-training/research-priorities",
+      "docs_url": "",
+      "api_url": ""
+    },
+    "type_content": {
+      "resource_type": [
+        "Training Resource",
+        "Data Repository (Small-Scale)"
+      ],
+      "domains": [
+        "Self-Management",
+        "Training/Methods"
+      ],
+      "data_types": [
+        "Psychosocial Variable Data",
+        "Webinars",
+        "Research Protocols"
+      ],
+      "target_populations": [
+        "Nursing Scientists",
+        "Community"
+      ],
+      "organisms": [
+        "Human"
+      ]
+    },
+    "access_cost": {
+      "access_model": "Open Access",
+      "cost_status": "Free",
+      "requires_registration": false,
+      "requires_dua": false,
+      "has_human_data": true,
+      "data_sensitivity": "De-identified/Public Information"
+    },
+    "practical_usage": {
+      "compute_location": [
+        "Web-based (YouTube)",
+        "Downloads"
+      ],
+      "requires_special_infrastructure": false,
+      "skills_required": [
+        "Research Methods"
+      ],
+      "typical_use_cases": "Accessing training webinars and compiled psychosocial variable data from NINR-funded Centers for use in research or training programs.",
+      "integration_parents": []
+    },
+    "lifecycle_curation": {
+      "status": "Active",
+      "maintaining_ic": [
+        "NINR"
+      ],
+      "notes": "NINR funds Centers that often produce community resources, such as training webinars and data repositories of psychosocial variables, which are shared freely."
+    },
+    "tagging": {
+      "keywords": [
+        "centers of excellence",
+        "training webinars",
+        "self-management",
+        "psychosocial variables",
+        "nursing science"
+      ]
+    }
+  },
+  {
+    "identity": {
+      "id": "IC_149",
+      "resource_name": "Clinical Repositories (All of Us Research Program)",
+      "short_name": "NINR Clinical",
+      "ic_code": "NINR",
+      "ic_name": "National Institute of Nursing Research",
+      "primary_url": "https://allofus.nih.gov/research",
+      "docs_url": "",
+      "api_url": ""
+    },
+    "type_content": {
+      "resource_type": [
+        "Clinical Repository",
+        "Population Cohort"
+      ],
+      "domains": [
+        "Population Health",
+        "Social Determinants of Health",
+        "Precision Medicine"
+      ],
+      "data_types": [
+        "EHR Data",
+        "Genomic Data",
+        "Social Determinants Data"
+      ],
+      "target_populations": [
+        "US Population (Diverse)"
+      ],
+      "organisms": [
+        "Human"
+      ]
+    },
+    "access_cost": {
+      "access_model": "Controlled Access (Tiered)",
+      "cost_status": "Free",
+      "requires_registration": true,
+      "requires_dua": true,
+      "has_human_data": true,
+      "data_sensitivity": "High (EHR/Genomic Data)"
+    },
+    "practical_usage": {
+      "compute_location": [
+        "Cloud-based (Data Enclave)"
+      ],
+      "requires_special_infrastructure": false,
+      "skills_required": [
+        "Data Science",
+        "Genomics",
+        "EHR Analysis"
+      ],
+      "typical_use_cases": "Leveraging large-scale, diverse EHR and genomic data from the All of Us Research Program for inclusive population health and precision medicine studies.",
+      "integration_parents": [
+        "All of Us Research Program"
+      ]
+    },
+    "lifecycle_curation": {
+      "status": "Active",
+      "maintaining_ic": [
+        "NINR",
+        "NIH"
+      ],
+      "notes": "NINR co-funds the All of Us Research Program (for inclusive population health data). All of Us data are available via a tiered access system for free to researchers."
+    },
+    "tagging": {
+      "keywords": [
+        "all of us",
+        "precision medicine",
+        "EHR data",
+        "genomics",
+        "population health",
+        "clinical repository"
+      ]
+    }
+  },
+  {
+    "identity": {
+      "id": "IC_150",
+      "resource_name": "PubMed",
+      "short_name": "PubMed",
+      "ic_code": "NLM",
+      "ic_name": "National Library of Medicine",
+      "primary_url": "https://pubmed.ncbi.nlm.nih.gov/",
+      "docs_url": "",
+      "api_url": "https://www.ncbi.nlm.nih.gov/books/NBK25501/"
+    },
+    "type_content": {
+      "resource_type": [
+        "Database",
+        "Literature Index"
+      ],
+      "domains": [
+        "Biomedical Literature",
+        "Life Sciences"
+      ],
+      "data_types": [
+        "Citations",
+        "Abstracts",
+        "MEDLINE Records"
+      ],
+      "target_populations": [
+        "Researchers",
+        "Public"
+      ],
+      "organisms": [
+        "N/A"
+      ]
+    },
+    "access_cost": {
+      "access_model": "Open Access",
+      "cost_status": "Free",
+      "requires_registration": false,
+      "requires_dua": false,
+      "has_human_data": false,
+      "data_sensitivity": "Public Information"
+    },
+    "practical_usage": {
+      "compute_location": [
+        "Web-based",
+        "API (E-utilities)"
+      ],
+      "requires_special_infrastructure": false,
+      "skills_required": [
+        "Information Retrieval"
+      ],
+      "typical_use_cases": "Searching and accessing over 34 million citations and abstracts from MEDLINE and other biomedical sources.",
+      "integration_parents": [
+        "NLM",
+        "NCBI"
+      ]
+    },
+    "lifecycle_curation": {
+      "status": "Active",
+      "maintaining_ic": [
+        "NLM"
+      ],
+      "notes": "The premier database of biomedical literature. Completely free to use; anyone can search without registration, and NLM's Entrez system allows programmatic access via API at no cost."
+    },
+    "tagging": {
+      "keywords": [
+        "PubMed",
+        "biomedical literature",
+        "MEDLINE",
+        "citations",
+        "abstracts",
+        "open access"
+      ]
+    }
+  },
+  {
+    "identity": {
+      "id": "IC_151",
+      "resource_name": "PubMed Central (PMC)",
+      "short_name": "PMC",
+      "ic_code": "NLM",
+      "ic_name": "National Library of Medicine",
+      "primary_url": "https://www.ncbi.nlm.nih.gov/pmc/",
+      "docs_url": "",
+      "api_url": "https://www.ncbi.nlm.nih.gov/pmc/tools/ftp/"
+    },
+    "type_content": {
+      "resource_type": [
+        "Digital Archive",
+        "Full-Text Repository"
+      ],
+      "domains": [
+        "Biomedical Literature",
+        "Life Sciences"
+      ],
+      "data_types": [
+        "Full-Text Articles",
+        "Open Access Articles"
+      ],
+      "target_populations": [
+        "Researchers",
+        "Public"
+      ],
+      "organisms": [
+        "N/A"
+      ]
+    },
+    "access_cost": {
+      "access_model": "Open Access",
+      "cost_status": "Free",
+      "requires_registration": false,
+      "requires_dua": false,
+      "has_human_data": false,
+      "data_sensitivity": "Public Information"
+    },
+    "practical_usage": {
+      "compute_location": [
+        "Web-based",
+        "Downloads"
+      ],
+      "requires_special_infrastructure": false,
+      "skills_required": [
+        "Text Mining (Optional)"
+      ],
+      "typical_use_cases": "Accessing and reading full-text biomedical articles, including all NIH-funded research articles (after 12 months), for research and public dissemination.",
+      "integration_parents": [
+        "NCBI"
+      ]
+    },
+    "lifecycle_curation": {
+      "status": "Active",
+      "maintaining_ic": [
+        "NLM"
+      ],
+      "notes": "A free full-text digital archive of biomedical and life sciences journal literature. Open and free: users can read, download, and text-mine all articles in PMC."
+    },
+    "tagging": {
+      "keywords": [
+        "PMC",
+        "full-text articles",
+        "open access",
+        "biomedical literature",
+        "digital archive"
+      ]
+    }
+  },
+  {
+    "identity": {
+      "id": "IC_152",
+      "resource_name": "ClinicalTrials.gov",
+      "short_name": "CT.gov",
+      "ic_code": "NLM",
+      "ic_name": "National Library of Medicine",
+      "primary_url": "https://clinicaltrials.gov/",
+      "docs_url": "",
+      "api_url": "https://clinicaltrials.gov/api/query/full_studies"
+    },
+    "type_content": {
+      "resource_type": [
+        "Registry",
+        "Database"
+      ],
+      "domains": [
+        "Clinical Trials",
+        "Public Health"
+      ],
+      "data_types": [
+        "Study Design",
+        "Locations",
+        "Recruitment Status",
+        "Outcome Results Data"
+      ],
+      "target_populations": [
+        "Researchers",
+        "Patients",
+        "Public"
+      ],
+      "organisms": [
+        "Human"
+      ]
+    },
+    "access_cost": {
+      "access_model": "Open Access",
+      "cost_status": "Free",
+      "requires_registration": false,
+      "requires_dua": false,
+      "has_human_data": true,
+      "data_sensitivity": "Public Information/Trial Results"
+    },
+    "practical_usage": {
+      "compute_location": [
+        "Web-based",
+        "API"
+      ],
+      "requires_special_infrastructure": false,
+      "skills_required": [
+        "Clinical Research"
+      ],
+      "typical_use_cases": "Searching for information on clinical studies globally, tracking trial progress, and downloading posted study results and outcome data.",
+      "integration_parents": []
+    },
+    "lifecycle_curation": {
+      "status": "Active",
+      "maintaining_ic": [
+        "NLM"
+      ],
+      "notes": "The public registry and results database of clinical studies (~450,000 trials globally). Free to search and access; study results can be viewed and downloaded at no cost."
+    },
+    "tagging": {
+      "keywords": [
+        "clinical trials",
+        "registry",
+        "trial results",
+        "outcomes data",
+        "transparency"
+      ]
+    }
+  },
+  {
+    "identity": {
+      "id": "IC_153",
+      "resource_name": "NCBI Databases and Tools (GenBank, SRA, BLAST, dbGaP, PubChem, GEO)",
+      "short_name": "NCBI Suite",
+      "ic_code": "NLM",
+      "ic_name": "National Library of Medicine",
+      "primary_url": "https://www.ncbi.nlm.nih.gov/",
+      "docs_url": "",
+      "api_url": "https://www.ncbi.nlm.nih.gov/books/NBK25500/"
+    },
+    "type_content": {
+      "resource_type": [
+        "Database Suite",
+        "Bioinformatics Tools"
+      ],
+      "domains": [
+        "Molecular Biology",
+        "Genomics",
+        "Chemistry"
+      ],
+      "data_types": [
+        "Nucleotide Sequences (GenBank)",
+        "Raw Sequencing Data (SRA)",
+        "Protein/Gene/Structure Data",
+        "Chemical Structures (PubChem)"
+      ],
+      "target_populations": [
+        "Bioinformaticians",
+        "Researchers"
+      ],
+      "organisms": [
+        "Human",
+        "All Species"
+      ]
+    },
+    "access_cost": {
+      "access_model": "Open Access / Controlled Access (dbGaP)",
+      "cost_status": "Free",
+      "requires_registration": true,
+      "requires_dua": true,
+      "has_human_data": true,
+      "data_sensitivity": "Varies (Public to High)"
+    },
+    "practical_usage": {
+      "compute_location": [
+        "Web-based",
+        "Downloads",
+        "API (E-utilities)"
+      ],
+      "requires_special_infrastructure": false,
+      "skills_required": [
+        "Bioinformatics",
+        "Genomic Analysis"
+      ],
+      "typical_use_cases": "Searching sequences (BLAST), accessing genomic data (GenBank), downloading raw sequencing reads (SRA), and obtaining controlled-access genetic data (dbGaP).",
+      "integration_parents": []
+    },
+    "lifecycle_curation": {
+      "status": "Active",
+      "maintaining_ic": [
+        "NLM"
+      ],
+      "notes": "NLM's National Center for Biotechnology Information provides a vast array of molecular biology databases and tools (GenBank, SRA, dbGaP, PubChem, BLAST, GEO), all freely accessible."
+    },
+    "tagging": {
+      "keywords": [
+        "NCBI",
+        "GenBank",
+        "SRA",
+        "dbGaP",
+        "BLAST",
+        "genomics",
+        "bioinformatics"
+      ]
+    }
+  },
+  {
+    "identity": {
+      "id": "IC_154",
+      "resource_name": "Medical Subject Headings (MeSH)",
+      "short_name": "MeSH",
+      "ic_code": "NLM",
+      "ic_name": "National Library of Medicine",
+      "primary_url": "https://www.nlm.nih.gov/mesh/meshhome.html",
+      "docs_url": "",
+      "api_url": ""
+    },
+    "type_content": {
+      "resource_type": [
+        "Terminology Standard",
+        "Thesaurus"
+      ],
+      "domains": [
+        "Information Retrieval",
+        "Indexing",
+        "Terminology"
+      ],
+      "data_types": [
+        "Controlled Vocabulary Terms",
+        "Hierarchical Structure"
+      ],
+      "target_populations": [
+        "Indexers",
+        "Researchers",
+        "Librarians"
+      ],
+      "organisms": [
+        "N/A"
+      ]
+    },
+    "access_cost": {
+      "access_model": "Public Domain",
+      "cost_status": "Free",
+      "requires_registration": false,
+      "requires_dua": false,
+      "has_human_data": false,
+      "data_sensitivity": "Public Information"
+    },
+    "practical_usage": {
+      "compute_location": [
+        "Web-based",
+        "Downloads"
+      ],
+      "requires_special_infrastructure": false,
+      "skills_required": [
+        "Information Science"
+      ],
+      "typical_use_cases": "Using NLM's controlled vocabulary for indexing articles in PubMed/MEDLINE, enhancing literature searches, and organizing information.",
+      "integration_parents": []
+    },
+    "lifecycle_curation": {
+      "status": "Active",
+      "maintaining_ic": [
+        "NLM"
+      ],
+      "notes": "NLM's controlled vocabulary thesaurus used for indexing articles. Freely available: downloadable from NLM's website and searchable via the MeSH browser. No licensing fee (public domain)."
+    },
+    "tagging": {
+      "keywords": [
+        "MeSH",
+        "terminology",
+        "thesaurus",
+        "indexing",
+        "controlled vocabulary"
+      ]
+    }
+  },
+  {
+    "identity": {
+      "id": "IC_155",
+      "resource_name": "Unified Medical Language System (UMLS)",
+      "short_name": "UMLS",
+      "ic_code": "NLM",
+      "ic_name": "National Library of Medicine",
+      "primary_url": "https://www.nlm.nih.gov/research/umls/index.html",
+      "docs_url": "",
+      "api_url": ""
+    },
+    "type_content": {
+      "resource_type": [
+        "Terminology Mapping",
+        "Knowledge Base"
+      ],
+      "domains": [
+        "Biomedical Informatics",
+        "Terminology"
+      ],
+      "data_types": [
+        "Concepts",
+        "Terminology Mappings (MeSH, SNOMED CT, ICD)"
+      ],
+      "target_populations": [
+        "Informatics Developers",
+        "Researchers"
+      ],
+      "organisms": [
+        "N/A"
+      ]
+    },
+    "access_cost": {
+      "access_model": "Controlled Access",
+      "cost_status": "Free (License Fee: $0)",
+      "requires_registration": true,
+      "requires_dua": true,
+      "has_human_data": false,
+      "data_sensitivity": "Licensed Data"
+    },
+    "practical_usage": {
+      "compute_location": [
+        "Downloads",
+        "Local Machine"
+      ],
+      "requires_special_infrastructure": false,
+      "skills_required": [
+        "Natural Language Processing (NLP)",
+        "Informatics"
+      ],
+      "typical_use_cases": "Linking and mapping various biomedical vocabularies (SNOMED, MeSH, ICD) to support NLP, data standardization, and complex information retrieval applications.",
+      "integration_parents": []
+    },
+    "lifecycle_curation": {
+      "status": "Active",
+      "maintaining_ic": [
+        "NLM"
+      ],
+      "notes": "A large compendium of biomedical terminology mappings. NLM makes UMLS available for free, though users must sign a license agreement online (no charge)."
+    },
+    "tagging": {
+      "keywords": [
+        "UMLS",
+        "terminology mapping",
+        "biomedical informatics",
+        "SNOMED CT",
+        "ICD",
+        "MeSH"
+      ]
+    }
+  },
+  {
+    "identity": {
+      "id": "IC_156",
+      "resource_name": "MedlinePlus",
+      "short_name": "MedlinePlus",
+      "ic_code": "NLM",
+      "ic_name": "National Library of Medicine",
+      "primary_url": "https://medlineplus.gov/",
+      "docs_url": "",
+      "api_url": ""
+    },
+    "type_content": {
+      "resource_type": [
+        "Consumer Health Portal",
+        "Information Resource"
+      ],
+      "domains": [
+        "Consumer Health",
+        "Patient Education"
+      ],
+      "data_types": [
+        "Disease Summaries",
+        "Condition Information",
+        "Drug Information (Lay Language)"
+      ],
+      "target_populations": [
+        "General Public",
+        "Patients"
+      ],
+      "organisms": [
+        "Human"
+      ]
+    },
+    "access_cost": {
+      "access_model": "Open Access",
+      "cost_status": "Free",
+      "requires_registration": false,
+      "requires_dua": false,
+      "has_human_data": false,
+      "data_sensitivity": "Public Information"
+    },
+    "practical_usage": {
+      "compute_location": [
+        "Web-based"
+      ],
+      "requires_special_infrastructure": false,
+      "skills_required": [
+        "None"
+      ],
+      "typical_use_cases": "Providing consumer-friendly, reliable information on diseases, conditions, and drugs to the public and patients.",
+      "integration_parents": []
+    },
+    "lifecycle_curation": {
+      "status": "Active",
+      "maintaining_ic": [
+        "NLM"
+      ],
+      "notes": "NLM's consumer health information portal. Summarizes diseases, conditions, and drugs in lay language. It has no cost and no login for use."
+    },
+    "tagging": {
+      "keywords": [
+        "MedlinePlus",
+        "consumer health",
+        "patient education",
+        "drug information",
+        "health portal"
+      ]
+    }
+  },
+  {
+    "identity": {
+      "id": "IC_157",
+      "resource_name": "Bookshelf",
+      "short_name": "Bookshelf",
+      "ic_code": "NLM",
+      "ic_name": "National Library of Medicine",
+      "primary_url": "https://www.ncbi.nlm.nih.gov/books/",
+      "docs_url": "",
+      "api_url": ""
+    },
+    "type_content": {
+      "resource_type": [
+        "Full-Text Repository",
+        "Digital Library"
+      ],
+      "domains": [
+        "Biomedical Science",
+        "Clinical Guidelines"
+      ],
+      "data_types": [
+        "Textbooks",
+        "Reports",
+        "Guidelines"
+      ],
+      "target_populations": [
+        "Researchers",
+        "Students",
+        "Clinicians"
+      ],
+      "organisms": [
+        "N/A"
+      ]
+    },
+    "access_cost": {
+      "access_model": "Open Access",
+      "cost_status": "Free",
+      "requires_registration": false,
+      "requires_dua": false,
+      "has_human_data": false,
+      "data_sensitivity": "Public Information"
+    },
+    "practical_usage": {
+      "compute_location": [
+        "Web-based"
+      ],
+      "requires_special_infrastructure": false,
+      "skills_required": [
+        "None"
+      ],
+      "typical_use_cases": "Reading medical textbooks, reference works, and official NIH clinical guidelines online at no charge.",
+      "integration_parents": [
+        "NCBI"
+      ]
+    },
+    "lifecycle_curation": {
+      "status": "Active",
+      "maintaining_ic": [
+        "NLM"
+      ],
+      "notes": "A full-text repository of biomedical books, reports, and guidelines provided online free. Researchers can read textbooks or reference works at no charge."
+    },
+    "tagging": {
+      "keywords": [
+        "Bookshelf",
+        "textbooks",
+        "clinical guidelines",
+        "reference works",
+        "digital library"
+      ]
+    }
+  },
+  {
+    "identity": {
+      "id": "IC_158",
+      "resource_name": "TOXNET (retired, but content moved)",
+      "short_name": "TOXNET",
+      "ic_code": "NLM",
+      "ic_name": "National Library of Medicine",
+      "primary_url": "https://www.nlm.nih.gov/toxnet/",
+      "docs_url": "",
+      "api_url": ""
+    },
+    "type_content": {
+      "resource_type": [
+        "Database (Retired)",
+        "Toxicology Data"
+      ],
+      "domains": [
+        "Toxicology",
+        "Hazardous Substances"
+      ],
+      "data_types": [
+        "Chemical Data (ChemIDplus)",
+        "LactMed Data",
+        "Hazardous Substances Data"
+      ],
+      "target_populations": [
+        "Toxicologists",
+        "Public"
+      ],
+      "organisms": [
+        "N/A"
+      ]
+    },
+    "access_cost": {
+      "access_model": "Open Access (Content Integrated)",
+      "cost_status": "Free",
+      "requires_registration": false,
+      "requires_dua": false,
+      "has_human_data": false,
+      "data_sensitivity": "Public Information"
+    },
+    "practical_usage": {
+      "compute_location": [
+        "Web-based (via PubChem)"
+      ],
+      "requires_special_infrastructure": false,
+      "skills_required": [
+        "Toxicology"
+      ],
+      "typical_use_cases": "Accessing chemical toxicity and hazardous substance data, now primarily through PubChem and other specialized NLM data portals.",
+      "integration_parents": [
+        "PubChem"
+      ]
+    },
+    "lifecycle_curation": {
+      "status": "Superseded (Content Migrated)",
+      "maintaining_ic": [
+        "NLM"
+      ],
+      "notes": "NLM's former toxicology data network. Content (e.g., ChemIDplus, LactMed) was integrated into PubChem or other free resources. The toxicity data remains free."
+    },
+    "tagging": {
+      "keywords": [
+        "TOXNET",
+        "toxicology",
+        "PubChem",
+        "hazardous substances",
+        "LactMed"
+      ]
+    }
+  },
+  {
+    "identity": {
+      "id": "IC_159",
+      "resource_name": "Open Source Software and APIs (E-utilities, ClinicalTrials.gov API)",
+      "short_name": "NLM API/Software",
+      "ic_code": "NLM",
+      "ic_name": "National Library of Medicine",
+      "primary_url": "https://www.ncbi.nlm.nih.gov/books/NBK25500/",
+      "docs_url": "",
+      "api_url": ""
+    },
+    "type_content": {
+      "resource_type": [
+        "Software Toolkit",
+        "API"
+      ],
+      "domains": [
+        "Bioinformatics",
+        "Data Retrieval"
+      ],
+      "data_types": [
+        "NCBI C++ Toolkit",
+        "Entrez Direct (Command Line)",
+        "APIs (ClinicalTrials.gov, Entrez)"
+      ],
+      "target_populations": [
+        "Developers",
+        "Bioinformaticians"
+      ],
+      "organisms": [
+        "N/A"
+      ]
+    },
+    "access_cost": {
+      "access_model": "Open Source / Open Access",
+      "cost_status": "Free",
+      "requires_registration": false,
+      "requires_dua": false,
+      "has_human_data": false,
+      "data_sensitivity": "Public Software/API"
+    },
+    "practical_usage": {
+      "compute_location": [
+        "Downloads",
+        "Local Machine/Server"
+      ],
+      "requires_special_infrastructure": false,
+      "skills_required": [
+        "Programming",
+        "Shell Scripting"
+      ],
+      "typical_use_cases": "Programmatically retrieving and incorporating data from NCBI, PubMed, and ClinicalTrials.gov into automated workflows and applications.",
+      "integration_parents": [
+        "NCBI"
+      ]
+    },
+    "lifecycle_curation": {
+      "status": "Active",
+      "maintaining_ic": [
+        "NLM"
+      ],
+      "notes": "NLM develops tools like the NCBI C++ Toolkit, Entrez Direct (command line tools), and the ClinicalTrials.gov API, which are all open-source or open-access and usable without any cost."
+    },
+    "tagging": {
+      "keywords": [
+        "open source",
+        "API",
+        "Entrez",
+        "ClinicalTrials.gov",
+        "bioinformatics",
+        "data retrieval"
+      ]
+    }
+  },
+  {
+    "identity": {
+      "id": "IC_160",
+      "resource_name": "Clinical Center Clinical Data (e.g., Chest X-ray8)",
+      "short_name": "CC Data",
+      "ic_code": "CC",
+      "ic_name": "NIH Clinical Center",
+      "primary_url": "https://www.cc.nih.gov/research-resources/data.html",
+      "docs_url": "",
+      "api_url": ""
+    },
+    "type_content": {
+      "resource_type": [
+        "Datasets",
+        "Clinical Archive (Subset)"
+      ],
+      "domains": [
+        "Clinical Research",
+        "Medical Imaging",
+        "Machine Learning"
+      ],
+      "data_types": [
+        "Chest X-ray8 Image Dataset",
+        "De-identified Clinical Data"
+      ],
+      "target_populations": [
+        "Patients",
+        "Machine Learning Researchers"
+      ],
+      "organisms": [
+        "Human"
+      ]
+    },
+    "access_cost": {
+      "access_model": "Open Access",
+      "cost_status": "Free",
+      "requires_registration": false,
+      "requires_dua": false,
+      "has_human_data": true,
+      "data_sensitivity": "De-identified Imaging/Clinical Data"
+    },
+    "practical_usage": {
+      "compute_location": [
+        "Downloads"
+      ],
+      "requires_special_infrastructure": false,
+      "skills_required": [
+        "Machine Learning",
+        "Image Analysis"
+      ],
+      "typical_use_cases": "Utilizing the Chest X-ray8 image dataset and other specific collections for machine learning research and algorithm development.",
+      "integration_parents": [
+        "Kaggle",
+        "NIH"
+      ]
+    },
+    "lifecycle_curation": {
+      "status": "Active (Data Sharing)",
+      "maintaining_ic": [
+        "CC"
+      ],
+      "notes": "The NIH Clinical Center releases de-identified datasets, such as the Chest X-ray8 image dataset (over 100,000 images), to open archives for research training purposes, all freely downloadable."
+    },
+    "tagging": {
+      "keywords": [
+        "clinical data",
+        "chest x-ray",
+        "medical imaging",
+        "machine learning",
+        "de-identified data"
+      ]
+    }
+  },
+  {
+    "identity": {
+      "id": "IC_161",
+      "resource_name": "Biowulf HPC Access for Collaborators",
+      "short_name": "Biowulf Access",
+      "ic_code": "CC",
+      "ic_name": "NIH Clinical Center",
+      "primary_url": "https://hpc.nih.gov/",
+      "docs_url": "",
+      "api_url": ""
+    },
+    "type_content": {
+      "resource_type": [
+        "High-Performance Computing (HPC)"
+      ],
+      "domains": [
+        "Computational Science",
+        "Genomics Analysis"
+      ],
+      "data_types": [
+        "Compute Time",
+        "Storage"
+      ],
+      "target_populations": [
+        "NIH Intramural Collaborators"
+      ],
+      "organisms": [
+        "N/A"
+      ]
+    },
+    "access_cost": {
+      "access_model": "Controlled Access",
+      "cost_status": "Free (No Charge to Researcher)",
+      "requires_registration": true,
+      "requires_dua": true,
+      "has_human_data": true,
+      "data_sensitivity": "Controlled Access/HPC Environment"
+    },
+    "practical_usage": {
+      "compute_location": [
+        "On-premise Cluster"
+      ],
+      "requires_special_infrastructure": true,
+      "skills_required": [
+        "HPC Management",
+        "Computational Modeling"
+      ],
+      "typical_use_cases": "Accessing the Biowulf supercomputing cluster for advanced data analysis (genomic analysis, imaging) related to Clinical Center protocols, provided at no cost to external collaborators.",
+      "integration_parents": [
+        "CIT (Center for Information Technology)"
+      ]
+    },
+    "lifecycle_curation": {
+      "status": "Active",
+      "maintaining_ic": [
+        "CIT",
+        "CC"
+      ],
+      "notes": "The Biowulf supercomputing cluster is a free resource for NIH intramural staff. External collaborators on CC protocols often get access for data analysis without charge."
+    },
+    "tagging": {
+      "keywords": [
+        "Biowulf",
+        "HPC",
+        "supercomputing",
+        "computational science",
+        "genomic analysis"
+      ]
+    }
+  },
+  {
+    "identity": {
+      "id": "IC_162",
+      "resource_name": "Clinical Research Training (IPPCR Course)",
+      "short_name": "IPPCR",
+      "ic_code": "CC",
+      "ic_name": "NIH Clinical Center",
+      "primary_url": "https://www.cc.nih.gov/training/ippcr.html",
+      "docs_url": "",
+      "api_url": ""
+    },
+    "type_content": {
+      "resource_type": [
+        "Training Course",
+        "Educational Material"
+      ],
+      "domains": [
+        "Clinical Research Principles",
+        "Research Ethics",
+        "Regulatory Affairs"
+      ],
+      "data_types": [
+        "Video Lectures",
+        "Course Materials"
+      ],
+      "target_populations": [
+        "Researchers",
+        "Trainees",
+        "Public"
+      ],
+      "organisms": [
+        "N/A"
+      ]
+    },
+    "access_cost": {
+      "access_model": "Open Access",
+      "cost_status": "Free",
+      "requires_registration": false,
+      "requires_dua": false,
+      "has_human_data": false,
+      "data_sensitivity": "Public Information"
+    },
+    "practical_usage": {
+      "compute_location": [
+        "Web-based"
+      ],
+      "requires_special_infrastructure": false,
+      "skills_required": [
+        "Clinical Research Methods"
+      ],
+      "typical_use_cases": "Accessing the Introduction to the Principles and Practice of Clinical Research (IPPCR) course online to gain foundational knowledge in study design and ethics.",
+      "integration_parents": []
+    },
+    "lifecycle_curation": {
+      "status": "Active",
+      "maintaining_ic": [
+        "CC"
+      ],
+      "notes": "Provides free training courses open to researchers globally, notably the Introduction to the Principles and Practice of Clinical Research (IPPCR) course. It is free of charge; participants access video lectures and materials via the CC website."
+    },
+    "tagging": {
+      "keywords": [
+        "clinical research",
+        "IPPCR",
+        "training course",
+        "ethics",
+        "study design"
+      ]
+    }
+  },
+  {
+    "identity": {
+      "id": "IC_163",
+      "resource_name": "Protocol Templates and Data Collection Forms",
+      "short_name": "CC Protocols",
+      "ic_code": "CC",
+      "ic_name": "NIH Clinical Center",
+      "primary_url": "https://www.cc.nih.gov/clinical-research-resources/regulatory-forms",
+      "docs_url": "",
+      "api_url": ""
+    },
+    "type_content": {
+      "resource_type": [
+        "Template Resource",
+        "Guidance Document"
+      ],
+      "domains": [
+        "Clinical Trial Operations",
+        "Regulatory Compliance"
+      ],
+      "data_types": [
+        "Protocol Templates",
+        "Informed Consent Templates",
+        "Case Report Forms (CRFs)"
+      ],
+      "target_populations": [
+        "Clinical Investigators",
+        "IRB Staff"
+      ],
+      "organisms": [
+        "Human"
+      ]
+    },
+    "access_cost": {
+      "access_model": "Open Access",
+      "cost_status": "Free",
+      "requires_registration": false,
+      "requires_dua": false,
+      "has_human_data": false,
+      "data_sensitivity": "Public Information"
+    },
+    "practical_usage": {
+      "compute_location": [
+        "Downloads"
+      ],
+      "requires_special_infrastructure": false,
+      "skills_required": [
+        "Study Design",
+        "Regulatory Affairs"
+      ],
+      "typical_use_cases": "Using NIH best-practice templates for designing studies, drafting informed consent documents, and preparing case report forms (CRFs).",
+      "integration_parents": [
+        "NIH Office of Clinical Research"
+      ]
+    },
+    "lifecycle_curation": {
+      "status": "Active",
+      "maintaining_ic": [
+        "CC"
+      ],
+      "notes": "The Clinical Center shares various protocol templates, informed consent templates, and case report forms it uses, as models for others. These are available freely on the CC or NIH Office of Clinical Research websites."
+    },
+    "tagging": {
+      "keywords": [
+        "protocol templates",
+        "CRFs",
+        "informed consent",
+        "clinical trial operations"
+      ]
+    }
+  },
+  {
+    "identity": {
+      "id": "IC_164",
+      "resource_name": "Clinical Center Data Repositories",
+      "short_name": "CC Repos",
+      "ic_code": "CC",
+      "ic_name": "NIH Clinical Center",
+      "primary_url": "https://www.cc.nih.gov/research-resources/data.html",
+      "docs_url": "",
+      "api_url": ""
+    },
+    "type_content": {
+      "resource_type": [
+        "Data Archive (Planned)",
+        "Synthetic Data"
+      ],
+      "domains": [
+        "Clinical Data Science",
+        "AI/ML Training"
+      ],
+      "data_types": [
+        "COVID-19 Dataset (Planned)",
+        "Synthetic Clinical Data"
+      ],
+      "target_populations": [
+        "AI/ML Developers"
+      ],
+      "organisms": [
+        "Human"
+      ]
+    },
+    "access_cost": {
+      "access_model": "Open Access (Planned)",
+      "cost_status": "Free",
+      "requires_registration": false,
+      "requires_dua": false,
+      "has_human_data": true,
+      "data_sensitivity": "Synthetic/De-identified"
+    },
+    "practical_usage": {
+      "compute_location": [
+        "NIH Repositories",
+        "ML Community"
+      ],
+      "requires_special_infrastructure": false,
+      "skills_required": [
+        "Data Science",
+        "AI/ML Development"
+      ],
+      "typical_use_cases": "Utilizing CC-curated datasets (e.g., a planned COVID-19 dataset) for AI training and model development in medical research, provided without fees.",
+      "integration_parents": []
+    },
+    "lifecycle_curation": {
+      "status": "Planning/Dissemination",
+      "maintaining_ic": [
+        "CC"
+      ],
+      "notes": "The CC was exploring making more of its data public (e.g., planned COVID-19 dataset). Any CC-curated datasets would be made available via NIH-controlled repositories without fees."
+    },
+    "tagging": {
+      "keywords": [
+        "clinical data",
+        "AI training data",
+        "synthetic data",
+        "COVID-19",
+        "data repositories"
+      ]
+    }
+  },
+  {
+    "identity": {
+      "id": "IC_165",
+      "resource_name": "Imaging Data and Challenges",
+      "short_name": "CC Imaging",
+      "ic_code": "CC",
+      "ic_name": "NIH Clinical Center",
+      "primary_url": "https://www.cc.nih.gov/research-resources/data.html",
+      "docs_url": "",
+      "api_url": ""
+    },
+    "type_content": {
+      "resource_type": [
+        "Datasets",
+        "Community Challenge Platform"
+      ],
+      "domains": [
+        "Medical Imaging",
+        "Radiology",
+        "AI/ML"
+      ],
+      "data_types": [
+        "PET/CT Images",
+        "MRI Images (BRATS)",
+        "Tumor Segmentation Data"
+      ],
+      "target_populations": [
+        "AI/ML Developers",
+        "Imaging Researchers"
+      ],
+      "organisms": [
+        "Human"
+      ]
+    },
+    "access_cost": {
+      "access_model": "Open Access",
+      "cost_status": "Free",
+      "requires_registration": true,
+      "requires_dua": false,
+      "has_human_data": true,
+      "data_sensitivity": "Anonymized Imaging Data"
+    },
+    "practical_usage": {
+      "compute_location": [
+        "Downloads (Challenge Websites)"
+      ],
+      "requires_special_infrastructure": false,
+      "skills_required": [
+        "Machine Learning",
+        "Radiology"
+      ],
+      "typical_use_cases": "Accessing de-identified imaging datasets (e.g., PET/CT for tumor segmentation, BRATS challenge data) to participate in public challenges and develop AI models.",
+      "integration_parents": [
+        "BRATS",
+        "SPIE"
+      ]
+    },
+    "lifecycle_curation": {
+      "status": "Active",
+      "maintaining_ic": [
+        "CC"
+      ],
+      "notes": "The CC hosts or contributes to public challenges (e.g., PET/CT image datasets, BRATS challenge data). Data are anonymized and shared openly with the research community at no cost."
+    },
+    "tagging": {
+      "keywords": [
+        "imaging data",
+        "AI challenges",
+        "PET/CT",
+        "MRI",
+        "BRATS",
+        "tumor segmentation"
+      ]
+    }
+  },
+  {
+    "identity": {
+      "id": "IC_166",
+      "resource_name": "Translational Bioinformatics Tools (BTRIS Synthetic Data)",
+      "short_name": "BTRIS Data",
+      "ic_code": "CC",
+      "ic_name": "NIH Clinical Center",
+      "primary_url": "https://www.cc.nih.gov/research-resources/data.html",
+      "docs_url": "",
+      "api_url": ""
+    },
+    "type_content": {
+      "resource_type": [
+        "Software Component",
+        "Synthetic Dataset"
+      ],
+      "domains": [
+        "Translational Bioinformatics",
+        "Data Exchange"
+      ],
+      "data_types": [
+        "Synthetic Clinical Dataset",
+        "Open-Source Code (FHIR)"
+      ],
+      "target_populations": [
+        "Developers",
+        "Bioinformaticians"
+      ],
+      "organisms": [
+        "Human (Synthetic)"
+      ]
+    },
+    "access_cost": {
+      "access_model": "Open Access",
+      "cost_status": "Free",
+      "requires_registration": false,
+      "requires_dua": false,
+      "has_human_data": false,
+      "data_sensitivity": "Synthetic Data"
+    },
+    "practical_usage": {
+      "compute_location": [
+        "Downloads"
+      ],
+      "requires_special_infrastructure": false,
+      "skills_required": [
+        "Bioinformatics",
+        "FHIR/Data Standards"
+      ],
+      "typical_use_cases": "Using the synthetic dataset for the Biomedical Translational Research Information System (BTRIS) to allow external developers to test queries and build research applications.",
+      "integration_parents": [
+        "BTRIS",
+        "FHIR"
+      ]
+    },
+    "lifecycle_curation": {
+      "status": "Active",
+      "maintaining_ic": [
+        "CC"
+      ],
+      "notes": "The CC publishes lessons and open-source components, such as a synthetic dataset for BTRIS to allow external developers to test queries. This synthetic data is free to access for anyone building research applications."
+    },
+    "tagging": {
+      "keywords": [
+        "translational bioinformatics",
+        "BTRIS",
+        "synthetic data",
+        "FHIR",
+        "open source"
+      ]
+    }
+  },
+  {
+    "identity": {
+      "id": "IC_167",
+      "resource_name": "Clinical Center Publications (Grand Rounds)",
+      "short_name": "CC Pubs",
+      "ic_code": "CC",
+      "ic_name": "NIH Clinical Center",
+      "primary_url": "https://www.cc.nih.gov/grands.html",
+      "docs_url": "",
+      "api_url": ""
+    },
+    "type_content": {
+      "resource_type": [
+        "Educational Material",
+        "Archived Media"
+      ],
+      "domains": [
+        "Translational Medicine",
+        "Clinical Research"
+      ],
+      "data_types": [
+        "Journal (Open Access)",
+        "Grand Rounds Video Archives"
+      ],
+      "target_populations": [
+        "Clinicians",
+        "Researchers",
+        "Public"
+      ],
+      "organisms": [
+        "N/A"
+      ]
+    },
+    "access_cost": {
+      "access_model": "Open Access",
+      "cost_status": "Free",
+      "requires_registration": false,
+      "requires_dua": false,
+      "has_human_data": false,
+      "data_sensitivity": "Public Information"
+    },
+    "practical_usage": {
+      "compute_location": [
+        "Web-based"
+      ],
+      "requires_special_infrastructure": false,
+      "skills_required": [
+        "None"
+      ],
+      "typical_use_cases": "Accessing the archives of the Clinical Center Grand Rounds presentations (webcast publicly) and open-access journal content for professional development and education.",
+      "integration_parents": []
+    },
+    "lifecycle_curation": {
+      "status": "Active",
+      "maintaining_ic": [
+        "CC"
+      ],
+      "notes": "The Clinical Center Grand Rounds presentations are publicly webcast and archived; they serve as an educational resource available freely to clinicians and researchers everywhere."
+    },
+    "tagging": {
+      "keywords": [
+        "grand rounds",
+        "webcasts",
+        "translational medicine",
+        "clinical research",
+        "educational resources"
+      ]
+    }
+  },
+  {
+    "identity": {
+      "id": "IC_168",
+      "resource_name": "NIH HPC Systems (Biowulf)",
+      "short_name": "Biowulf",
+      "ic_code": "CIT",
+      "ic_name": "Center for Information Technology",
+      "primary_url": "https://hpc.nih.gov/",
+      "docs_url": "",
+      "api_url": ""
+    },
+    "type_content": {
+      "resource_type": [
+        "High-Performance Computing (HPC)"
+      ],
+      "domains": [
+        "Computational Science",
+        "Bioinformatics",
+        "Data Analysis"
+      ],
+      "data_types": [
+        "Compute Time",
+        "Storage"
+      ],
+      "target_populations": [
+        "NIH Intramural Researchers",
+        "Collaborators"
+      ],
+      "organisms": [
+        "N/A"
+      ]
+    },
+    "access_cost": {
+      "access_model": "Controlled Access",
+      "cost_status": "Free (No Charge to Researcher)",
+      "requires_registration": true,
+      "requires_dua": true,
+      "has_human_data": true,
+      "data_sensitivity": "Controlled Access/HPC Environment"
+    },
+    "practical_usage": {
+      "compute_location": [
+        "On-premise Cluster"
+      ],
+      "requires_special_infrastructure": true,
+      "skills_required": [
+        "Linux/Shell Scripting",
+        "HPC Management"
+      ],
+      "typical_use_cases": "Running large-scale genomic analyses, complex image processing, and AI modeling tasks that require significant computational power.",
+      "integration_parents": []
+    },
+    "lifecycle_curation": {
+      "status": "Active",
+      "maintaining_ic": [
+        "CIT"
+      ],
+      "notes": "CIT operates Biowulf, a high-performance computing cluster. It is a free resource for those eligible (NIH intramural researchers and their collaborators) as they do not pay for computing time or storage."
+    },
+    "tagging": {
+      "keywords": [
+        "Biowulf",
+        "HPC",
+        "supercomputing",
+        "computational science",
+        "genomic analysis"
+      ]
+    }
+  },
+  {
+    "identity": {
+      "id": "IC_169",
+      "resource_name": "NIH Cloud Services (STRIDES)",
+      "short_name": "STRIDES",
+      "ic_code": "CIT",
+      "ic_name": "Center for Information Technology",
+      "primary_url": "https://datastorage.nih.gov/strides",
+      "docs_url": "",
+      "api_url": ""
+    },
+    "type_content": {
+      "resource_type": [
+        "Cloud Computing Program",
+        "Subsidized Service"
+      ],
+      "domains": [
+        "Data Storage",
+        "Cloud Analysis"
+      ],
+      "data_types": [
+        "Cloud Credits",
+        "Subsidized Rates"
+      ],
+      "target_populations": [
+        "NIH-Funded Projects",
+        "Academic Researchers"
+      ],
+      "organisms": [
+        "N/A"
+      ]
+    },
+    "access_cost": {
+      "access_model": "Controlled Access",
+      "cost_status": "Subsidized/Free (Credits)",
+      "requires_registration": true,
+      "requires_dua": false,
+      "has_human_data": true,
+      "data_sensitivity": "N/A (Service)"
+    },
+    "practical_usage": {
+      "compute_location": [
+        "Google Cloud",
+        "AWS Cloud"
+      ],
+      "requires_special_infrastructure": true,
+      "skills_required": [
+        "Cloud Computing",
+        "Data Engineering"
+      ],
+      "typical_use_cases": "Accessing subsidized commercial cloud computing services (Google/AWS) for data storage and analysis of large NIH-funded datasets (e.g., TOPMed, All of Us).",
+      "integration_parents": [
+        "Google",
+        "AWS"
+      ]
+    },
+    "lifecycle_curation": {
+      "status": "Active",
+      "maintaining_ic": [
+        "CIT",
+        "NIH"
+      ],
+      "notes": "CIT partners in NIH's STRIDES initiative, offering subsidized cloud computing with commercial providers for NIH-funded projects. Provides free credits or pilot cloud resources to reduce or eliminate initial cost."
+    },
+    "tagging": {
+      "keywords": [
+        "STRIDES",
+        "cloud computing",
+        "AWS",
+        "Google Cloud",
+        "subsidized service"
+      ]
+    }
+  },
+  {
+    "identity": {
+      "id": "IC_170",
+      "resource_name": "Common Data Element (CDE) Repository",
+      "short_name": "CDE Repository",
+      "ic_code": "CIT",
+      "ic_name": "Center for Information Technology",
+      "primary_url": "https://cde.nlm.nih.gov/",
+      "docs_url": "",
+      "api_url": ""
+    },
+    "type_content": {
+      "resource_type": [
+        "Database",
+        "Terminology Standard"
+      ],
+      "domains": [
+        "Data Harmonization",
+        "Clinical Research"
+      ],
+      "data_types": [
+        "Standardized Data Definitions",
+        "CDE Forms",
+        "Metadata"
+      ],
+      "target_populations": [
+        "Researchers",
+        "Data Managers"
+      ],
+      "organisms": [
+        "Human"
+      ]
+    },
+    "access_cost": {
+      "access_model": "Open Access",
+      "cost_status": "Free",
+      "requires_registration": false,
+      "requires_dua": false,
+      "has_human_data": false,
+      "data_sensitivity": "Public Information"
+    },
+    "practical_usage": {
+      "compute_location": [
+        "Web-based"
+      ],
+      "requires_special_infrastructure": false,
+      "skills_required": [
+        "Data Management"
+      ],
+      "typical_use_cases": "Searching and downloading standardized data definitions (CDEs) from various institutes (e.g., NINDS, NIMH) to ensure consistent data collection across studies.",
+      "integration_parents": [
+        "NLM",
+        "NINDS"
+      ]
+    },
+    "lifecycle_curation": {
+      "status": "Active",
+      "maintaining_ic": [
+        "CIT",
+        "NLM"
+      ],
+      "notes": "CIT hosts the NIH CDE Repository in partnership with NLM. It houses standardized data definitions from multiple institutes and is open-access; anyone can search and download CDE forms for free."
+    },
+    "tagging": {
+      "keywords": [
+        "CDE",
+        "data elements",
+        "data harmonization",
+        "clinical research",
+        "terminology standard"
+      ]
+    }
+  },
+  {
+    "identity": {
+      "id": "IC_171",
+      "resource_name": "VideoCast and Web Collaboration Tools",
+      "short_name": "VideoCast",
+      "ic_code": "CIT",
+      "ic_name": "Center for Information Technology",
+      "primary_url": "https://videocast.nih.gov/",
+      "docs_url": "",
+      "api_url": ""
+    },
+    "type_content": {
+      "resource_type": [
+        "Media Archive",
+        "Educational Material"
+      ],
+      "domains": [
+        "Science Communication",
+        "Training",
+        "Conferences"
+      ],
+      "data_types": [
+        "Archived Webcasts",
+        "Seminars (WALS)",
+        "Meetings"
+      ],
+      "target_populations": [
+        "Researchers",
+        "Public"
+      ],
+      "organisms": [
+        "N/A"
+      ]
+    },
+    "access_cost": {
+      "access_model": "Open Access",
+      "cost_status": "Free",
+      "requires_registration": false,
+      "requires_dua": false,
+      "has_human_data": false,
+      "data_sensitivity": "Public Information"
+    },
+    "practical_usage": {
+      "compute_location": [
+        "Web-based"
+      ],
+      "requires_special_infrastructure": false,
+      "skills_required": [
+        "None"
+      ],
+      "typical_use_cases": "Accessing the NIH VideoCast archive to watch past seminars, meetings, and major events (e.g., Wednesday Afternoon Lecture Series) for free education and information.",
+      "integration_parents": []
+    },
+    "lifecycle_curation": {
+      "status": "Active",
+      "maintaining_ic": [
+        "CIT"
+      ],
+      "notes": "CIT provides the NIH VideoCast system, which streams and archives NIH seminars and conferences. The archives are open to the public at no cost."
+    },
+    "tagging": {
+      "keywords": [
+        "VideoCast",
+        "webcasts",
+        "seminars",
+        "science communication",
+        "training"
+      ]
+    }
+  },
+  {
+    "identity": {
+      "id": "IC_172",
+      "resource_name": "Enterprise Software Tools (free licenses)",
+      "short_name": "CIT Software",
+      "ic_code": "CIT",
+      "ic_name": "Center for Information Technology",
+      "primary_url": "https://www.nih.gov/about-nih/nih-institutes-centers/center-information-technology-cit/software",
+      "docs_url": "",
+      "api_url": ""
+    },
+    "type_content": {
+      "resource_type": [
+        "Software",
+        "Open-Source Tool"
+      ],
+      "domains": [
+        "Image Analysis",
+        "Data Management"
+      ],
+      "data_types": [
+        "ImageJ/NIH Image",
+        "Utility Software (GitHub)"
+      ],
+      "target_populations": [
+        "Researchers",
+        "Developers"
+      ],
+      "organisms": [
+        "N/A"
+      ]
+    },
+    "access_cost": {
+      "access_model": "Open Source/Public Domain",
+      "cost_status": "Free",
+      "requires_registration": false,
+      "requires_dua": false,
+      "has_human_data": false,
+      "data_sensitivity": "Public Software"
+    },
+    "practical_usage": {
+      "compute_location": [
+        "Downloads (GitHub)"
+      ],
+      "requires_special_infrastructure": false,
+      "skills_required": [
+        "Programming",
+        "Data Management"
+      ],
+      "typical_use_cases": "Utilizing open-source tools like ImageJ (NIH Image) for image analysis or accessing utility software released by CIT on GitHub for data management.",
+      "integration_parents": [
+        "ImageJ",
+        "GitHub"
+      ]
+    },
+    "lifecycle_curation": {
+      "status": "Active",
+      "maintaining_ic": [
+        "CIT"
+      ],
+      "notes": "CIT develops/supports open-source software like ImageJ (NIH Image) as a free image analysis tool (public domain). It also releases various utility software on GitHub under open licenses."
+    },
+    "tagging": {
+      "keywords": [
+        "software",
+        "open source",
+        "ImageJ",
+        "NIH Image",
+        "GitHub",
+        "free licenses"
+      ]
+    }
+  },
+  {
+    "identity": {
+      "id": "IC_173",
+      "resource_name": "Secure Data Services",
+      "short_name": "CIT Secure",
+      "ic_code": "CIT",
+      "ic_name": "Center for Information Technology",
+      "primary_url": "https://www.nih.gov/about-nih/nih-institutes-centers/center-information-technology-cit/security",
+      "docs_url": "",
+      "api_url": ""
+    },
+    "type_content": {
+      "resource_type": [
+        "Secure Service",
+        "Data Transfer Tool"
+      ],
+      "domains": [
+        "Data Security",
+        "Collaboration"
+      ],
+      "data_types": [
+        "Secure Email (SEMS)",
+        "Secure File Transfer (ASPERA)"
+      ],
+      "target_populations": [
+        "NIH Collaborators"
+      ],
+      "organisms": [
+        "N/A"
+      ]
+    },
+    "access_cost": {
+      "access_model": "Controlled Access",
+      "cost_status": "Free (No Cost to Partner)",
+      "requires_registration": true,
+      "requires_dua": true,
+      "has_human_data": true,
+      "data_sensitivity": "Sensitive Data"
+    },
+    "practical_usage": {
+      "compute_location": [
+        "NIH Infrastructure"
+      ],
+      "requires_special_infrastructure": false,
+      "skills_required": [
+        "Security Protocols"
+      ],
+      "typical_use_cases": "Securely transmitting sensitive data (SEMS) and large files (ASPERA) between NIH researchers and outside academic partners, with costs covered by NIH.",
+      "integration_parents": []
+    },
+    "lifecycle_curation": {
+      "status": "Active",
+      "maintaining_ic": [
+        "CIT"
+      ],
+      "notes": "CIT's Secure Email (SEMS) and Secure File Transfer (ASPERA) are used to send sensitive data to outside collaborators. The service is provided at no cost to the partner to facilitate secure exchange."
+    },
+    "tagging": {
+      "keywords": [
+        "secure data",
+        "data transfer",
+        "SEMS",
+        "ASPERA",
+        "collaboration support"
+      ]
+    }
+  },
+  {
+    "identity": {
+      "id": "IC_174",
+      "resource_name": "Electronic Research Administration (eRA) Systems",
+      "short_name": "eRA Commons/ASSIST",
+      "ic_code": "CIT",
+      "ic_name": "Center for Information Technology",
+      "primary_url": "https://era.nih.gov/",
+      "docs_url": "",
+      "api_url": ""
+    },
+    "type_content": {
+      "resource_type": [
+        "Web Portal",
+        "Administrative System"
+      ],
+      "domains": [
+        "Grant Submission",
+        "Research Administration"
+      ],
+      "data_types": [
+        "Grant Applications (ASSIST)",
+        "Grant Management Tools (Commons)"
+      ],
+      "target_populations": [
+        "PIs",
+        "Research Administrators"
+      ],
+      "organisms": [
+        "N/A"
+      ]
+    },
+    "access_cost": {
+      "access_model": "Controlled Access",
+      "cost_status": "Free",
+      "requires_registration": true,
+      "requires_dua": false,
+      "has_human_data": false,
+      "data_sensitivity": "Grant Information"
+    },
+    "practical_usage": {
+      "compute_location": [
+        "Web-based"
+      ],
+      "requires_special_infrastructure": false,
+      "skills_required": [
+        "Grant Writing",
+        "Administration"
+      ],
+      "typical_use_cases": "Using ASSIST to prepare and submit NIH grant applications electronically and using Commons to manage the grant lifecycle (status, reporting).",
+      "integration_parents": []
+    },
+    "lifecycle_curation": {
+      "status": "Active",
+      "maintaining_ic": [
+        "CIT",
+        "OER"
+      ],
+      "notes": "Systems for grant submission (ASSIST) and managing grants (Commons) are supported by CIT. These tools are provided freely for the external researcher community applying for NIH funding."
+    },
+    "tagging": {
+      "keywords": [
+        "eRA",
+        "eRA Commons",
+        "ASSIST",
+        "grant submission",
+        "research administration"
+      ]
+    }
+  },
+  {
+    "identity": {
+      "id": "IC_175",
+      "resource_name": "Cloud-based Data Repositories (NIH Figshare/Science Data Portal)",
+      "short_name": "CIT Cloud Repos",
+      "ic_code": "CIT",
+      "ic_name": "Center for Information Technology",
+      "primary_url": "https://sciencedataportal.nih.gov/",
+      "docs_url": "",
+      "api_url": ""
+    },
+    "type_content": {
+      "resource_type": [
+        "Data Repository",
+        "Data Portal (Prototype)"
+      ],
+      "domains": [
+        "Data Sharing",
+        "Intramural Research"
+      ],
+      "data_types": [
+        "Research Datasets",
+        "Preprints (Figshare)"
+      ],
+      "target_populations": [
+        "Researchers",
+        "Public"
+      ],
+      "organisms": [
+        "Human",
+        "Model Organisms"
+      ]
+    },
+    "access_cost": {
+      "access_model": "Open Access (Promoted)",
+      "cost_status": "Free",
+      "requires_registration": false,
+      "requires_dua": false,
+      "has_human_data": true,
+      "data_sensitivity": "Varies (Intramural Shared Data)"
+    },
+    "practical_usage": {
+      "compute_location": [
+        "Web-based"
+      ],
+      "requires_special_infrastructure": false,
+      "skills_required": [
+        "Data Discovery"
+      ],
+      "typical_use_cases": "Accessing datasets and materials posted by NIH intramural scientists on general data repositories like NIH Figshare or via Science Data Portal prototypes.",
+      "integration_parents": [
+        "NIH Figshare"
+      ]
+    },
+    "lifecycle_curation": {
+      "status": "Active (Prototyping)",
+      "maintaining_ic": [
+        "CIT"
+      ],
+      "notes": "CIT is involved in hosting platforms like NIH Figshare (a general data repository for NIH preprints and materials) and Science Data Portal prototypes. These would allow free public access to deposited datasets."
+    },
+    "tagging": {
+      "keywords": [
+        "cloud data",
+        "data repository",
+        "Figshare",
+        "science data portal",
+        "intramural research"
+      ]
+    }
+  },
+  {
+    "identity": {
+      "id": "IC_176",
+      "resource_name": "Training and Outreach (Tech Talks/Biowulf Guide)",
+      "short_name": "CIT Outreach",
+      "ic_code": "CIT",
+      "ic_name": "Center for Information Technology",
+      "primary_url": "https://hpc.nih.gov/docs/",
+      "docs_url": "",
+      "api_url": ""
+    },
+    "type_content": {
+      "resource_type": [
+        "Training Resource",
+        "Documentation"
+      ],
+      "domains": [
+        "Bioinformatics",
+        "HPC Management",
+        "Data Science"
+      ],
+      "data_types": [
+        "Biowulf User Guide",
+        "Code Recipes",
+        "Tech Talk Archives"
+      ],
+      "target_populations": [
+        "HPC Users",
+        "Bioinformaticians",
+        "Public"
+      ],
+      "organisms": [
+        "N/A"
+      ]
+    },
+    "access_cost": {
+      "access_model": "Open Access",
+      "cost_status": "Free",
+      "requires_registration": false,
+      "requires_dua": false,
+      "has_human_data": false,
+      "data_sensitivity": "Public Information"
+    },
+    "practical_usage": {
+      "compute_location": [
+        "Web-based"
+      ],
+      "requires_special_infrastructure": false,
+      "skills_required": [
+        "HPC Management",
+        "Bioinformatics"
+      ],
+      "typical_use_cases": "Accessing the extensive, publicly available Biowulf User Guide and code recipes for bioinformatics to learn and implement analysis workflows.",
+      "integration_parents": []
+    },
+    "lifecycle_curation": {
+      "status": "Active",
+      "maintaining_ic": [
+        "CIT"
+      ],
+      "notes": "Shares best practices and code through NIH Tech Talks (often videocast publicly) and maintains extensive, freely available documentation (e.g., the Biowulf User Guide and code recipes for bioinformatics)."
+    },
+    "tagging": {
+      "keywords": [
+        "training",
+        "documentation",
+        "Biowulf guide",
+        "bioinformatics",
+        "tech talks"
+      ]
+    }
+  },
+  {
+    "identity": {
+      "id": "IC_177",
+      "resource_name": "Sample Grant Applications",
+      "short_name": "CSR Grants",
+      "ic_code": "CSR",
+      "ic_name": "Center for Scientific Review",
+      "primary_url": "https://www.niaid.nih.gov/grants-contracts/sample-applications",
+      "docs_url": "",
+      "api_url": ""
+    },
+    "type_content": {
+      "resource_type": [
+        "Educational Material",
+        "Template Resource"
+      ],
+      "domains": [
+        "Grant Writing",
+        "Peer Review"
+      ],
+      "data_types": [
+        "Sample Funded Applications (R01, R21)",
+        "Summary Statements"
+      ],
+      "target_populations": [
+        "Grant Applicants",
+        "New Investigators"
+      ],
+      "organisms": [
+        "N/A"
+      ]
+    },
+    "access_cost": {
+      "access_model": "Open Access",
+      "cost_status": "Free",
+      "requires_registration": false,
+      "requires_dua": false,
+      "has_human_data": false,
+      "data_sensitivity": "De-identified Research Proposals"
+    },
+    "practical_usage": {
+      "compute_location": [
+        "Downloads"
+      ],
+      "requires_special_infrastructure": false,
+      "skills_required": [
+        "Grant Writing"
+      ],
+      "typical_use_cases": "Studying successful grant proposals (R01, R21) and reviewers' critiques to understand review expectations and improve application quality.",
+      "integration_parents": [
+        "NIAID",
+        "NIH"
+      ]
+    },
+    "lifecycle_curation": {
+      "status": "Active",
+      "maintaining_ic": [
+        "CSR",
+        "NIAID"
+      ],
+      "notes": "CSR provides valuable resources to help researchers craft strong applications. Sample funded grant applications and summary statements are made available for educational purposes, which are freely downloadable."
+    },
+    "tagging": {
+      "keywords": [
+        "grant applications",
+        "CSR",
+        "R01",
+        "grant writing",
+        "peer review",
+        "summary statements"
+      ]
+    }
   }
 ]
