@@ -99,6 +99,12 @@ const LOGO_LIBRARY = {
   NLM: { small: 'abrv-logos/NLM.svg', large: 'png-logos/NLM.png' },
 };
 
+const NAV_LINKS = [
+  { label: 'Resources', href: '#resources' },
+  { label: 'Filters', href: '#filters' },
+  { label: 'Support', href: '#support' },
+];
+
 const getIcAssets = (ic) => {
   const normalized = (ic || '').toUpperCase();
   const assets = LOGO_LIBRARY[normalized] || {};
@@ -509,7 +515,9 @@ const App = () => {
   const [selectedDomains, setSelectedDomains] = useState([]);
   const [selectedResourceTypes, setSelectedResourceTypes] = useState([]);
   const [expandedResourceId, setExpandedResourceId] = useState(null);
+  const [isHeroNavOpen, setIsHeroNavOpen] = useState(false);
   const indexRef = useRef(null);
+  const heroNavRef = useRef(null);
 
   useEffect(() => {
     const loadResources = async () => {
@@ -532,6 +540,28 @@ const App = () => {
     };
 
     loadResources();
+  }, []);
+
+  useEffect(() => {
+    const handleClick = (event) => {
+      if (heroNavRef.current && !heroNavRef.current.contains(event.target)) {
+        setIsHeroNavOpen(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClick);
+    return () => document.removeEventListener('mousedown', handleClick);
+  }, []);
+
+  useEffect(() => {
+    const handleKey = (event) => {
+      if (event.key === 'Escape') {
+        setIsHeroNavOpen(false);
+      }
+    };
+
+    document.addEventListener('keydown', handleKey);
+    return () => document.removeEventListener('keydown', handleKey);
   }, []);
 
   useEffect(() => {
@@ -678,140 +708,237 @@ const App = () => {
   const totalResults = filteredResources.length;
 
   return (
-    <div className="mx-auto max-w-7xl px-4 py-8 lg:px-8">
-      <header className="mb-8">
-        <p className="text-sm font-semibold uppercase tracking-[0.3em] text-indigo-600">
-          NIH Resource Finder
-        </p>
-        <div className="mt-2 flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
-          <div>
-            <h1 className="text-3xl font-bold text-slate-900">
-              Search, filter, and launch NIH-supported research resources
-            </h1>
-            <p className="mt-2 max-w-3xl text-base text-slate-600">
-              Explore data repositories, biospecimen banks, and analysis tools. Use the NIH logo
-              picker and lightweight combobox filters to focus on the institutes, domains, and
-              resource types that matter most.
-            </p>
+    <div className="page-shell">
+      <header className="hero">
+        <div className="hero-content">
+          <div className={`hero-nav ${isHeroNavOpen ? 'is-open' : ''}`} ref={heroNavRef}>
+            <button
+              type="button"
+              className="hero-nav-toggle"
+              aria-expanded={isHeroNavOpen}
+              aria-controls="hero-nav-menu"
+              onClick={() => setIsHeroNavOpen((previous) => !previous)}
+            >
+              <span aria-hidden="true">NIH Resource Finder</span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                aria-hidden="true"
+                className="hero-nav-toggle-icon"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M5.23 7.21a.75.75 0 0 1 1.06.02L10 11.185l3.71-3.955a.75.75 0 1 1 1.08 1.04l-4.24 4.52a.75.75 0 0 1-1.08 0l-4.24-4.52a.75.75 0 0 1 .02-1.06z"
+                  clipRule="evenodd"
+                />
+              </svg>
+              <span className="sr-only">Toggle hero navigation menu</span>
+            </button>
+            <div id="hero-nav-menu" className="hero-nav-menu" hidden={!isHeroNavOpen}>
+              {NAV_LINKS.map((link, index) => (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  className={`hero-nav-link ${index === 0 ? 'is-current' : ''}`}
+                  onClick={() => setIsHeroNavOpen(false)}
+                >
+                  <span>{link.label}</span>
+                  <span aria-hidden="true" className="hero-nav-link-indicator">
+                    ↗
+                  </span>
+                </a>
+              ))}
+            </div>
           </div>
-          <div className="rounded-2xl border border-slate-200 bg-white px-4 py-3 text-right shadow-sm">
-            <p className="text-3xl font-semibold text-slate-900">{resources.length}</p>
-            <p className="text-xs uppercase tracking-widest text-slate-500">Total resources</p>
+          <h1>Search, filter, and launch NIH-supported research infrastructure</h1>
+          <p className="hero-subtitle">
+            Explore data repositories, biospecimen banks, and analysis tools across NIH institutes. Use the
+            curated filters, NIH logo picker, and fast semantic search to hone in on the resources that
+            accelerate your work.
+          </p>
+          <div className="hero-stat-grid">
+            <div className="hero-stat">
+              <p className="hero-stat-value">{resources.length}</p>
+              <p className="hero-stat-label">Total resources</p>
+            </div>
+            <div className="hero-stat">
+              <p className="hero-stat-value">{filterOptions.ics.length}</p>
+              <p className="hero-stat-label">Institutes</p>
+            </div>
+            <div className="hero-stat">
+              <p className="hero-stat-value">{filterOptions.resourceTypes.length}</p>
+              <p className="hero-stat-label">Resource types</p>
+            </div>
+          </div>
+        </div>
+        <div className="hero-visual">
+          <div className="hero-quick-launch">
+            <p className="hero-quick-kicker">Quick launch</p>
+            <h2>Jump directly into the NIH explorer</h2>
+            <p>
+              Start with a blank search or skip down to the resource explorer whenever you are ready to browse
+              the catalog.
+            </p>
+            <div className="hero-quick-actions">
+              <button type="button" className="hero-quick-link" onClick={() => setSearchQuery('')}>
+                <span>Clear current query</span>
+                <span className="hero-quick-meta">Reset</span>
+              </button>
+              <a href="#resources" className="hero-quick-link hero-quick-link--primary">
+                <span>Skip to explorer</span>
+                <span className="hero-quick-meta">↓</span>
+              </a>
+            </div>
           </div>
         </div>
       </header>
 
-      <div className="grid gap-6 lg:grid-cols-12">
-        <aside className="lg:col-span-4">
-          <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
-            <div className="flex items-center justify-between">
-              <h2 className="text-sm font-semibold uppercase tracking-wide text-slate-500">
-                Filters
-              </h2>
-              <button
-                className="text-xs font-semibold uppercase tracking-wide text-indigo-600 hover:text-indigo-500"
-                onClick={clearFilters}
-              >
-                Clear all
-              </button>
-            </div>
+      <main>
+        <section id="resources" className="resources-panel text-slate-900">
+          <div className="mx-auto max-w-7xl px-4 lg:px-8">
+            <div className="grid gap-8 lg:grid-cols-12">
+              <aside id="filters" className="lg:col-span-4">
+                <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-xl">
+                <div className="flex items-center justify-between">
+                  <h2 className="text-sm font-semibold uppercase tracking-wide text-slate-500">
+                    Filters
+                  </h2>
+                  <button
+                    className="text-xs font-semibold uppercase tracking-wide text-indigo-600 hover:text-indigo-500"
+                    onClick={clearFilters}
+                  >
+                    Clear all
+                  </button>
+                </div>
 
-            <div className="mt-4 space-y-6">
-              <LogoFilterGrid
-                options={icLogoOptions}
-                selected={selectedICs}
-                onToggle={(value) => toggleSelection(value, selectedICs, setSelectedICs)}
-              />
+                <div className="mt-5 space-y-6">
+                  <LogoFilterGrid
+                    options={icLogoOptions}
+                    selected={selectedICs}
+                    onToggle={(value) => toggleSelection(value, selectedICs, setSelectedICs)}
+                  />
 
-              <MultiEntryInput
-                label="Maintaining IC"
-                placeholder="Type an IC code"
-                options={filterOptions.ics}
-                values={selectedICs}
-                onChange={setSelectedICs}
-              />
+                  <MultiEntryInput
+                    label="Maintaining IC"
+                    placeholder="Type an IC code"
+                    options={filterOptions.ics}
+                    values={selectedICs}
+                    onChange={setSelectedICs}
+                  />
 
-              <MultiEntryInput
-                label="Domain"
-                placeholder="Add a domain"
-                options={filterOptions.domains}
-                values={selectedDomains}
-                onChange={setSelectedDomains}
-              />
+                  <MultiEntryInput
+                    label="Domain"
+                    placeholder="Add a domain"
+                    options={filterOptions.domains}
+                    values={selectedDomains}
+                    onChange={setSelectedDomains}
+                  />
 
-              <MultiEntryInput
-                label="Resource type"
-                placeholder="Add a resource type"
-                options={filterOptions.resourceTypes}
-                values={selectedResourceTypes}
-                onChange={setSelectedResourceTypes}
-              />
-            </div>
-          </div>
-        </aside>
-
-        <main className="space-y-4 lg:col-span-8">
-          <div className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
-            <div className="flex flex-col gap-3 lg:flex-row lg:items-center lg:gap-4">
-              <div className="flex-1">
-                <label className="sr-only" htmlFor="resource-search">
-                  Search resources
-                </label>
-                <div className="relative">
-                  <span className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3 text-slate-400">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="h-5 w-5"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="1.5"
-                        d="M10.5 3.75a6.75 6.75 0 1 1 0 13.5 6.75 6.75 0 0 1 0-13.5zm0 0L16.5 15"
-                      />
-                    </svg>
-                  </span>
-                  <input
-                    id="resource-search"
-                    type="search"
-                    placeholder="Search by resource name, domain, or keyword"
-                    value={searchQuery}
-                    onChange={(event) => setSearchQuery(event.target.value)}
-                    className="w-full rounded-xl border border-slate-200 bg-slate-50 py-3 pl-10 pr-4 text-sm text-slate-700 focus:border-indigo-400 focus:bg-white focus:outline-none focus:ring-2 focus:ring-indigo-100"
+                  <MultiEntryInput
+                    label="Resource type"
+                    placeholder="Add a resource type"
+                    options={filterOptions.resourceTypes}
+                    values={selectedResourceTypes}
+                    onChange={setSelectedResourceTypes}
                   />
                 </div>
+                </div>
+              </aside>
+
+            <div className="space-y-4 lg:col-span-8">
+              <div className="rounded-3xl border border-slate-200 bg-white p-5 shadow-xl">
+                <div className="flex flex-col gap-3 lg:flex-row lg:items-center lg:gap-4">
+                  <div className="flex-1">
+                    <label className="sr-only" htmlFor="resource-search">
+                      Search resources
+                    </label>
+                    <div className="relative">
+                      <span className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3 text-slate-400">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          className="h-5 w-5"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="1.5"
+                            d="M10.5 3.75a6.75 6.75 0 1 1 0 13.5 6.75 6.75 0 0 1 0-13.5zm0 0L16.5 15"
+                          />
+                        </svg>
+                      </span>
+                      <input
+                        id="resource-search"
+                        type="search"
+                        placeholder="Search by resource name, domain, or keyword"
+                        value={searchQuery}
+                        onChange={(event) => setSearchQuery(event.target.value)}
+                        className="w-full rounded-2xl border border-slate-200 bg-slate-50 py-3 pl-10 pr-4 text-sm text-slate-700 focus:border-indigo-400 focus:bg-white focus:outline-none focus:ring-2 focus:ring-indigo-100"
+                      />
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-3 text-sm text-slate-500">
+                    <span className="text-sm font-semibold text-slate-900">{totalResults}</span>
+                    results
+                  </div>
+                </div>
               </div>
-              <div className="flex items-center gap-3 text-sm text-slate-500">
-                <span className="text-sm font-semibold text-slate-900">{totalResults}</span>
-                results
+
+              {totalResults === 0 ? (
+                <div className="rounded-3xl border border-dashed border-slate-300 bg-white p-10 text-center text-slate-500">
+                  <p className="text-lg font-semibold text-slate-700">No resources found</p>
+                  <p className="mt-2 text-sm text-slate-500">
+                    Adjust your filters or search query to discover more NIH resources.
+                  </p>
+                </div>
+              ) : (
+                <div className="space-y-4">
+                  {filteredResources.map((resource) => (
+                    <ResourceCard
+                      key={resource.id}
+                      resource={resource}
+                      isExpanded={expandedResourceId === resource.id}
+                      onToggle={handleCardToggle}
+                    />
+                  ))}
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
+        </section>
+
+        <section id="support" className="support-section text-white">
+          <div className="mx-auto max-w-5xl px-4 text-center lg:px-8">
+            <div className="rounded-3xl border border-white border-opacity-10 bg-white bg-opacity-5 p-10 shadow-2xl backdrop-blur">
+              <p className="text-xs font-semibold uppercase tracking-[0.5em] text-sky-200">Need help?</p>
+              <h2 className="mt-4 text-3xl font-semibold">Support for the NIH Resource Finder</h2>
+            <p className="mt-4 text-base text-white text-opacity-80">
+              Contact the BioData Catalyst Resource Finder team to contribute new resources, provide
+              corrections, or request additional filters. Use your existing NIH support channels or
+              email the program office for guidance.
+            </p>
+            <div className="mt-8 flex flex-wrap justify-center gap-4 text-sm font-semibold">
+              <a
+                href="mailto:nih-resourcefinder@nih.gov"
+                className="rounded-full border border-white border-opacity-40 px-6 py-3 text-white transition hover:border-white"
+              >
+                Email program office
+              </a>
+              <a
+                href="#resources"
+                className="rounded-full bg-white px-6 py-3 text-slate-900 shadow-lg transition hover:-translate-y-0.5"
+              >
+                Back to top
+              </a>
               </div>
             </div>
           </div>
-
-          {totalResults === 0 ? (
-            <div className="rounded-2xl border border-dashed border-slate-300 bg-white p-10 text-center text-slate-500">
-              <p className="text-lg font-semibold text-slate-700">No resources found</p>
-              <p className="mt-2 text-sm text-slate-500">
-                Adjust your filters or search query to discover more NIH resources.
-              </p>
-            </div>
-          ) : (
-            <div className="space-y-4">
-              {filteredResources.map((resource) => (
-                <ResourceCard
-                  key={resource.id}
-                  resource={resource}
-                  isExpanded={expandedResourceId === resource.id}
-                  onToggle={handleCardToggle}
-                />
-              ))}
-            </div>
-          )}
-        </main>
-      </div>
+        </section>
+      </main>
     </div>
   );
 };
