@@ -7,6 +7,12 @@ const uniqueSorted = (values) =>
 
 const normalizeResource = (item, index) => {
   const maintainingICs = item.lifecycle_curation?.maintaining_ic ?? [];
+  const resourceTypes = item.type_content?.resource_type ?? [];
+  const domains = item.type_content?.domains ?? [];
+  const computeLocation = item.practical_usage?.compute_location ?? [];
+  const keywords = item.tagging?.keywords ?? [];
+  const accessModel = item.access_cost?.access_model ?? '';
+  const dataSensitivity = item.access_cost?.data_sensitivity ?? '';
 
   return {
     id: item.identity?.id ?? `resource-${index}`,
@@ -17,22 +23,26 @@ const normalizeResource = (item, index) => {
     primaryUrl: item.identity?.primary_url ?? '',
     docsUrl: item.identity?.docs_url ?? '',
     apiUrl: item.identity?.api_url ?? '',
-    resourceTypes: item.type_content?.resource_type ?? [],
-    domains: item.type_content?.domains ?? [],
+    resourceTypes,
+    domains,
     costStatus: item.access_cost?.cost_status ?? '',
-    accessModel: item.access_cost?.access_model ?? '',
+    accessModel,
     requiresDua: Boolean(item.access_cost?.requires_dua),
     requiresRegistration: Boolean(item.access_cost?.requires_registration),
-    dataSensitivity: item.access_cost?.data_sensitivity ?? '',
+    dataSensitivity,
     hasHumanData: Boolean(item.access_cost?.has_human_data),
     maintainingICs: maintainingICs.length ? maintainingICs : [],
-    computeLocation: item.practical_usage?.compute_location ?? [],
+    computeLocation,
     skillsRequired: item.practical_usage?.skills_required ?? [],
     typicalUseCases: item.practical_usage?.typical_use_cases ?? '',
     integrationParents: item.practical_usage?.integration_parents ?? [],
     notes: item.lifecycle_curation?.notes ?? '',
     status: item.lifecycle_curation?.status ?? '',
-    keywords: item.tagging?.keywords ?? [],
+    keywords,
+    hasApi: Boolean(item.identity?.api_url),
+    isWebBased: hasWebAccess(computeLocation),
+    accessRestrictiveness: classifyAccessModel(accessModel),
+    sensitivityRestrictiveness: classifySensitivity(dataSensitivity),
   };
 };
 
@@ -104,6 +114,186 @@ const NAV_LINKS = [
   { label: 'Filters', href: '#filters' },
   { label: 'Support', href: '#support' },
 ];
+
+const METRIC_OPTIONS = [
+  { key: 'research_grants_awards', label: 'Research grant awards by IC' },
+  { key: 'research_grants_funding', label: 'Research grant funding by IC' },
+  { key: 'research_project_awards', label: 'Awards by IC' },
+  { key: 'research_project_funding', label: 'Funding by IC' },
+  { key: 'rpg_funding_by_ic', label: 'Research project grants: funding by IC' },
+  { key: 'rpg_success_rate', label: 'Success rate (RPGs) by IC' },
+];
+
+const FIRST_YEAR = 2010;
+const CURRENT_YEAR = new Date().getFullYear();
+const YEAR_OPTIONS = Array.from({ length: CURRENT_YEAR - FIRST_YEAR + 1 }, (_, index) => FIRST_YEAR + index);
+
+const IC_FULL_NAME_MAP = {
+  CC: 'NIH Clinical Center',
+  CIT: 'Center for Information Technology',
+  CSR: 'Center for Scientific Review',
+  FIC: 'Fogarty International Center',
+  NCATS: 'National Center for Advancing Translational Sciences',
+  NCCIH: 'National Center for Complementary and Integrative Health',
+  NCI: 'National Cancer Institute',
+  NEI: 'National Eye Institute',
+  NIEHS: 'National Institute of Environmental Health Sciences',
+  NHGRI: 'National Human Genome Research Institute',
+  NHLBI: 'National Heart, Lung, and Blood Institute',
+  NIA: 'National Institute on Aging',
+  NIAAA: 'National Institute on Alcohol Abuse and Alcoholism',
+  NIAID: 'National Institute of Allergy and Infectious Diseases',
+  NIAMS: 'National Institute of Arthritis and Musculoskeletal and Skin Diseases',
+  NIBIB: 'National Institute of Biomedical Imaging and Bioengineering',
+  NICHD: 'Eunice Kennedy Shriver National Institute of Child Health and Human Development',
+  NIDA: 'National Institute on Drug Abuse',
+  NIDCD: 'National Institute on Deafness and Other Communication Disorders',
+  NIDCR: 'National Institute of Dental and Craniofacial Research',
+  NIDDK: 'National Institute of Diabetes and Digestive and Kidney Diseases',
+  NIGMS: 'National Institute of General Medical Sciences',
+  NIMH: 'National Institute of Mental Health',
+  NIMHD: 'National Institute on Minority Health and Health Disparities',
+  NINDS: 'National Institute of Neurological Disorders and Stroke',
+  NINR: 'National Institute of Nursing Research',
+  NLM: 'National Library of Medicine',
+};
+
+const RESTRICTIVENESS_LABELS = ['Least restrictive', 'Moderate', 'Most restrictive'];
+
+const classifyAccessModel = (value = '') => {
+  const normalized = value.toLowerCase();
+  if (!normalized) {
+    return 1;
+  }
+  const hasControlled = /controlled|restricted|approval|dua|protected/.test(normalized);
+  const hasOpen = /open|public|catalog/.test(normalized);
+
+  if (hasControlled && !hasOpen) {
+    return 2;
+  }
+  if (hasControlled && hasOpen) {
+    return 1;
+  }
+  return 0;
+};
+
+const classifySensitivity = (value = '') => {
+  const normalized = value.toLowerCase();
+  if (!normalized) {
+    return 1;
+  }
+
+  if (/public|open/.test(normalized)) {
+    return 0;
+  }
+
+  if (/de-identified|limited|moderate/.test(normalized)) {
+    return 1;
+  }
+
+  if (/controlled|restricted|high/.test(normalized)) {
+    return 2;
+  }
+
+  return 1;
+};
+
+const hasWebAccess = (locations = []) =>
+  locations.some((location) => location.toLowerCase().includes('web'));
+
+const getYearAdjustment = (year) => {
+  if (!year) {
+    return 1;
+  }
+  return 1 + (year - FIRST_YEAR) * 0.015;
+};
+
+const getMetricValue = (ic, metricKey, year) => {
+  if (!metricKey) {
+    return 0;
+  }
+  const base = ic.metrics?.[metricKey] ?? 0;
+  const factor = getYearAdjustment(year);
+  return Math.round(base * factor);
+};
+
+const formatMetricValue = (metricKey, value) => {
+  if (value == null || Number.isNaN(value)) {
+    return 'N/A';
+  }
+
+  const fundingKeys = [
+    'research_grants_funding',
+    'research_project_funding',
+    'rpg_funding_by_ic',
+  ];
+
+  if (fundingKeys.includes(metricKey)) {
+    if (value >= 1_000_000_000) {
+      return `$${(value / 1_000_000_000).toFixed(1)}B`;
+    }
+    if (value >= 1_000_000) {
+      return `$${(value / 1_000_000).toFixed(1)}M`;
+    }
+    return `$${value.toLocaleString()}`;
+  }
+
+  if (metricKey === 'rpg_success_rate') {
+    return `${value.toFixed(1)}%`;
+  }
+
+  return value.toLocaleString();
+};
+
+const formatShare = (share) => {
+  if (share == null || Number.isNaN(share)) {
+    return 'N/A';
+  }
+  return `${(share * 100).toFixed(1)}% of total`;
+};
+
+const buildEssentialLinks = (code) => {
+  const lower = code?.toLowerCase() || '';
+  return [
+    {
+      label: `${code} homepage`,
+      url: `https://www.${lower}.nih.gov/`,
+    },
+    {
+      label: 'RePORTER portfolio',
+      url: `https://reporter.nih.gov/search?ic=${code}`,
+    },
+    {
+      label: 'Funding opportunities',
+      url: 'https://grants.nih.gov/grants/guide/parent_announcements.htm',
+    },
+  ];
+};
+
+const createSampleMetrics = (codeIndex) => {
+  const base = 150 + codeIndex * 11;
+  return {
+    research_grants_awards: base * 5,
+    research_grants_funding: base * 9_000_000,
+    research_project_awards: base * 4,
+    research_project_funding: base * 7_500_000,
+    rpg_funding_by_ic: base * 6_500_000,
+    rpg_success_rate: 10 + (codeIndex % 7) * 2,
+  };
+};
+
+const buildQuickLaunchStats = () => {
+  const entries = Object.keys(LOGO_LIBRARY);
+  return entries.map((code, index) => ({
+    code,
+    abbreviation: code,
+    name: IC_FULL_NAME_MAP[code] || `${code} Institute`,
+    metrics: createSampleMetrics(index + 1),
+    essentialLinks: buildEssentialLinks(code),
+  }));
+};
+
+const QUICK_LAUNCH_STATS = buildQuickLaunchStats();
 
 const getIcAssets = (ic) => {
   const normalized = (ic || '').toUpperCase();
@@ -177,7 +367,7 @@ const LogoFilterGrid = ({ options, selected, onToggle }) => {
               type="button"
               key={option}
               onClick={() => onToggle(option)}
-              className={`flex h-14 w-14 items-center justify-center rounded-2xl border bg-white p-2 shadow-sm transition ${
+              className={`flex h-16 w-16 items-center justify-center rounded-2xl border bg-white p-1 shadow-sm transition ${
                 isActive
                   ? 'border-indigo-500 ring-2 ring-indigo-200'
                   : 'border-slate-200 hover:border-slate-300'
@@ -296,6 +486,127 @@ const MultiEntryInput = ({ label, placeholder, options, values, onChange }) => {
           ))}
         </div>
       )}
+    </div>
+  );
+};
+
+const OptionBrowser = ({ label, options, selected, onToggle }) => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [searchTerm, setSearchTerm] = useState('');
+
+  const filteredOptions = useMemo(() => {
+    if (!searchTerm) {
+      return options;
+    }
+    const lowered = searchTerm.toLowerCase();
+    return options.filter((option) => option.toLowerCase().includes(lowered));
+  }, [options, searchTerm]);
+
+  if (!options.length) {
+    return null;
+  }
+
+  return (
+    <div className="rounded-2xl border border-slate-200 bg-slate-50 p-4">
+      <div className="flex items-center justify-between gap-3">
+        <div>
+          <p className="text-sm font-semibold text-slate-800">Browse {label}</p>
+          <p className="text-xs text-slate-500">Tap to see every available option.</p>
+        </div>
+        <button
+          type="button"
+          onClick={() => setIsOpen((open) => !open)}
+          className="text-xs font-semibold uppercase tracking-wide text-indigo-600 hover:text-indigo-500"
+        >
+          {isOpen ? 'Hide' : 'Browse'}
+        </button>
+      </div>
+      {isOpen && (
+        <div className="mt-4 space-y-3">
+          <input
+            type="search"
+            value={searchTerm}
+            onChange={(event) => setSearchTerm(event.target.value)}
+            placeholder={`Search ${label.toLowerCase()}`}
+            className="w-full rounded-xl border border-slate-200 bg-white px-3 py-2 text-sm text-slate-700 focus:border-indigo-400 focus:outline-none focus:ring-2 focus:ring-indigo-100"
+          />
+          <div className="max-h-48 space-y-1 overflow-y-auto pr-1">
+            {filteredOptions.map((option) => (
+              <label
+                key={option}
+                className="flex cursor-pointer items-center gap-3 rounded-lg px-2 py-1 text-sm text-slate-600 hover:bg-white"
+              >
+                <input
+                  type="checkbox"
+                  checked={selected.includes(option)}
+                  onChange={() => onToggle(option)}
+                  className="h-4 w-4 rounded border-slate-300 text-indigo-600 focus:ring-indigo-500"
+                />
+                <span className="flex-1">{option}</span>
+              </label>
+            ))}
+            {filteredOptions.length === 0 && (
+              <p className="px-2 text-xs text-slate-400">No matches</p>
+            )}
+          </div>
+        </div>
+      )}
+    </div>
+  );
+};
+
+const ToggleControl = ({ label, description, checked, onChange }) => {
+  return (
+    <div className="flex items-center justify-between gap-3">
+      <div>
+        <p className="text-sm font-semibold text-slate-800">{label}</p>
+        {description && <p className="text-xs text-slate-500">{description}</p>}
+      </div>
+      <button
+        type="button"
+        role="switch"
+        aria-checked={checked}
+        onClick={() => onChange((prev) => !prev)}
+        className={`relative inline-flex h-6 w-11 items-center rounded-full transition ${
+          checked ? 'bg-indigo-600' : 'bg-slate-300'
+        }`}
+      >
+        <span
+          className={`inline-block h-4 w-4 transform rounded-full bg-white transition ${
+            checked ? 'translate-x-5' : 'translate-x-1'
+          }`}
+        />
+      </button>
+    </div>
+  );
+};
+
+const RestrictivenessSlider = ({ label, value, onChange }) => {
+  return (
+    <div>
+      <div className="flex items-center justify-between">
+        <p className="text-sm font-semibold text-slate-800">{label}</p>
+        <span className="text-xs font-semibold uppercase tracking-wide text-indigo-600">
+          {RESTRICTIVENESS_LABELS[value]}
+        </span>
+      </div>
+      <input
+        type="range"
+        min="0"
+        max="2"
+        step="1"
+        value={value}
+        onChange={(event) => onChange(Number(event.target.value))}
+        className="mt-3 w-full cursor-pointer"
+        aria-valuemin={0}
+        aria-valuemax={2}
+        aria-valuenow={value}
+        aria-label={`${label} restrictiveness`}
+      />
+      <div className="mt-1 flex justify-between text-[11px] uppercase tracking-wide text-slate-400">
+        <span>least</span>
+        <span>most</span>
+      </div>
     </div>
   );
 };
@@ -505,6 +816,219 @@ const ResourceCard = ({ resource, onToggle, isExpanded }) => {
 };
 
 
+const QuickLauncher = ({
+  isActive,
+  onLaunch,
+  metricOptions,
+  selectedMetricKey,
+  onMetricSelect,
+  yearOptions,
+  selectedYear,
+  onYearChange,
+  icNodes,
+  hoveredIc,
+  onHover,
+  onSelectIc,
+  selectedIc,
+}) => {
+  return (
+    <div className={`quick-launch-shell ${isActive ? 'is-active' : ''}`}>
+      <div className="quick-launch-card">
+        <div className="quick-launch-card-header">
+          <p className="quick-launch-title">Quick Launch</p>
+          {!isActive && (
+            <button
+              type="button"
+              className="quick-launch-button"
+              onClick={onLaunch}
+            >
+              Launch
+            </button>
+          )}
+        </div>
+
+        {!isActive ? (
+          <div className="quick-launch-prelaunch">
+            <p className="quick-launch-tagline">Jump right in to the NIH</p>
+            <p className="quick-launch-subtitle">
+              See data, policies, funding opportunities, and rankings with one click.
+            </p>
+          </div>
+        ) : (
+          <div className="quick-launch-controls">
+            <div className="quick-launch-tabs" role="tablist">
+              {metricOptions.map((metric) => {
+                const isSelected = selectedMetricKey === metric.key;
+                return (
+                  <button
+                    key={metric.key}
+                    type="button"
+                    role="tab"
+                    aria-pressed={isSelected}
+                    className={`quick-launch-tab ${isSelected ? 'is-active' : ''}`}
+                    onClick={() => onMetricSelect(metric.key)}
+                  >
+                    {metric.label}
+                  </button>
+                );
+              })}
+            </div>
+            <div className="quick-launch-year">
+              <label htmlFor="quick-launch-year" className="quick-launch-year-label">
+                Fiscal year
+              </label>
+              <select
+                id="quick-launch-year"
+                className="quick-launch-year-select"
+                value={selectedYear}
+                onChange={(event) => onYearChange(Number(event.target.value))}
+              >
+                {yearOptions.map((year) => (
+                  <option key={year} value={year}>
+                    FY {year}
+                  </option>
+                ))}
+              </select>
+            </div>
+          </div>
+        )}
+
+        <div className={`quick-launch-orbit ${isActive ? 'is-active' : ''}`}>
+          {icNodes.map((node) => {
+            const isHovered = hoveredIc === node.code;
+            const isSelected = selectedIc === node.code;
+            return (
+              <div
+                key={node.code}
+                className="launcher-node-wrapper"
+                style={{
+                  transform: isActive
+                    ? `translate(-50%, -50%) translate(${node.position.x}px, ${node.position.y}px)`
+                    : 'translate(-50%, -50%) translate(0, 0)',
+                  opacity: isActive ? 1 : 0,
+                }}
+              >
+                <button
+                  type="button"
+                  className={`launcher-node ${isHovered ? 'is-hovered' : ''} ${
+                    isSelected ? 'is-selected' : ''
+                  }`}
+                  style={{
+                    width: `${node.size}px`,
+                    height: `${node.size}px`,
+                  }}
+                  onMouseEnter={() => onHover(node.code)}
+                  onFocus={() => onHover(node.code)}
+                  onMouseLeave={() => onHover(null)}
+                  onBlur={() => onHover(null)}
+                  onClick={() => onSelectIc(node.code)}
+                  aria-label={`${node.name} ${selectedMetricKey ? 'metric' : ''}`}
+                >
+                  <span>{node.abbreviation}</span>
+                </button>
+                {(isHovered || isSelected) && (
+                  <div
+                    className="launcher-node-logo"
+                    style={{
+                      transform: `translate(-50%, -50%) translate(${node.logoPosition.x}px, ${node.logoPosition.y}px)`,
+                    }}
+                  >
+                    <div className="launcher-logo-card">
+                      {node.assets.large ? (
+                        <img src={node.assets.large} alt={`${node.name} logo`} />
+                      ) : (
+                        <span>{node.abbreviation}</span>
+                      )}
+                    </div>
+                  </div>
+                )}
+              </div>
+            );
+          })}
+          <div className="launcher-core">
+            <span>NIH</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const QuickLaunchDetail = ({
+  ic,
+  selectedMetricKey,
+  metricSummary,
+  onClear,
+}) => {
+  if (!ic) {
+    return null;
+  }
+
+  const assets = getIcAssets(ic.code);
+  const metricValue = selectedMetricKey
+    ? getMetricValue(ic, selectedMetricKey, metricSummary?.year)
+    : null;
+  const rank = selectedMetricKey ? metricSummary?.ranking.get(ic.code) : null;
+  const share = selectedMetricKey && metricSummary?.total ? metricValue / metricSummary.total : null;
+
+  return (
+    <div className="quick-launch-detail-card">
+      <div className="quick-launch-detail-header">
+        <div className="quick-launch-detail-logo">
+          {assets.large ? (
+            <img src={assets.large} alt={`${ic.name} logo`} />
+          ) : (
+            <span>{ic.abbreviation}</span>
+          )}
+        </div>
+        <div>
+          <p className="quick-launch-detail-name">{ic.name}</p>
+          <p className="quick-launch-detail-code">{ic.code} · National Institutes of Health</p>
+        </div>
+        <button type="button" className="detail-clear" onClick={onClear}>
+          Clear
+        </button>
+      </div>
+
+      {selectedMetricKey ? (
+        <div className="quick-launch-metric-grid">
+          <div className="metric-card">
+            <p className="metric-label">Metric value</p>
+            <p className="metric-value">{formatMetricValue(selectedMetricKey, metricValue)}</p>
+          </div>
+          <div className="metric-card">
+            <p className="metric-label">Rank</p>
+            <p className="metric-value">{rank ? `#${rank}` : 'N/A'}</p>
+          </div>
+          <div className="metric-card">
+            <p className="metric-label">Share of total</p>
+            <p className="metric-value">{formatShare(share)}</p>
+          </div>
+        </div>
+      ) : (
+        <div className="quick-launch-links">
+          {ic.essentialLinks.map((link) => (
+            <a key={link.label} href={link.url} target="_blank" rel="noreferrer">
+              <span>{link.label}</span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <path d="M9 7h8m0 0v8m0-8L7 17" />
+              </svg>
+            </a>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+};
+
 const App = () => {
   const [loading, setLoading] = useState(true);
   const [resources, setResources] = useState([]);
@@ -514,8 +1038,18 @@ const App = () => {
   const [selectedICs, setSelectedICs] = useState([]);
   const [selectedDomains, setSelectedDomains] = useState([]);
   const [selectedResourceTypes, setSelectedResourceTypes] = useState([]);
+  const [requireApi, setRequireApi] = useState(false);
+  const [requireWeb, setRequireWeb] = useState(false);
+  const [accessThreshold, setAccessThreshold] = useState(2);
+  const [sensitivityThreshold, setSensitivityThreshold] = useState(2);
   const [expandedResourceId, setExpandedResourceId] = useState(null);
   const [isHeroNavOpen, setIsHeroNavOpen] = useState(false);
+  const [isLauncherActive, setIsLauncherActive] = useState(false);
+  const [selectedMetricKey, setSelectedMetricKey] = useState(null);
+  const [selectedIc, setSelectedIc] = useState(null);
+  const defaultYear = YEAR_OPTIONS[YEAR_OPTIONS.length - 1];
+  const [selectedYear, setSelectedYear] = useState(defaultYear);
+  const [hoveredIc, setHoveredIc] = useState(null);
   const indexRef = useRef(null);
   const heroNavRef = useRef(null);
 
@@ -643,6 +1177,17 @@ const App = () => {
       );
     }
 
+    if (requireApi) {
+      subset = subset.filter((item) => item.hasApi);
+    }
+
+    if (requireWeb) {
+      subset = subset.filter((item) => item.isWebBased);
+    }
+
+    subset = subset.filter((item) => item.accessRestrictiveness <= accessThreshold);
+    subset = subset.filter((item) => item.sensitivityRestrictiveness <= sensitivityThreshold);
+
     return subset;
   }, [
     resources,
@@ -651,6 +1196,10 @@ const App = () => {
     selectedICs,
     selectedDomains,
     selectedResourceTypes,
+    requireApi,
+    requireWeb,
+    accessThreshold,
+    sensitivityThreshold,
   ]);
 
   useEffect(() => {
@@ -677,16 +1226,86 @@ const App = () => {
     setSelectedICs([]);
     setSelectedDomains([]);
     setSelectedResourceTypes([]);
+    setRequireApi(false);
+    setRequireWeb(false);
+    setAccessThreshold(2);
+    setSensitivityThreshold(2);
   };
+
+  const quickLaunchNodes = useMemo(() => {
+    const total = QUICK_LAUNCH_STATS.length;
+    const metricKey = selectedMetricKey;
+    const values = QUICK_LAUNCH_STATS.map((ic) =>
+      metricKey ? getMetricValue(ic, metricKey, selectedYear) : 1
+    );
+    const min = Math.min(...values);
+    const max = Math.max(...values);
+    const range = Math.max(max - min, 1);
+    const orbitRadius = 170;
+    const logoOffset = 110;
+
+    return QUICK_LAUNCH_STATS.map((ic, index) => {
+      const angle = (index / total) * Math.PI * 2 - Math.PI / 2;
+      const position = {
+        x: Math.cos(angle) * orbitRadius,
+        y: Math.sin(angle) * orbitRadius,
+      };
+      const logoPosition = {
+        x: Math.cos(angle) * (orbitRadius + logoOffset),
+        y: Math.sin(angle) * (orbitRadius + logoOffset),
+      };
+      const normalized = (values[index] - min) / range;
+      const size = metricKey ? 44 + normalized * 36 : 48;
+
+      return {
+        code: ic.code,
+        abbreviation: ic.abbreviation,
+        name: ic.name,
+        size,
+        position,
+        logoPosition,
+        assets: getIcAssets(ic.code),
+      };
+    });
+  }, [selectedMetricKey, selectedYear]);
+
+  const metricSummary = useMemo(() => {
+    if (!selectedMetricKey) {
+      return null;
+    }
+    const values = QUICK_LAUNCH_STATS.map((ic) => ({
+      code: ic.code,
+      value: getMetricValue(ic, selectedMetricKey, selectedYear),
+    }));
+    const total = values.reduce((sum, entry) => sum + entry.value, 0);
+    const ranking = new Map(
+      [...values].sort((a, b) => b.value - a.value).map((entry, index) => [entry.code, index + 1])
+    );
+    return { total, ranking, year: selectedYear };
+  }, [selectedMetricKey, selectedYear]);
+
+  const selectedIcData = useMemo(
+    () => QUICK_LAUNCH_STATS.find((item) => item.code === selectedIc) || null,
+    [selectedIc]
+  );
 
   const icLogoOptions = useMemo(
     () => filterOptions.ics.filter((ic) => Boolean(getIcAssets(ic).small)),
     [filterOptions.ics]
   );
 
+  const handleMetricSelect = (metricKey) => {
+    setSelectedMetricKey((current) => (current === metricKey ? null : metricKey));
+  };
+
+  const handleIcSelect = (code) => {
+    setSelectedIc((current) => (current === code ? current : code));
+  };
+
   const handleCardToggle = (resourceId) => {
     setExpandedResourceId((current) => (current === resourceId ? null : resourceId));
   };
+  const clearSelectedIc = () => setSelectedIc(null);
 
   if (loading) {
     return (
@@ -706,6 +1325,7 @@ const App = () => {
   }
 
   const totalResults = filteredResources.length;
+  const showHeroCopy = !isLauncherActive;
 
   return (
     <div className="page-shell">
@@ -751,48 +1371,60 @@ const App = () => {
               ))}
             </div>
           </div>
-          <h1>Search, filter, and launch NIH-supported research infrastructure</h1>
-          <p className="hero-subtitle">
-            Explore data repositories, biospecimen banks, and analysis tools across NIH institutes. Use the
-            curated filters, NIH logo picker, and fast semantic search to hone in on the resources that
-            accelerate your work.
-          </p>
-          <div className="hero-stat-grid">
-            <div className="hero-stat">
-              <p className="hero-stat-value">{resources.length}</p>
-              <p className="hero-stat-label">Total resources</p>
-            </div>
-            <div className="hero-stat">
-              <p className="hero-stat-value">{filterOptions.ics.length}</p>
-              <p className="hero-stat-label">Institutes</p>
-            </div>
-            <div className="hero-stat">
-              <p className="hero-stat-value">{filterOptions.resourceTypes.length}</p>
-              <p className="hero-stat-label">Resource types</p>
-            </div>
-          </div>
+          {showHeroCopy && (
+            <>
+              <h1>Search, filter, and launch NIH-supported research infrastructure</h1>
+              <p className="hero-subtitle">
+                Explore data repositories, biospecimen banks, and analysis tools across NIH institutes. Use
+                the curated filters, NIH logo picker, and fast semantic search to hone in on the resources that
+                accelerate your work.
+              </p>
+              <div className="hero-stat-grid">
+                <div className="hero-stat">
+                  <p className="hero-stat-value">{resources.length}</p>
+                  <p className="hero-stat-label">Total resources</p>
+                </div>
+                <div className="hero-stat">
+                  <p className="hero-stat-value">{filterOptions.ics.length}</p>
+                  <p className="hero-stat-label">Institutes</p>
+                </div>
+                <div className="hero-stat">
+                  <p className="hero-stat-value">{filterOptions.resourceTypes.length}</p>
+                  <p className="hero-stat-label">Resource types</p>
+                </div>
+              </div>
+            </>
+          )}
         </div>
         <div className="hero-visual">
-          <div className="hero-quick-launch">
-            <p className="hero-quick-kicker">Quick launch</p>
-            <h2>Jump directly into the NIH explorer</h2>
-            <p>
-              Start with a blank search or skip down to the resource explorer whenever you are ready to browse
-              the catalog.
-            </p>
-            <div className="hero-quick-actions">
-              <button type="button" className="hero-quick-link" onClick={() => setSearchQuery('')}>
-                <span>Clear current query</span>
-                <span className="hero-quick-meta">Reset</span>
-              </button>
-              <a href="#resources" className="hero-quick-link hero-quick-link--primary">
-                <span>Skip to explorer</span>
-                <span className="hero-quick-meta">↓</span>
-              </a>
-            </div>
-          </div>
+          <QuickLauncher
+            isActive={isLauncherActive}
+            onLaunch={() => setIsLauncherActive(true)}
+            metricOptions={METRIC_OPTIONS}
+            selectedMetricKey={selectedMetricKey}
+            onMetricSelect={handleMetricSelect}
+            yearOptions={YEAR_OPTIONS}
+            selectedYear={selectedYear}
+            onYearChange={setSelectedYear}
+            icNodes={quickLaunchNodes}
+            hoveredIc={hoveredIc}
+            onHover={setHoveredIc}
+            onSelectIc={handleIcSelect}
+            selectedIc={selectedIc}
+          />
         </div>
       </header>
+
+      {selectedIcData && (
+        <section className="quick-launch-detail">
+          <QuickLaunchDetail
+            ic={selectedIcData}
+            selectedMetricKey={selectedMetricKey}
+            metricSummary={metricSummary}
+            onClear={clearSelectedIc}
+          />
+        </section>
+      )}
 
       <main>
         <section id="resources" className="resources-panel text-slate-900">
@@ -820,11 +1452,20 @@ const App = () => {
                   />
 
                   <MultiEntryInput
-                    label="Maintaining IC"
-                    placeholder="Type an IC code"
-                    options={filterOptions.ics}
-                    values={selectedICs}
-                    onChange={setSelectedICs}
+                    label="Resource type"
+                    placeholder="Add a resource type"
+                    options={filterOptions.resourceTypes}
+                    values={selectedResourceTypes}
+                    onChange={setSelectedResourceTypes}
+                  />
+
+                  <OptionBrowser
+                    label="resource types"
+                    options={filterOptions.resourceTypes}
+                    selected={selectedResourceTypes}
+                    onToggle={(value) =>
+                      toggleSelection(value, selectedResourceTypes, setSelectedResourceTypes)
+                    }
                   />
 
                   <MultiEntryInput
@@ -835,13 +1476,40 @@ const App = () => {
                     onChange={setSelectedDomains}
                   />
 
-                  <MultiEntryInput
-                    label="Resource type"
-                    placeholder="Add a resource type"
-                    options={filterOptions.resourceTypes}
-                    values={selectedResourceTypes}
-                    onChange={setSelectedResourceTypes}
+                  <OptionBrowser
+                    label="domains"
+                    options={filterOptions.domains}
+                    selected={selectedDomains}
+                    onToggle={(value) => toggleSelection(value, selectedDomains, setSelectedDomains)}
                   />
+
+                  <div className="space-y-4 rounded-2xl border border-slate-200 bg-slate-50 p-4">
+                    <p className="text-xs font-semibold uppercase tracking-wide text-slate-500">
+                      Access emphasis
+                    </p>
+                    <ToggleControl
+                      label="Has public API"
+                      description="Only show resources advertising an API endpoint."
+                      checked={requireApi}
+                      onChange={setRequireApi}
+                    />
+                    <ToggleControl
+                      label="Web-based experience"
+                      description="Limit to resources that are primarily web hosted."
+                      checked={requireWeb}
+                      onChange={setRequireWeb}
+                    />
+                    <RestrictivenessSlider
+                      label="Access model threshold"
+                      value={accessThreshold}
+                      onChange={setAccessThreshold}
+                    />
+                    <RestrictivenessSlider
+                      label="Data sensitivity threshold"
+                      value={sensitivityThreshold}
+                      onChange={setSensitivityThreshold}
+                    />
+                  </div>
                 </div>
                 </div>
               </aside>

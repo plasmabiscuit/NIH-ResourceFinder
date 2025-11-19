@@ -2,7 +2,7 @@
   {
     "identity": {
       "id": "IC_001",
-      "resource_name": "NCI Resources for Researchers Directory",
+      "resource_name": "NCI Data Catalog",
       "short_name": "NCI Data Catalog",
       "ic_code": "NCI",
       "ic_name": "National Cancer Institute",
@@ -300,8 +300,8 @@
   {
     "identity": {
       "id": "IC_005",
-      "resource_name": "State Cancer Profiles & Cancer Atlas",
-      "short_name": "Cancer Atlas",
+      "resource_name": "State Cancer Profiles",
+      "short_name": "State Cancer Profiles",
       "ic_code": "NCI",
       "ic_name": "National Cancer Institute",
       "primary_url": "https://statecancerprofiles.cancer.gov/",
@@ -361,7 +361,7 @@
         "NCI",
         "CDC"
       ],
-      "notes": "Interactive GIS-based tools to visualize cancer statistics by state, county, demographics, and risk factors. Open to the public online for custom maps, graphs, and data downloads."
+      "notes": "Interactive GIS-based tools to visualize cancer statistics by state, county, demographics, and risk factors. Open to the public online for custom maps, graphs, and data downloads. Includes the interactive Cancer Atlas views within the State Cancer Profiles platform."
     },
     "tagging": {
       "keywords": [
@@ -369,7 +369,8 @@
         "cancer burden",
         "geographic profiles",
         "public health",
-        "policy making"
+        "policy making",
+        "cancer atlas"
       ]
     }
   },
@@ -447,8 +448,8 @@
   {
     "identity": {
       "id": "IC_007",
-      "resource_name": "Dietary Assessment Tools (ASA24 & ACT24)",
-      "short_name": "ASA24 & ACT24",
+      "resource_name": "Automated Self-Administered 24-Hour (ASA24) Dietary Assessment Tool",
+      "short_name": "ASA24",
       "ic_code": "NCI",
       "ic_name": "National Cancer Institute",
       "primary_url": "https://epi.grants.cancer.gov/asa24/",
@@ -462,14 +463,12 @@
       ],
       "domains": [
         "Dietary Assessment",
-        "Physical Activity",
+        "Nutrition",
         "Population Science"
       ],
       "data_types": [
         "24-hour Dietary Recalls",
-        "Food Records",
-        "Physical Activity Data",
-        "Sedentary Behavior Data"
+        "Food Records"
       ],
       "target_populations": [
         "Research Participants",
@@ -497,7 +496,7 @@
         "Study Setup",
         "Data Interpretation"
       ],
-      "typical_use_cases": "Collecting dietary and physical activity data for epidemiologic, intervention, behavioral, or clinical research.",
+      "typical_use_cases": "Collecting self-administered 24-hour dietary recalls for epidemiologic, behavioral, or clinical nutrition research.",
       "integration_parents": []
     },
     "lifecycle_curation": {
@@ -505,16 +504,84 @@
       "maintaining_ic": [
         "NCI"
       ],
-      "notes": "Web-based tool for collecting 24-hour dietary recalls (ASA24) and physical activity/sedentary behavior (ACT24). Provided at no cost by NCI. An account may be required for researchers."
+      "notes": "Web-based dietary recall platform provided by NCI; researchers register projects and manage respondent-facing surveys."
     },
     "tagging": {
       "keywords": [
         "dietary intake",
         "nutrition",
-        "physical activity",
         "assessment tool",
-        "epidemiology",
-        "ASA24",
+        "ASA24"
+      ]
+    }
+  },
+  {
+    "identity": {
+      "id": "IC_007A",
+      "resource_name": "Automated Self-Administered 24-Hour (ACT24) Physical Activity Recall",
+      "short_name": "ACT24",
+      "ic_code": "NCI",
+      "ic_name": "National Cancer Institute",
+      "primary_url": "https://act24.nci.nih.gov/",
+      "docs_url": "https://asa24.nci.nih.gov/researcherSite/assets-r/Researcher_Instructions.pdf",
+      "api_url": ""
+    },
+    "type_content": {
+      "resource_type": [
+        "Software Tool",
+        "Web Application"
+      ],
+      "domains": [
+        "Physical Activity",
+        "Sedentary Behavior",
+        "Population Science"
+      ],
+      "data_types": [
+        "Physical Activity Data",
+        "Sedentary Behavior Data",
+        "Time-use Diaries"
+      ],
+      "target_populations": [
+        "Research Participants",
+        "Clinical Patients",
+        "Students"
+      ],
+      "organisms": [
+        "Human"
+      ]
+    },
+    "access_cost": {
+      "access_model": "Open Access",
+      "cost_status": "Free",
+      "requires_registration": true,
+      "requires_dua": false,
+      "has_human_data": false,
+      "data_sensitivity": "None (The tool itself)"
+    },
+    "practical_usage": {
+      "compute_location": [
+        "Web-based (Researcher and Respondent Websites)"
+      ],
+      "requires_special_infrastructure": false,
+      "skills_required": [
+        "Study Setup",
+        "Data Interpretation"
+      ],
+      "typical_use_cases": "Capturing detailed 24-hour time-use and activity recalls for studies of physical activity, sedentary time, and energy expenditure.",
+      "integration_parents": []
+    },
+    "lifecycle_curation": {
+      "status": "Active",
+      "maintaining_ic": [
+        "NCI"
+      ],
+      "notes": "Companion to ASA24 focused on activity and time-use diaries; investigators configure studies and respondents complete browser-based recalls."
+    },
+    "tagging": {
+      "keywords": [
+        "physical activity",
+        "sedentary behavior",
+        "time use",
         "ACT24"
       ]
     }
@@ -668,7 +735,7 @@
   {
     "identity": {
       "id": "IC_010",
-      "resource_name": "NCI Thesaurus and Ontology",
+      "resource_name": "NCI Thesaurus (NCIt)",
       "short_name": "NCIt",
       "ic_code": "NCI",
       "ic_name": "National Cancer Institute",
@@ -747,7 +814,7 @@
   {
     "identity": {
       "id": "IC_011",
-      "resource_name": "eyeGENE® Research Resource",
+      "resource_name": "eyeGENE\u00ae Research Resource",
       "short_name": "eyeGENE",
       "ic_code": "NEI",
       "ic_name": "National Eye Institute",
@@ -819,7 +886,7 @@
   {
     "identity": {
       "id": "IC_012",
-      "resource_name": "NEI Data Commons & Modules (e.g., eyeIntegration)",
+      "resource_name": "NEI Data Commons",
       "short_name": "NEIDC",
       "ic_code": "NEI",
       "ic_name": "National Eye Institute",
@@ -1035,8 +1102,8 @@
   {
     "identity": {
       "id": "IC_015",
-      "resource_name": "Audacious Goals Initiative (AGI) data portals",
-      "short_name": "AGI Portals",
+      "resource_name": "Audacious Goals Initiative (AGI) Projects",
+      "short_name": "NEI AGI",
       "ic_code": "NEI",
       "ic_name": "National Eye Institute",
       "primary_url": "https://www.nei.nih.gov/about/goals-and-accomplishments/nei-research-initiatives/audacious-goals-initiative/agi-projects",
@@ -1252,7 +1319,7 @@
   {
     "identity": {
       "id": "IC_018",
-      "resource_name": "eyeGENE® Biorepository (Biospecimen Resource)",
+      "resource_name": "eyeGENE\u00ae Biorepository (Biospecimen Resource)",
       "short_name": "eyeGENE Bio",
       "ic_code": "NEI",
       "ic_name": "National Eye Institute",
@@ -1469,57 +1536,65 @@
   {
     "identity": {
       "id": "IC_021",
-      "resource_name": "NHLBI Data Stacy (Data Stage) (Former Name for BDC)",
-      "short_name": "",
+      "resource_name": "BioData Catalyst Data STAGE",
+      "short_name": "Data STAGE",
       "ic_code": "NHLBI",
       "ic_name": "National Heart, Lung, and Blood Institute",
-      "primary_url": "https://biodatacatalyst.nhlbi.nih.gov/",
+      "primary_url": "https://datastage.biodatacatalyst.nhlbi.nih.gov/",
       "docs_url": "",
       "api_url": ""
     },
     "type_content": {
       "resource_type": [
-        "Former Resource"
+        "Cloud Platform",
+        "Data Commons",
+        "Analysis Workspace"
       ],
       "domains": [
         "Heart, Lung, Blood, and Sleep (HLBS) Disorders"
       ],
       "data_types": [
-        "N/A"
+        "Genomic Data",
+        "Clinical Data",
+        "Imaging Data"
       ],
       "target_populations": [],
       "organisms": []
     },
     "access_cost": {
-      "access_model": "N/A",
-      "cost_status": "N/A",
-      "requires_registration": false,
-      "requires_dua": false,
-      "has_human_data": false,
-      "data_sensitivity": "N/A"
+      "access_model": "Controlled Access (Data/Analysis)",
+      "cost_status": "Free (platform access); cloud compute billed via STRIDES credits",
+      "requires_registration": true,
+      "requires_dua": true,
+      "has_human_data": true,
+      "data_sensitivity": "High (Genomic and Clinical Data)"
     },
     "practical_usage": {
       "compute_location": [
-        "N/A"
+        "Cloud-based"
       ],
       "requires_special_infrastructure": false,
       "skills_required": [
-        "N/A"
+        "Bioinformatics",
+        "Cloud Computing",
+        "Data Science"
       ],
-      "typical_use_cases": "Former name for the NHLBI BioData Catalyst (IC_020). Use BDC for current information.",
+      "typical_use_cases": "Provision and orchestration layer that lets researchers stage, transform, and analyze NHLBI BioData Catalyst datasets in secure workspaces.",
       "integration_parents": []
     },
     "lifecycle_curation": {
-      "status": "Superseded",
+      "status": "Active",
       "maintaining_ic": [
         "NHLBI"
       ],
-      "notes": "Former name for the NHLBI BioData Catalyst (IC_020). Resource is obsolete and details defer to BDC."
+      "notes": "Data STAGE is the shared storage and tooling environment that powers BioData Catalyst workspaces and services."
     },
     "tagging": {
       "keywords": [
-        "former resource",
-        "BDC"
+        "Data STAGE",
+        "cloud",
+        "BDC",
+        "genomics"
       ]
     }
   },
@@ -1604,8 +1679,8 @@
   {
     "identity": {
       "id": "IC_023",
-      "resource_name": "NHLBI Cohort Studies Public Data",
-      "short_name": "NHLBI Cohorts",
+      "resource_name": "NHLBI-Supported Studies",
+      "short_name": "NHLBI Studies",
       "ic_code": "NHLBI",
       "ic_name": "National Heart, Lung, and Blood Institute",
       "primary_url": "https://www.nhlbi.nih.gov/research/resources/nhlbi-supported-studies",
@@ -1658,7 +1733,7 @@
       "maintaining_ic": [
         "NHLBI"
       ],
-      "notes": "Public data summaries or limited datasets released from long-term NHLBI cohort studies (e.g., Framingham, Jackson Heart Study). Freely accessible for public use."
+      "notes": "Public data summaries or limited datasets released from long-term NHLBI cohort studies (e.g., Framingham, Jackson Heart Study). Freely accessible for public use. Landing hub highlighting major NHLBI-funded cohort studies and public data releases."
     },
     "tagging": {
       "keywords": [
@@ -1741,8 +1816,8 @@
   {
     "identity": {
       "id": "IC_025",
-      "resource_name": "NHLBI Clinical Trial Networks Tools",
-      "short_name": "CTN Tools",
+      "resource_name": "Study Quality Assessment Tools",
+      "short_name": "Study Quality Tools",
       "ic_code": "NHLBI",
       "ic_name": "National Heart, Lung, and Blood Institute",
       "primary_url": "https://www.nhlbi.nih.gov/health-topics/study-quality-assessment-tools",
@@ -2102,8 +2177,8 @@
   {
     "identity": {
       "id": "IC_030",
-      "resource_name": "Human Genome Reference (GRCh)",
-      "short_name": "GRCh",
+      "resource_name": "Human Genome Project",
+      "short_name": "Human Genome Project",
       "ic_code": "NHGRI",
       "ic_name": "National Human Genome Research Institute",
       "primary_url": "https://www.genome.gov/about-genomics/fact-sheets/Human-Genome-Project",
@@ -2445,7 +2520,7 @@
       "maintaining_ic": [
         "NIA"
       ],
-      "notes": "Provides a vast collection of longitudinal MRI/PET images, clinical assessments, and CSF/blood biomarkers. Data are openly shared with researchers worldwide—registration and DUA are required, but no fee."
+      "notes": "Provides a vast collection of longitudinal MRI/PET images, clinical assessments, and CSF/blood biomarkers. Data are openly shared with researchers worldwide\u2014registration and DUA are required, but no fee."
     },
     "tagging": {
       "keywords": [
@@ -2461,11 +2536,11 @@
   {
     "identity": {
       "id": "IC_035",
-      "resource_name": "Longitudinal Aging Studies & Surveys (e.g., NHATS, MIDUS, BLSA)",
-      "short_name": "Aging Surveys",
+      "resource_name": "National Health and Aging Trends Study (NHATS)",
+      "short_name": "NHATS",
       "ic_code": "NIA",
       "ic_name": "National Institute on Aging",
-      "primary_url": "https://www.nia.nih.gov/research/dbsr/data-resources-behavioral-and-social-research-aging",
+      "primary_url": "https://www.nhats.org/",
       "docs_url": "",
       "api_url": ""
     },
@@ -2476,14 +2551,88 @@
       ],
       "domains": [
         "Aging",
-        "Health",
-        "Economics",
+        "Disability",
+        "Health Services",
         "Gerontology"
       ],
       "data_types": [
         "Survey Data",
-        "Biomarkers",
-        "Socioeconomic Data"
+        "Linked Medicare Data",
+        "Caregiver Interviews"
+      ],
+      "target_populations": [
+        "Older Adults",
+        "Medicare Beneficiaries"
+      ],
+      "organisms": [
+        "Human"
+      ]
+    },
+    "access_cost": {
+      "access_model": "Open Access (Varies by Study)",
+      "cost_status": "Free",
+      "requires_registration": true,
+      "requires_dua": true,
+      "has_human_data": true,
+      "data_sensitivity": "Varies (De-identified to Controlled)"
+    },
+    "practical_usage": {
+      "compute_location": [
+        "Downloads",
+        "ICPSR"
+      ],
+      "requires_special_infrastructure": false,
+      "skills_required": [
+        "Statistical Analysis",
+        "Epidemiology"
+      ],
+      "typical_use_cases": "Studying disability, caregiving, and health trajectories among older U.S. Medicare beneficiaries using annual longitudinal surveys.",
+      "integration_parents": [
+        "ICPSR",
+        "CMS"
+      ]
+    },
+    "lifecycle_curation": {
+      "status": "Active",
+      "maintaining_ic": [
+        "NIA"
+      ],
+      "notes": "NHATS provides annual data files (with linked caregiver surveys) for qualified researchers via the NHATS website and ICPSR after completing a data use agreement."
+    },
+    "tagging": {
+      "keywords": [
+        "NHATS",
+        "aging",
+        "disability",
+        "caregiving"
+      ]
+    }
+  },
+  {
+    "identity": {
+      "id": "IC_035A",
+      "resource_name": "Midlife in the United States (MIDUS)",
+      "short_name": "MIDUS",
+      "ic_code": "NIA",
+      "ic_name": "National Institute on Aging",
+      "primary_url": "https://midus.wisc.edu/",
+      "docs_url": "",
+      "api_url": ""
+    },
+    "type_content": {
+      "resource_type": [
+        "Survey Data",
+        "Longitudinal Cohort"
+      ],
+      "domains": [
+        "Aging",
+        "Psychosocial Factors",
+        "Biobehavioral Medicine"
+      ],
+      "data_types": [
+        "Survey Data",
+        "Biomarker Data",
+        "Cognitive Assessments"
       ],
       "target_populations": [
         "Older Adults",
@@ -2511,10 +2660,10 @@
         "Statistical Analysis",
         "Epidemiology"
       ],
-      "typical_use_cases": "Secondary analysis of national and regional longitudinal datasets to study health and behavioral changes related to aging across the lifespan.",
+      "typical_use_cases": "Analyzing nationally representative midlife cohort data that link psychosocial measures with biomarkers and cognitive testing.",
       "integration_parents": [
         "ICPSR",
-        "NHATS"
+        "UW-Madison"
       ]
     },
     "lifecycle_curation": {
@@ -2522,16 +2671,87 @@
       "maintaining_ic": [
         "NIA"
       ],
-      "notes": "NIA supports numerous free datasets (e.g., NHATS, MIDUS, BLSA). Data can be obtained at no cost by bona fide researchers, typically by agreeing to conditions of use."
+      "notes": "MIDUS study waves (including biomarker projects) are distributed through ICPSR with free registration and signed data use terms."
     },
     "tagging": {
       "keywords": [
-        "aging studies",
-        "longitudinal",
-        "NHATS",
         "MIDUS",
+        "midlife",
+        "psychosocial",
+        "biomarkers"
+      ]
+    }
+  },
+  {
+    "identity": {
+      "id": "IC_035B",
+      "resource_name": "Baltimore Longitudinal Study of Aging (BLSA)",
+      "short_name": "BLSA",
+      "ic_code": "NIA",
+      "ic_name": "National Institute on Aging",
+      "primary_url": "https://www.blsa.nih.gov/",
+      "docs_url": "",
+      "api_url": ""
+    },
+    "type_content": {
+      "resource_type": [
+        "Survey Data",
+        "Longitudinal Cohort"
+      ],
+      "domains": [
+        "Aging",
+        "Gerontology",
+        "Clinical Research"
+      ],
+      "data_types": [
+        "Clinical Assessments",
+        "Imaging Data",
+        "Biomarkers"
+      ],
+      "target_populations": [
+        "Older Adults",
+        "Midlife Individuals"
+      ],
+      "organisms": [
+        "Human"
+      ]
+    },
+    "access_cost": {
+      "access_model": "Open Access (Varies by Study)",
+      "cost_status": "Free",
+      "requires_registration": true,
+      "requires_dua": true,
+      "has_human_data": true,
+      "data_sensitivity": "Varies (De-identified to Controlled)"
+    },
+    "practical_usage": {
+      "compute_location": [
+        "Downloads",
+        "ICPSR"
+      ],
+      "requires_special_infrastructure": false,
+      "skills_required": [
+        "Statistical Analysis",
+        "Epidemiology"
+      ],
+      "typical_use_cases": "Requesting access to the nation\u2019s longest-running study of human aging for analyses of clinical, imaging, and biomarker trajectories.",
+      "integration_parents": [
+        "NIA"
+      ]
+    },
+    "lifecycle_curation": {
+      "status": "Active",
+      "maintaining_ic": [
+        "NIA"
+      ],
+      "notes": "BLSA data access is granted through NIA upon submission of a data request and approved analysis plan."
+    },
+    "tagging": {
+      "keywords": [
         "BLSA",
-        "gerontology"
+        "longitudinal",
+        "clinical assessments",
+        "aging"
       ]
     }
   },
@@ -2613,8 +2833,8 @@
   {
     "identity": {
       "id": "IC_037",
-      "resource_name": "Biological Resources (Cell Repository & Rodent Colonies)",
-      "short_name": "NIA BioResources",
+      "resource_name": "NIA Research Resources",
+      "short_name": "NIA Research Resources",
       "ic_code": "NIA",
       "ic_name": "National Institute on Aging",
       "primary_url": "https://www.nia.nih.gov/research/resources",
@@ -2687,8 +2907,8 @@
   {
     "identity": {
       "id": "IC_038",
-      "resource_name": "Data Sharing Toolkits",
-      "short_name": "NIA Data Tools",
+      "resource_name": "NIA Data Sharing Resources for Researchers",
+      "short_name": "NIA Data Sharing Resources",
       "ic_code": "NIA",
       "ic_name": "National Institute on Aging",
       "primary_url": "https://www.nia.nih.gov/research/data-sharing-resources-researchers",
@@ -2898,8 +3118,8 @@
   {
     "identity": {
       "id": "IC_041",
-      "resource_name": "NIAAA Clinical Study Data (NESARC, etc.)",
-      "short_name": "NIAAA Study Data",
+      "resource_name": "NIAAA Data Archive and Resources",
+      "short_name": "NIAAA Data Resources",
       "ic_code": "NIAAA",
       "ic_name": "National Institute on Alcohol Abuse and Alcoholism",
       "primary_url": "https://www.niaaa.nih.gov/research/data-archive-and-resources",
@@ -2970,8 +3190,8 @@
   {
     "identity": {
       "id": "IC_042",
-      "resource_name": "NIAAA Clinical Trial Registry/Toolkit",
-      "short_name": "CT Toolkit",
+      "resource_name": "NIAAA Clinical Research Toolkit",
+      "short_name": "NIAAA Clinical Research Toolkit",
       "ic_code": "NIAAA",
       "ic_name": "National Institute on Alcohol Abuse and Alcoholism",
       "primary_url": "https://www.niaaa.nih.gov/funding/clinical-trials/niaaa-clinical-research-toolkit",
@@ -3043,8 +3263,8 @@
   {
     "identity": {
       "id": "IC_043",
-      "resource_name": "Alcohol Research Information (Reports/Surveillance)",
-      "short_name": "NIAAA Reports",
+      "resource_name": "NIAAA Publications",
+      "short_name": "NIAAA Publications",
       "ic_code": "NIAAA",
       "ic_name": "National Institute on Alcohol Abuse and Alcoholism",
       "primary_url": "https://www.niaaa.nih.gov/publications",
@@ -3113,8 +3333,8 @@
   {
     "identity": {
       "id": "IC_044",
-      "resource_name": "Biological Materials (Animal Models/Reagents)",
-      "short_name": "NIAAA BioMat",
+      "resource_name": "NIAAA Research Resources",
+      "short_name": "NIAAA Research Resources",
       "ic_code": "NIAAA",
       "ic_name": "National Institute on Alcohol Abuse and Alcoholism",
       "primary_url": "https://www.niaaa.nih.gov/research/niaaa-supported-research-resources",
@@ -3398,11 +3618,11 @@
   {
     "identity": {
       "id": "IC_048",
-      "resource_name": "Pathogen Genomics & Bioinformatics Databases (VEuPathDB, BV-BRC, LANL)",
-      "short_name": "PathogenDBs",
+      "resource_name": "VEuPathDB",
+      "short_name": "VEuPathDB",
       "ic_code": "NIAID",
       "ic_name": "National Institute of Allergy and Infectious Diseases",
-      "primary_url": "https://www.niaid.nih.gov/research/pathogen-genomics-databases",
+      "primary_url": "https://veupathdb.org/",
       "docs_url": "",
       "api_url": ""
     },
@@ -3412,14 +3632,91 @@
         "Bioinformatics Platform"
       ],
       "domains": [
-        "Pathogen Genomics",
-        "Infectious Disease"
+        "Parasitology",
+        "Vector-Borne Diseases",
+        "Microbiology"
       ],
       "data_types": [
-        "Genomes (Bacteria, Virus, Parasite)",
-        "Sequence Data",
-        "Annotation Pipelines",
-        "Comparative Genomics"
+        "Genomes",
+        "Transcriptomics",
+        "Functional Annotations"
+      ],
+      "target_populations": [
+        "Bioinformaticians",
+        "Microbiologists"
+      ],
+      "organisms": [
+        "Protozoa",
+        "Helminths",
+        "Vectors"
+      ]
+    },
+    "access_cost": {
+      "access_model": "Open Access (VEuPathDB, LANL); Open Registration (BV-BRC)",
+      "cost_status": "Free",
+      "requires_registration": false,
+      "requires_dua": false,
+      "has_human_data": false,
+      "data_sensitivity": "Public Data"
+    },
+    "practical_usage": {
+      "compute_location": [
+        "Web-based",
+        "Downloads"
+      ],
+      "requires_special_infrastructure": false,
+      "skills_required": [
+        "Bioinformatics",
+        "Genomics"
+      ],
+      "typical_use_cases": "Interrogate integrated omics datasets for parasites, vectors, and related pathogens with built-in comparative and visualization tools.",
+      "integration_parents": [
+        "VEuPathDB",
+        "BV-BRC",
+        "LANL"
+      ]
+    },
+    "lifecycle_curation": {
+      "status": "Active",
+      "maintaining_ic": [
+        "NIAID"
+      ],
+      "notes": "VEuPathDB aggregates multiple eukaryotic pathogen resources (e.g., PlasmoDB, AmoebaDB) funded by NIAID and provides unified query and analysis workflows."
+    },
+    "tagging": {
+      "keywords": [
+        "VEuPathDB",
+        "parasites",
+        "vector-borne",
+        "omics"
+      ]
+    }
+  },
+  {
+    "identity": {
+      "id": "IC_048A",
+      "resource_name": "Bacterial and Viral Bioinformatics Resource Center (BV-BRC)",
+      "short_name": "BV-BRC",
+      "ic_code": "NIAID",
+      "ic_name": "National Institute of Allergy and Infectious Diseases",
+      "primary_url": "https://www.bv-brc.org/",
+      "docs_url": "",
+      "api_url": ""
+    },
+    "type_content": {
+      "resource_type": [
+        "Database",
+        "Bioinformatics Platform"
+      ],
+      "domains": [
+        "Bacteriology",
+        "Virology",
+        "Bioinformatics"
+      ],
+      "data_types": [
+        "Genomes",
+        "Comparative Genomics",
+        "Analysis Workflows"
       ],
       "target_populations": [
         "Bioinformaticians",
@@ -3427,9 +3724,7 @@
       ],
       "organisms": [
         "Bacteria",
-        "Viruses",
-        "Fungi",
-        "Protozoa"
+        "Viruses"
       ]
     },
     "access_cost": {
@@ -3450,7 +3745,7 @@
         "Bioinformatics",
         "Genomics"
       ],
-      "typical_use_cases": "Querying, annotating, and performing comparative genomics on the genomes of various pathogens (e.g., Plasmodium, HIV, Influenza).",
+      "typical_use_cases": "Manage bacterial and viral genome projects, run annotation pipelines, and share Jupyter-based analyses through the BV-BRC workspace.",
       "integration_parents": [
         "VEuPathDB",
         "BV-BRC",
@@ -3462,27 +3757,100 @@
       "maintaining_ic": [
         "NIAID"
       ],
-      "notes": "NIAID funds several free genomic databases: VEuPathDB (parasites/fungi), BV-BRC (bacteria/viruses, offers analysis pipelines), and LANL databases (HIV/HCV/TB). All offer free access to data and tools."
+      "notes": "BV-BRC merges the former PATRIC and IRD/ViPR resources into a single NIAID-funded platform for bacterial and viral pathogens."
     },
     "tagging": {
       "keywords": [
-        "pathogen genomics",
+        "BV-BRC",
+        "bacterial genomes",
+        "viral genomes",
+        "analysis workflows"
+      ]
+    }
+  },
+  {
+    "identity": {
+      "id": "IC_048B",
+      "resource_name": "LANL HIV Sequence Database",
+      "short_name": "LANL HIV DB",
+      "ic_code": "NIAID",
+      "ic_name": "National Institute of Allergy and Infectious Diseases",
+      "primary_url": "https://www.hiv.lanl.gov/",
+      "docs_url": "",
+      "api_url": ""
+    },
+    "type_content": {
+      "resource_type": [
+        "Database",
+        "Bioinformatics Platform"
+      ],
+      "domains": [
+        "HIV",
+        "Viral Evolution",
+        "Vaccine Research"
+      ],
+      "data_types": [
+        "Sequence Alignments",
+        "Phylogenetic Trees",
+        "Immunogen Design Tools"
+      ],
+      "target_populations": [
+        "Bioinformaticians",
+        "Microbiologists"
+      ],
+      "organisms": [
+        "Viruses"
+      ]
+    },
+    "access_cost": {
+      "access_model": "Open Access (VEuPathDB, LANL); Open Registration (BV-BRC)",
+      "cost_status": "Free",
+      "requires_registration": false,
+      "requires_dua": false,
+      "has_human_data": false,
+      "data_sensitivity": "Public Data"
+    },
+    "practical_usage": {
+      "compute_location": [
+        "Web-based",
+        "Downloads"
+      ],
+      "requires_special_infrastructure": false,
+      "skills_required": [
+        "Bioinformatics",
+        "Genomics"
+      ],
+      "typical_use_cases": "Download curated HIV sequence alignments and use specialized tools for vaccine and diagnostics research.",
+      "integration_parents": [
         "VEuPathDB",
         "BV-BRC",
+        "LANL"
+      ]
+    },
+    "lifecycle_curation": {
+      "status": "Active",
+      "maintaining_ic": [
+        "NIAID"
+      ],
+      "notes": "Operated by Los Alamos National Laboratory with NIAID support; includes HIV, HCV, and TB sequence resources."
+    },
+    "tagging": {
+      "keywords": [
+        "LANL",
         "HIV",
-        "comparative genomics",
-        "bioinformatics"
+        "sequence database",
+        "vaccine research"
       ]
     }
   },
   {
     "identity": {
       "id": "IC_049",
-      "resource_name": "NIAID Clinical Trials Data (CTN Data Share)",
-      "short_name": "NIAID CT Data",
+      "resource_name": "NIAID Clinical Trials Data Sharing",
+      "short_name": "NIAID Data Sharing",
       "ic_code": "NIAID",
       "ic_name": "National Institute of Allergy and Infectious Diseases",
-      "primary_url": "https://datashare.nida.nih.gov/",
+      "primary_url": "https://www.niaid.nih.gov/research/clinical-trials-data-sharing",
       "docs_url": "",
       "api_url": ""
     },
@@ -3494,8 +3862,7 @@
       "domains": [
         "Clinical Trials",
         "Infectious Diseases",
-        "HIV/AIDS",
-        "Drug Abuse"
+        "HIV/AIDS"
       ],
       "data_types": [
         "De-identified Clinical Trial Data",
@@ -3527,7 +3894,6 @@
       ],
       "typical_use_cases": "Performing secondary analysis of de-identified data from completed clinical trials focused on HIV/AIDS and infectious diseases (e.g., ACTG, HPTN networks).",
       "integration_parents": [
-        "NIDA Data Share",
         "ACTG",
         "HPTN"
       ]
@@ -3535,25 +3901,24 @@
     "lifecycle_curation": {
       "status": "Active",
       "maintaining_ic": [
-        "NIAID",
-        "NIDA"
+        "NIAID"
       ],
-      "notes": "NIAID and NIDA share de-identified data from completed clinical trials via the CTN Data Share and other portals. Datasets are free to download after agreeing to terms of use.",
+      "notes": "NIAID shares de-identified DMID/DAIDS-sponsored clinical trial data packages; investigators follow the posted process to request access and agree to the data-use policy."
+    },
+    "tagging": {
       "keywords": [
         "clinical trials",
         "HIV",
-        "AIDS",
         "infectious disease",
-        "secondary analysis",
-        "CTN Data Share"
+        "data sharing"
       ]
     }
   },
   {
     "identity": {
       "id": "IC_050",
-      "resource_name": "Reagent and Protocol Repositories (ASP, EMME)",
-      "short_name": "NIAID Protocols",
+      "resource_name": "NIAID Research Tools and Resources",
+      "short_name": "NIAID Research Tools",
       "ic_code": "NIAID",
       "ic_name": "National Institute of Allergy and Infectious Diseases",
       "primary_url": "https://www.niaid.nih.gov/research/other-research-tools-and-resources",
@@ -3623,8 +3988,8 @@
   {
     "identity": {
       "id": "IC_051",
-      "resource_name": "Computational Tools (Epitope Prediction, FluDB, HLA Typing)",
-      "short_name": "NIAID Compute",
+      "resource_name": "IEDB Analysis Resource",
+      "short_name": "IEDB Analysis Resource",
       "ic_code": "NIAID",
       "ic_name": "National Institute of Allergy and Infectious Diseases",
       "primary_url": "https://www.iedb.org/main/tools",
@@ -3840,8 +4205,8 @@
   {
     "identity": {
       "id": "IC_054",
-      "resource_name": "NIAMS Natural History Databases (e.g., IMACS)",
-      "short_name": "NIAMS NHD",
+      "resource_name": "NIAMS Natural History Studies",
+      "short_name": "NIAMS Natural History",
       "ic_code": "NIAMS",
       "ic_name": "National Institute of Arthritis and Musculoskeletal and Skin Diseases",
       "primary_url": "https://www.niams.nih.gov/research/clinical-research/natural-history-studies",
@@ -3897,7 +4262,7 @@
       "maintaining_ic": [
         "NIAMS"
       ],
-      "notes": "Data from intramural studies and IMACS. Shared via collaboration or request without charge."
+      "notes": "Data from intramural studies and IMACS. Shared via collaboration or request without charge. Includes resources such as the International Myositis Assessment and Clinical Studies Group (IMACS) database."
     },
     "tagging": {
       "keywords": [
@@ -3981,8 +4346,8 @@
   {
     "identity": {
       "id": "IC_056",
-      "resource_name": "Data & Analysis Resources (External)",
-      "short_name": "NIAMS Data Links",
+      "resource_name": "NIAMS Funding Resources",
+      "short_name": "NIAMS Funding Resources",
       "ic_code": "NIAMS",
       "ic_name": "National Institute of Arthritis and Musculoskeletal and Skin Diseases",
       "primary_url": "https://www.niams.nih.gov/funding/resources",
@@ -4055,8 +4420,8 @@
   {
     "identity": {
       "id": "IC_057",
-      "resource_name": "Educational Resources (Patient/Questionnaires)",
-      "short_name": "NIAMS Educ.",
+      "resource_name": "NIAMS Online Health Resources",
+      "short_name": "NIAMS Online Resources",
       "ic_code": "NIAMS",
       "ic_name": "National Institute of Arthritis and Musculoskeletal and Skin Diseases",
       "primary_url": "https://www.niams.nih.gov/health-topics/online-resources",
@@ -4487,7 +4852,7 @@
   {
     "identity": {
       "id": "IC_063",
-      "resource_name": "Point-of-Care Technology Research Network (POCTRN) Data Hub",
+      "resource_name": "Point-of-Care Technology Research Network (POCTRN)",
       "short_name": "POCTRN",
       "ic_code": "NIBIB",
       "ic_name": "National Institute of Biomedical Imaging and Bioengineering",
@@ -4556,8 +4921,8 @@
   {
     "identity": {
       "id": "IC_064",
-      "resource_name": "High-Performance Computing (HPC) resources (Software)",
-      "short_name": "HPC Software",
+      "resource_name": "NIBIB Software and Computational Tools",
+      "short_name": "NIBIB Software Tools",
       "ic_code": "NIBIB",
       "ic_name": "National Institute of Biomedical Imaging and Bioengineering",
       "primary_url": "https://www.nibib.nih.gov/research/supported-research/tools-resources/software-computational-tools",
@@ -4630,8 +4995,8 @@
   {
     "identity": {
       "id": "IC_065",
-      "resource_name": "NIH Biomed Imaging & Informatics Communities (Challenge Data)",
-      "short_name": "NIH Imaging Data",
+      "resource_name": "NIBIB Research Challenges",
+      "short_name": "NIBIB Challenges",
       "ic_code": "NIBIB",
       "ic_name": "National Institute of Biomedical Imaging and Bioengineering",
       "primary_url": "https://www.nibib.nih.gov/research/challenges",
@@ -4847,8 +5212,8 @@
   {
     "identity": {
       "id": "IC_068",
-      "resource_name": "NICHD-supported Cohort Databases (Fragile Families, SCRN)",
-      "short_name": "NICHD Cohorts",
+      "resource_name": "NICHD Research Datasets",
+      "short_name": "NICHD Datasets",
       "ic_code": "NICHD",
       "ic_name": "Eunice Kennedy Shriver National Institute of Child Health and Human Development",
       "primary_url": "https://www.nichd.nih.gov/research/resources/datasets",
@@ -4920,11 +5285,11 @@
   {
     "identity": {
       "id": "IC_069",
-      "resource_name": "Data Repositories for Specific Fields (e.g., NDAR for Autism)",
-      "short_name": "Specific Repos",
+      "resource_name": "National Database for Autism Research (NDAR)",
+      "short_name": "NDAR",
       "ic_code": "NICHD",
       "ic_name": "Eunice Kennedy Shriver National Institute of Child Health and Human Development",
-      "primary_url": "https://nda.nih.gov/",
+      "primary_url": "https://nda.nih.gov/ndar.html",
       "docs_url": "",
       "api_url": ""
     },
@@ -4994,8 +5359,8 @@
   {
     "identity": {
       "id": "IC_070",
-      "resource_name": "Model Organism Repositories (Zebrafish, Knockout Mouse)",
-      "short_name": "NICHD MODs",
+      "resource_name": "NICHD Model Organism Resources",
+      "short_name": "Model Organism Resources",
       "ic_code": "NICHD",
       "ic_name": "Eunice Kennedy Shriver National Institute of Child Health and Human Development",
       "primary_url": "https://www.nichd.nih.gov/research/resources/model-organisms",
@@ -9188,7 +9553,7 @@
       "maintaining_ic": [
         "NIMH"
       ],
-      "notes": "Produces tools like AFNI (Analysis of Functional NeuroImages)—MRI analysis software that is open-source and freely downloadable. Also supports Connectome Workbench."
+      "notes": "Produces tools like AFNI (Analysis of Functional NeuroImages)\u2014MRI analysis software that is open-source and freely downloadable. Also supports Connectome Workbench."
     },
     "tagging": {
       "keywords": [
@@ -9974,7 +10339,7 @@
       "maintaining_ic": [
         "NINDS"
       ],
-      "notes": "NINDS leads the development of CDEs for many neurological diseases. The CDE website provides data dictionaries and CRFs—all freely downloadable. Open-access resource that increases research efficiency at zero cost."
+      "notes": "NINDS leads the development of CDEs for many neurological diseases. The CDE website provides data dictionaries and CRFs\u2014all freely downloadable. Open-access resource that increases research efficiency at zero cost."
     },
     "tagging": {
       "keywords": [
@@ -10428,8 +10793,8 @@
   {
     "identity": {
       "id": "IC_145",
-      "resource_name": "Patient-Reported Outcome Measures (PROMIS, NIH Toolbox)",
-      "short_name": "NINR PROMs",
+      "resource_name": "Patient-Reported Outcomes Measurement Information System (PROMIS)",
+      "short_name": "PROMIS",
       "ic_code": "NINR",
       "ic_name": "National Institute of Nursing Research",
       "primary_url": "https://www.healthmeasures.net/explore-measurement-systems/promis",
@@ -10447,8 +10812,8 @@
         "Health Metrics"
       ],
       "data_types": [
-        "PROMIS Fatigue Scale",
-        "NIH Toolbox Emotion Measures"
+        "PROMIS Item Banks",
+        "PROMIS Short Forms"
       ],
       "target_populations": [
         "Researchers",
@@ -10476,7 +10841,7 @@
         "Outcome Measurement",
         "Psychometrics"
       ],
-      "typical_use_cases": "Using validated patient-reported outcome measures (PROMs) like PROMIS and NIH Toolbox for consistent outcome measurement in nursing and clinical research.",
+      "typical_use_cases": "Selecting and administering PROMIS item banks and short forms for symptom and function assessment.",
       "integration_parents": [
         "PROMIS",
         "NIH Toolbox"
@@ -10488,15 +10853,88 @@
         "NINR",
         "NIH Common Fund"
       ],
-      "notes": "NINR uses tools from PROMIS and NIH Toolbox. These tools are free for researchers (some require a free account on HealthMeasures.net)."
+      "notes": "PROMIS instruments are distributed through HealthMeasures; free registration provides scoring manuals and access to Assessment Center tools."
     },
     "tagging": {
       "keywords": [
         "PROMIS",
-        "NIH Toolbox",
         "patient-reported outcomes",
-        "PROMs",
-        "questionnaires"
+        "item bank"
+      ]
+    }
+  },
+  {
+    "identity": {
+      "id": "IC_145A",
+      "resource_name": "NIH Toolbox",
+      "short_name": "NIH Toolbox",
+      "ic_code": "NINR",
+      "ic_name": "National Institute of Nursing Research",
+      "primary_url": "https://www.healthmeasures.net/explore-measurement-systems/nih-toolbox",
+      "docs_url": "",
+      "api_url": ""
+    },
+    "type_content": {
+      "resource_type": [
+        "Measurement Tool",
+        "Questionnaire"
+      ],
+      "domains": [
+        "Patient-Reported Outcomes (PROs)",
+        "Symptom Assessment",
+        "Health Metrics"
+      ],
+      "data_types": [
+        "Cognition Measures",
+        "Motor Measures",
+        "Emotion Measures"
+      ],
+      "target_populations": [
+        "Researchers",
+        "Clinicians"
+      ],
+      "organisms": [
+        "Human"
+      ]
+    },
+    "access_cost": {
+      "access_model": "Open Access (Registration for Account)",
+      "cost_status": "Free",
+      "requires_registration": true,
+      "requires_dua": false,
+      "has_human_data": false,
+      "data_sensitivity": "Public Instruments"
+    },
+    "practical_usage": {
+      "compute_location": [
+        "Web-based",
+        "Downloads"
+      ],
+      "requires_special_infrastructure": false,
+      "skills_required": [
+        "Outcome Measurement",
+        "Psychometrics"
+      ],
+      "typical_use_cases": "Using standardized cognition, motor, sensory, and emotional health measures across the lifespan.",
+      "integration_parents": [
+        "PROMIS",
+        "NIH Toolbox"
+      ]
+    },
+    "lifecycle_curation": {
+      "status": "Active",
+      "maintaining_ic": [
+        "NINR",
+        "NIH Common Fund"
+      ],
+      "notes": "NIH Toolbox instruments are delivered through HealthMeasures and require a free account for administration and scoring guidance."
+    },
+    "tagging": {
+      "keywords": [
+        "NIH Toolbox",
+        "cognition",
+        "motor",
+        "assessment tools"
       ]
     }
   },
