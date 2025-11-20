@@ -80,34 +80,35 @@ const createSearchIndex = (items) => {
 };
 
 const LOGO_LIBRARY = {
-  CC: { small: 'abrv-logos/CC.svg', large: 'png-logos/CC.png' },
-  CIT: { small: 'abrv-logos/CIT.svg', large: 'png-logos/CIT.png' },
-  CSR: { small: 'abrv-logos/CSR.svg', large: 'png-logos/CSR.png' },
-  FIC: { small: 'abrv-logos/FIC.svg', large: 'png-logos/FIC.png' },
-  NCATS: { small: 'abrv-logos/NCATS.svg', large: 'png-logos/NCATS.png' },
-  NCCIH: { small: 'abrv-logos/NCCIH.svg', large: 'png-logos/NCCIH.png' },
-  NCI: { small: 'abrv-logos/NCI.svg', large: 'png-logos/NCI.png' },
-  NEI: { small: 'abrv-logos/NEI.svg', large: 'png-logos/NEI.png' },
-  NIEHS: { small: 'abrv-logos/NEIHS.svg', large: 'png-logos/NIEHS.png' },
-  NHGRI: { small: 'abrv-logos/NHGRI.svg', large: 'png-logos/NHGRI.png' },
-  NHLBI: { small: 'abrv-logos/NHLBI.svg', large: 'png-logos/NHLBI.png' },
-  NIA: { small: 'abrv-logos/NIA.svg', large: 'png-logos/NIA.png' },
-  NIAAA: { small: 'abrv-logos/NIAAA.svg', large: 'png-logos/NIAAA.png' },
-  NIAID: { small: 'abrv-logos/NIAID.svg', large: 'png-logos/niaid.png' },
-  NIAMS: { small: 'abrv-logos/NIAMS.svg', large: 'png-logos/NIAMSD.png' },
-  NIBIB: { small: 'abrv-logos/NIBIB.svg', large: 'png-logos/NIBIB.png' },
-  NICHD: { small: 'abrv-logos/NICHD.svg', large: 'png-logos/NICHHD.png' },
-  NIDA: { small: 'abrv-logos/NIDA.svg', large: 'png-logos/NIDA.png' },
-  NIDCD: { small: 'abrv-logos/NIDCD.svg', large: 'png-logos/NIDCD.png' },
-  NIDCR: { small: 'abrv-logos/NIDCR.svg', large: 'png-logos/NIDCR.png' },
-  NIDDK: { small: 'abrv-logos/NIDDK.svg', large: 'png-logos/NIDDK.png' },
-  NIGMS: { small: 'abrv-logos/NIGMS.svg', large: 'png-logos/NIGMS.png' },
-  NIMH: { small: 'abrv-logos/NIMH.svg', large: 'png-logos/NIMH.png' },
-  NIMHD: { small: 'abrv-logos/NIMHD.svg', large: 'png-logos/NIMHHD.png' },
-  NINDS: { small: 'abrv-logos/NINDS.svg', large: 'png-logos/NINDS.png' },
-  NINR: { small: 'abrv-logos/NINR.svg', large: 'png-logos/NINR.png' },
-  NLM: { small: 'abrv-logos/NLM.svg', large: 'png-logos/NLM.png' },
+  CC: { small: 'Icons/CC.png', large: 'Icons/CC.png' },
+  CIT: { small: 'Icons/CIT.png', large: 'Icons/CIT.png' },
+  CSR: { small: 'Icons/CSR.png', large: 'Icons/CSR.png' },
+  FIC: { small: 'Icons/FIC.png', large: 'Icons/FIC.png' },
+  NCATS: { small: 'Icons/NCATS.png', large: 'Icons/NCATS.png' },
+  NCCIH: { small: 'Icons/NCCIH.png', large: 'Icons/NCCIH.png' },
+  NCI: { small: 'Icons/NCI.png', large: 'Icons/NCI.png' },
+  NEI: { small: 'Icons/NEI.png', large: 'Icons/NEI.png' },
+  NIEHS: { small: 'Icons/NIEHS.png', large: 'Icons/NIEHS.png' },
+  NHGRI: { small: 'Icons/NHGRI.png', large: 'Icons/NHGRI.png' },
+  NHLBI: { small: 'Icons/NHLBI.png', large: 'Icons/NHLBI.png' },
+  NIA: { small: 'Icons/NIA.png', large: 'Icons/NIA.png' },
+  NIAAA: { small: 'Icons/NIAAA.png', large: 'Icons/NIAAA.png' },
+  NIAID: { small: 'Icons/NIAID.png', large: 'Icons/NIAID.png' },
+  NIAMS: { small: 'Icons/NIAMSD.png', large: 'Icons/NIAMSD.png' },
+  NIBIB: { small: 'Icons/NIBIB.png', large: 'Icons/NIBIB.png' },
+  NICHD: { small: 'Icons/NICHHD.png', large: 'Icons/NICHHD.png' },
+  NIDA: { small: 'Icons/NIDA.png', large: 'Icons/NIDA.png' },
+  NIDCD: { small: 'Icons/NIDCD.png', large: 'Icons/NIDCD.png' },
+  NIDCR: { small: 'Icons/NIDCR.png', large: 'Icons/NIDCR.png' },
+  NIGMS: { small: 'Icons/NIGMS.png', large: 'Icons/NIGMS.png' },
+  NIMH: { small: 'Icons/NIMH.png', large: 'Icons/NIMH.png' },
+  NIMHD: { small: 'Icons/NIMHHD.png', large: 'Icons/NIMHHD.png' },
+  NINDS: { small: 'Icons/NINDS.png', large: 'Icons/NINDS.png' },
+  NINR: { small: 'Icons/NINR.png', large: 'Icons/NINR.png' },
+  NLM: { small: 'Icons/NLM.png', large: 'Icons/NLM.png' },
 };
+
+const TOTAL_INSTITUTES = Object.keys(LOGO_LIBRARY).length;
 
 const NAV_LINKS = [
   { label: 'Resources', href: '#resources' },
@@ -351,33 +352,28 @@ const LogoFilterGrid = ({ options, selected, onToggle }) => {
   }
 
   return (
-    <div>
-      <p className="text-xs font-semibold uppercase tracking-wide text-slate-500">
-        Filter by IC logo
-      </p>
-      <div className="mt-3 flex flex-wrap gap-3">
-        {options.map((option) => {
-          const assets = getIcAssets(option);
-          if (!assets.small) {
-            return null;
-          }
-          const isActive = selected.includes(option);
-          return (
-            <button
-              type="button"
-              key={option}
-              onClick={() => onToggle(option)}
-              className={`flex h-16 w-16 items-center justify-center rounded-2xl border bg-white p-1 shadow-sm transition ${
-                isActive
-                  ? 'border-indigo-500 ring-2 ring-indigo-200'
-                  : 'border-slate-200 hover:border-slate-300'
-              }`}
-            >
-              <img src={assets.small} alt={`${option} logo`} className="h-full w-full object-contain" />
-            </button>
-          );
-        })}
-      </div>
+    <div className="ic-ribbon-grid" role="group" aria-label="Filter by Institute or Center">
+      {options.map((option) => {
+        const assets = getIcAssets(option);
+        if (!assets.large) {
+          return null;
+        }
+        const isActive = selected.includes(option);
+        return (
+          <button
+            type="button"
+            key={option}
+            aria-pressed={isActive}
+            className={`ic-ribbon-tile ${isActive ? 'is-active' : ''}`}
+            onClick={() => onToggle(option)}
+          >
+            <span className="ic-ribbon-icon">
+              <img src={assets.large} alt={`${option} logo`} />
+            </span>
+            <span className="ic-ribbon-label">{option}</span>
+          </button>
+        );
+      })}
     </div>
   );
 };
@@ -818,43 +814,27 @@ const ResourceCard = ({ resource, onToggle, isExpanded }) => {
 
 const QuickLauncher = ({
   isActive,
-  onLaunch,
+  onToggle,
   metricOptions,
   selectedMetricKey,
   onMetricSelect,
   yearOptions,
   selectedYear,
   onYearChange,
-  icNodes,
-  hoveredIc,
-  onHover,
-  onSelectIc,
-  selectedIc,
 }) => {
   return (
     <div className={`quick-launch-shell ${isActive ? 'is-active' : ''}`}>
       <div className="quick-launch-card">
         <div className="quick-launch-card-header">
-          <p className="quick-launch-title">Quick Launch</p>
-          {!isActive && (
-            <button
-              type="button"
-              className="quick-launch-button"
-              onClick={onLaunch}
-            >
-              Launch
-            </button>
-          )}
-        </div>
-
-        {!isActive ? (
-          <div className="quick-launch-prelaunch">
-            <p className="quick-launch-tagline">Jump right in to the NIH</p>
-            <p className="quick-launch-subtitle">
-              See data, policies, funding opportunities, and rankings with one click.
+          <div>
+            <p className="quick-launch-title">Quick Launch</p>
+            <p className="quick-launch-intro">
+              Launch a focus view that locks onto a specific institute or center.
             </p>
           </div>
-        ) : (
+        </div>
+
+        {isActive ? (
           <div className="quick-launch-controls">
             <div className="quick-launch-tabs" role="tablist">
               {metricOptions.map((metric) => {
@@ -891,63 +871,23 @@ const QuickLauncher = ({
               </select>
             </div>
           </div>
+        ) : (
+          <div className="quick-launch-prelaunch">
+            <p className="quick-launch-tagline">Jump right in to the NIH</p>
+            <p className="quick-launch-subtitle">
+              See data, policies, funding opportunities, and rankings with one click.
+            </p>
+          </div>
         )}
 
-        <div className={`quick-launch-orbit ${isActive ? 'is-active' : ''}`}>
-          {icNodes.map((node) => {
-            const isHovered = hoveredIc === node.code;
-            const isSelected = selectedIc === node.code;
-            return (
-              <div
-                key={node.code}
-                className="launcher-node-wrapper"
-                style={{
-                  transform: isActive
-                    ? `translate(-50%, -50%) translate(${node.position.x}px, ${node.position.y}px)`
-                    : 'translate(-50%, -50%) translate(0, 0)',
-                  opacity: isActive ? 1 : 0,
-                }}
-              >
-                <button
-                  type="button"
-                  className={`launcher-node ${isHovered ? 'is-hovered' : ''} ${
-                    isSelected ? 'is-selected' : ''
-                  }`}
-                  style={{
-                    width: `${node.size}px`,
-                    height: `${node.size}px`,
-                  }}
-                  onMouseEnter={() => onHover(node.code)}
-                  onFocus={() => onHover(node.code)}
-                  onMouseLeave={() => onHover(null)}
-                  onBlur={() => onHover(null)}
-                  onClick={() => onSelectIc(node.code)}
-                  aria-label={`${node.name} ${selectedMetricKey ? 'metric' : ''}`}
-                >
-                  <span>{node.abbreviation}</span>
-                </button>
-                {(isHovered || isSelected) && (
-                  <div
-                    className="launcher-node-logo"
-                    style={{
-                      transform: `translate(-50%, -50%) translate(${node.logoPosition.x}px, ${node.logoPosition.y}px)`,
-                    }}
-                  >
-                    <div className="launcher-logo-card">
-                      {node.assets.large ? (
-                        <img src={node.assets.large} alt={`${node.name} logo`} />
-                      ) : (
-                        <span>{node.abbreviation}</span>
-                      )}
-                    </div>
-                  </div>
-                )}
-              </div>
-            );
-          })}
-          <div className="launcher-core">
-            <span>NIH</span>
-          </div>
+        <div className="quick-launch-card-footer">
+          <button
+            type="button"
+            className={`quick-launch-button ${isActive ? 'is-active' : ''}`}
+            onClick={onToggle}
+          >
+            {isActive ? 'Close' : 'Launch'}
+          </button>
         </div>
       </div>
     </div>
@@ -1049,7 +989,6 @@ const App = () => {
   const [selectedIc, setSelectedIc] = useState(null);
   const defaultYear = YEAR_OPTIONS[YEAR_OPTIONS.length - 1];
   const [selectedYear, setSelectedYear] = useState(defaultYear);
-  const [hoveredIc, setHoveredIc] = useState(null);
   const indexRef = useRef(null);
   const heroNavRef = useRef(null);
 
@@ -1223,7 +1162,7 @@ const App = () => {
   };
 
   const clearFilters = () => {
-    setSelectedICs([]);
+    clearInstituteSelection();
     setSelectedDomains([]);
     setSelectedResourceTypes([]);
     setRequireApi(false);
@@ -1231,43 +1170,6 @@ const App = () => {
     setAccessThreshold(2);
     setSensitivityThreshold(2);
   };
-
-  const quickLaunchNodes = useMemo(() => {
-    const total = QUICK_LAUNCH_STATS.length;
-    const metricKey = selectedMetricKey;
-    const values = QUICK_LAUNCH_STATS.map((ic) =>
-      metricKey ? getMetricValue(ic, metricKey, selectedYear) : 1
-    );
-    const min = Math.min(...values);
-    const max = Math.max(...values);
-    const range = Math.max(max - min, 1);
-    const orbitRadius = 170;
-    const logoOffset = 110;
-
-    return QUICK_LAUNCH_STATS.map((ic, index) => {
-      const angle = (index / total) * Math.PI * 2 - Math.PI / 2;
-      const position = {
-        x: Math.cos(angle) * orbitRadius,
-        y: Math.sin(angle) * orbitRadius,
-      };
-      const logoPosition = {
-        x: Math.cos(angle) * (orbitRadius + logoOffset),
-        y: Math.sin(angle) * (orbitRadius + logoOffset),
-      };
-      const normalized = (values[index] - min) / range;
-      const size = metricKey ? 44 + normalized * 36 : 48;
-
-      return {
-        code: ic.code,
-        abbreviation: ic.abbreviation,
-        name: ic.name,
-        size,
-        position,
-        logoPosition,
-        assets: getIcAssets(ic.code),
-      };
-    });
-  }, [selectedMetricKey, selectedYear]);
 
   const metricSummary = useMemo(() => {
     if (!selectedMetricKey) {
@@ -1289,17 +1191,30 @@ const App = () => {
     [selectedIc]
   );
 
-  const icLogoOptions = useMemo(
-    () => filterOptions.ics.filter((ic) => Boolean(getIcAssets(ic).small)),
-    [filterOptions.ics]
-  );
+  const icLogoOptions = useMemo(() => Object.keys(LOGO_LIBRARY), []);
 
   const handleMetricSelect = (metricKey) => {
     setSelectedMetricKey((current) => (current === metricKey ? null : metricKey));
   };
 
-  const handleIcSelect = (code) => {
-    setSelectedIc((current) => (current === code ? current : code));
+  const handleInstituteToggle = (code) => {
+    setSelectedICs((previous) => {
+      const isActive = previous.includes(code);
+      const next = isActive ? previous.filter((item) => item !== code) : [...previous, code];
+      if (isActive) {
+        setSelectedIc((current) => (current === code ? null : current));
+      } else {
+        setSelectedIc(code);
+        setIsLauncherActive(true);
+      }
+      return next;
+    });
+  };
+
+  const clearInstituteSelection = () => {
+    setSelectedICs([]);
+    setSelectedIc(null);
+    setIsLauncherActive(false);
   };
 
   const handleCardToggle = (resourceId) => {
@@ -1329,7 +1244,19 @@ const App = () => {
 
   return (
     <div className="page-shell">
-      <header className="hero">
+      <div className={`quick-launch-float ${isLauncherActive ? 'is-active' : ''}`}>
+        <QuickLauncher
+          isActive={isLauncherActive}
+          onToggle={() => setIsLauncherActive((previous) => !previous)}
+          metricOptions={METRIC_OPTIONS}
+          selectedMetricKey={selectedMetricKey}
+          onMetricSelect={handleMetricSelect}
+          yearOptions={YEAR_OPTIONS}
+          selectedYear={selectedYear}
+          onYearChange={setSelectedYear}
+        />
+      </div>
+      <header className={`hero ${isLauncherActive ? 'is-launching' : ''}`}>
         <div className="hero-content">
           <div className={`hero-nav ${isHeroNavOpen ? 'is-open' : ''}`} ref={heroNavRef}>
             <button
@@ -1385,7 +1312,7 @@ const App = () => {
                   <p className="hero-stat-label">Total resources</p>
                 </div>
                 <div className="hero-stat">
-                  <p className="hero-stat-value">{filterOptions.ics.length}</p>
+                  <p className="hero-stat-value">{TOTAL_INSTITUTES}</p>
                   <p className="hero-stat-label">Institutes</p>
                 </div>
                 <div className="hero-stat">
@@ -1396,128 +1323,79 @@ const App = () => {
             </>
           )}
         </div>
-        <div className="hero-visual">
-          <QuickLauncher
-            isActive={isLauncherActive}
-            onLaunch={() => setIsLauncherActive(true)}
-            metricOptions={METRIC_OPTIONS}
-            selectedMetricKey={selectedMetricKey}
-            onMetricSelect={handleMetricSelect}
-            yearOptions={YEAR_OPTIONS}
-            selectedYear={selectedYear}
-            onYearChange={setSelectedYear}
-            icNodes={quickLaunchNodes}
-            hoveredIc={hoveredIc}
-            onHover={setHoveredIc}
-            onSelectIc={handleIcSelect}
-            selectedIc={selectedIc}
-          />
-        </div>
       </header>
 
       {selectedIcData && (
         <section className="quick-launch-detail">
-          <QuickLaunchDetail
-            ic={selectedIcData}
-            selectedMetricKey={selectedMetricKey}
-            metricSummary={metricSummary}
-            onClear={clearSelectedIc}
-          />
-        </section>
-      )}
+      <QuickLaunchDetail
+        ic={selectedIcData}
+        selectedMetricKey={selectedMetricKey}
+        metricSummary={metricSummary}
+        onClear={clearSelectedIc}
+      />
+    </section>
+  )}
+
+      <section className="ic-ribbon-section">
+        <div className="ic-ribbon-shell">
+          <div className="ic-ribbon-headline">
+            <p className="ic-ribbon-eyebrow">Institutes & Centers</p>
+            <div className="ic-ribbon-controls">
+              <div className="ic-ribbon-select">
+                <label className="sr-only" htmlFor="hero-metric-select">
+                  Hero metric
+                </label>
+                <select
+                  id="hero-metric-select"
+                  value={selectedMetricKey || ''}
+                  onChange={(event) => handleMetricSelect(event.target.value)}
+                >
+                  <option value="">Essential links</option>
+                  {METRIC_OPTIONS.map((metric) => (
+                    <option key={metric.key} value={metric.key}>
+                      {metric.label}
+                    </option>
+                  ))}
+                </select>
+              </div>
+              <div className="ic-ribbon-select">
+                <label className="sr-only" htmlFor="hero-year-select">
+                  Fiscal year
+                </label>
+                <select
+                  id="hero-year-select"
+                  value={selectedYear}
+                  onChange={(event) => setSelectedYear(Number(event.target.value))}
+                >
+                  {YEAR_OPTIONS.map((year) => (
+                    <option key={year} value={year}>
+                      FY {year}
+                    </option>
+                  ))}
+                </select>
+              </div>
+              <button
+                type="button"
+                className="ic-ribbon-clear"
+                onClick={clearInstituteSelection}
+                disabled={!selectedICs.length}
+              >
+                Clear selection
+              </button>
+            </div>
+          </div>
+          <LogoFilterGrid options={icLogoOptions} selected={selectedICs} onToggle={handleInstituteToggle} />
+          <p className="ic-ribbon-title">Pick a badge to filter resources and launch detail cards</p>
+        </div>
+      </section>
 
       <main>
         <section id="resources" className="resources-panel text-slate-900">
           <div className="mx-auto max-w-7xl px-4 lg:px-8">
-            <div className="grid gap-8 lg:grid-cols-12">
-              <aside id="filters" className="lg:col-span-4">
-                <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-xl">
-                <div className="flex items-center justify-between">
-                  <h2 className="text-sm font-semibold uppercase tracking-wide text-slate-500">
-                    Filters
-                  </h2>
-                  <button
-                    className="text-xs font-semibold uppercase tracking-wide text-indigo-600 hover:text-indigo-500"
-                    onClick={clearFilters}
-                  >
-                    Clear all
-                  </button>
-                </div>
-
-                <div className="mt-5 space-y-6">
-                  <LogoFilterGrid
-                    options={icLogoOptions}
-                    selected={selectedICs}
-                    onToggle={(value) => toggleSelection(value, selectedICs, setSelectedICs)}
-                  />
-
-                  <MultiEntryInput
-                    label="Resource type"
-                    placeholder="Add a resource type"
-                    options={filterOptions.resourceTypes}
-                    values={selectedResourceTypes}
-                    onChange={setSelectedResourceTypes}
-                  />
-
-                  <OptionBrowser
-                    label="resource types"
-                    options={filterOptions.resourceTypes}
-                    selected={selectedResourceTypes}
-                    onToggle={(value) =>
-                      toggleSelection(value, selectedResourceTypes, setSelectedResourceTypes)
-                    }
-                  />
-
-                  <MultiEntryInput
-                    label="Domain"
-                    placeholder="Add a domain"
-                    options={filterOptions.domains}
-                    values={selectedDomains}
-                    onChange={setSelectedDomains}
-                  />
-
-                  <OptionBrowser
-                    label="domains"
-                    options={filterOptions.domains}
-                    selected={selectedDomains}
-                    onToggle={(value) => toggleSelection(value, selectedDomains, setSelectedDomains)}
-                  />
-
-                  <div className="space-y-4 rounded-2xl border border-slate-200 bg-slate-50 p-4">
-                    <p className="text-xs font-semibold uppercase tracking-wide text-slate-500">
-                      Access emphasis
-                    </p>
-                    <ToggleControl
-                      label="Has public API"
-                      description="Only show resources advertising an API endpoint."
-                      checked={requireApi}
-                      onChange={setRequireApi}
-                    />
-                    <ToggleControl
-                      label="Web-based experience"
-                      description="Limit to resources that are primarily web hosted."
-                      checked={requireWeb}
-                      onChange={setRequireWeb}
-                    />
-                    <RestrictivenessSlider
-                      label="Access model threshold"
-                      value={accessThreshold}
-                      onChange={setAccessThreshold}
-                    />
-                    <RestrictivenessSlider
-                      label="Data sensitivity threshold"
-                      value={sensitivityThreshold}
-                      onChange={setSensitivityThreshold}
-                    />
-                  </div>
-                </div>
-                </div>
-              </aside>
-
-            <div className="space-y-4 lg:col-span-8">
-              <div className="rounded-3xl border border-slate-200 bg-white p-5 shadow-xl">
-                <div className="flex flex-col gap-3 lg:flex-row lg:items-center lg:gap-4">
-                  <div className="flex-1">
+            <div className="resource-layout">
+              <aside id="filters" className="filters-column">
+                <div className="filters-column-inner">
+                  <div className="filter-search-card">
                     <label className="sr-only" htmlFor="resource-search">
                       Search resources
                     </label>
@@ -1547,36 +1425,114 @@ const App = () => {
                         className="w-full rounded-2xl border border-slate-200 bg-slate-50 py-3 pl-10 pr-4 text-sm text-slate-700 focus:border-indigo-400 focus:bg-white focus:outline-none focus:ring-2 focus:ring-indigo-100"
                       />
                     </div>
+                    <p className="filter-search-meta">
+                      <span>{totalResults}</span> resources in view
+                    </p>
                   </div>
-                  <div className="flex items-center gap-3 text-sm text-slate-500">
-                    <span className="text-sm font-semibold text-slate-900">{totalResults}</span>
-                    results
-                  </div>
-                </div>
-              </div>
 
-              {totalResults === 0 ? (
-                <div className="rounded-3xl border border-dashed border-slate-300 bg-white p-10 text-center text-slate-500">
-                  <p className="text-lg font-semibold text-slate-700">No resources found</p>
-                  <p className="mt-2 text-sm text-slate-500">
-                    Adjust your filters or search query to discover more NIH resources.
-                  </p>
+                  <div className="filters-panel rounded-3xl border border-slate-200 bg-white p-6 shadow-xl">
+                    <div className="flex items-center justify-between">
+                      <h2 className="text-sm font-semibold uppercase tracking-wide text-slate-500">
+                        Filters
+                      </h2>
+                      <button
+                        className="text-xs font-semibold uppercase tracking-wide text-indigo-600 hover:text-indigo-500"
+                        onClick={clearFilters}
+                      >
+                        Clear all
+                      </button>
+                    </div>
+
+                    <div className="mt-5 space-y-6">
+                      <MultiEntryInput
+                        label="Resource type"
+                        placeholder="Add a resource type"
+                        options={filterOptions.resourceTypes}
+                        values={selectedResourceTypes}
+                        onChange={setSelectedResourceTypes}
+                      />
+
+                      <OptionBrowser
+                        label="resource types"
+                        options={filterOptions.resourceTypes}
+                        selected={selectedResourceTypes}
+                        onToggle={(value) =>
+                          toggleSelection(value, selectedResourceTypes, setSelectedResourceTypes)
+                        }
+                      />
+
+                      <MultiEntryInput
+                        label="Domain"
+                        placeholder="Add a domain"
+                        options={filterOptions.domains}
+                        values={selectedDomains}
+                        onChange={setSelectedDomains}
+                      />
+
+                      <OptionBrowser
+                        label="domains"
+                        options={filterOptions.domains}
+                        selected={selectedDomains}
+                        onToggle={(value) =>
+                          toggleSelection(value, selectedDomains, setSelectedDomains)
+                        }
+                      />
+
+                      <div className="space-y-4 rounded-2xl border border-slate-200 bg-slate-50 p-4">
+                        <p className="text-xs font-semibold uppercase tracking-wide text-slate-500">
+                          Access emphasis
+                        </p>
+                        <ToggleControl
+                          label="Has public API"
+                          description="Only show resources advertising an API endpoint."
+                          checked={requireApi}
+                          onChange={setRequireApi}
+                        />
+                        <ToggleControl
+                          label="Web-based experience"
+                          description="Limit to resources that are primarily web hosted."
+                          checked={requireWeb}
+                          onChange={setRequireWeb}
+                        />
+                        <RestrictivenessSlider
+                          label="Access model threshold"
+                          value={accessThreshold}
+                          onChange={setAccessThreshold}
+                        />
+                        <RestrictivenessSlider
+                          label="Data sensitivity threshold"
+                          value={sensitivityThreshold}
+                          onChange={setSensitivityThreshold}
+                        />
+                      </div>
+                    </div>
+                  </div>
                 </div>
-              ) : (
-                <div className="space-y-4">
-                  {filteredResources.map((resource) => (
-                    <ResourceCard
-                      key={resource.id}
-                      resource={resource}
-                      isExpanded={expandedResourceId === resource.id}
-                      onToggle={handleCardToggle}
-                    />
-                  ))}
-                </div>
-              )}
+              </aside>
+
+              <div className="resource-results">
+                {totalResults === 0 ? (
+                  <div className="rounded-3xl border border-dashed border-slate-300 bg-white p-10 text-center text-slate-500">
+                    <p className="text-lg font-semibold text-slate-700">No resources found</p>
+                    <p className="mt-2 text-sm text-slate-500">
+                      Adjust your filters or search query to discover more NIH resources.
+                    </p>
+                  </div>
+                ) : (
+                  <div className="space-y-4">
+                    {filteredResources.map((resource) => (
+                      <ResourceCard
+                        key={resource.id}
+                        resource={resource}
+                        isExpanded={expandedResourceId === resource.id}
+                        onToggle={handleCardToggle}
+                      />
+                    ))}
+                  </div>
+                )}
+              </div>
             </div>
           </div>
-        </div>
         </section>
 
         <section id="support" className="support-section text-white">

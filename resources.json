@@ -54,7 +54,7 @@
         "Data Analysis"
       ],
       "typical_use_cases": "Finding and obtaining NCI-supported datasets, software, and tools across various cancer research areas.",
-      "integration_parents": []
+      "Resource_tags": []
     },
     "lifecycle_curation": {
       "status": "Active",
@@ -128,7 +128,7 @@
         "Statistical Analysis"
       ],
       "typical_use_cases": "Analyzing cancer incidence and survival trends by age, sex, race, and geographic area; informing public health planning.",
-      "integration_parents": []
+      "Resource_tags": []
     },
     "lifecycle_curation": {
       "status": "Active",
@@ -201,7 +201,7 @@
         "Genomic Analysis"
       ],
       "typical_use_cases": "Hosting, standardization, and analysis of large-scale cancer genomic and clinical data (e.g., TCGA, TARGET).",
-      "integration_parents": [
+      "Resource_tags": [
         "dbGaP",
         "CRDC"
       ]
@@ -275,7 +275,7 @@
         "Machine Learning"
       ],
       "typical_use_cases": "Browsing and downloading de-identified radiology and pathology images for cancer research (e.g., LIDC, CPTAC data).",
-      "integration_parents": [
+      "Resource_tags": [
         "CRDC"
       ]
     },
@@ -351,7 +351,7 @@
         "None"
       ],
       "typical_use_cases": "Visualizing geographic patterns of cancer burden, risk factors, and screening across different population subgroups; informing policy and research opportunities.",
-      "integration_parents": [
+      "Resource_tags": [
         "CDC"
       ]
     },
@@ -426,7 +426,7 @@
         "Public Health Practice"
       ],
       "typical_use_cases": "Finding and implementing rigorously evaluated cancer control interventions (e.g., for tobacco control, screening, or diet/nutrition).",
-      "integration_parents": []
+      "Resource_tags": []
     },
     "lifecycle_curation": {
       "status": "Active",
@@ -497,7 +497,7 @@
         "Data Interpretation"
       ],
       "typical_use_cases": "Collecting self-administered 24-hour dietary recalls for epidemiologic, behavioral, or clinical nutrition research.",
-      "integration_parents": []
+      "Resource_tags": []
     },
     "lifecycle_curation": {
       "status": "Active",
@@ -568,7 +568,7 @@
         "Data Interpretation"
       ],
       "typical_use_cases": "Capturing detailed 24-hour time-use and activity recalls for studies of physical activity, sedentary time, and energy expenditure.",
-      "integration_parents": []
+      "Resource_tags": []
     },
     "lifecycle_curation": {
       "status": "Active",
@@ -640,7 +640,7 @@
         "None"
       ],
       "typical_use_cases": "Finding resources and knowledge to improve the efficiency and effectiveness of collaborative, team-based science initiatives.",
-      "integration_parents": []
+      "Resource_tags": []
     },
     "lifecycle_curation": {
       "status": "Active",
@@ -713,7 +713,7 @@
         "Survey Design"
       ],
       "typical_use_cases": "Searching for and downloading standardized behavioral and social science measures (surveys, scales) organized by theoretical construct; contributing to measure standardization.",
-      "integration_parents": []
+      "Resource_tags": []
     },
     "lifecycle_curation": {
       "status": "Active",
@@ -788,7 +788,7 @@
         "Data Annotation"
       ],
       "typical_use_cases": "Freely using comprehensive biomedical terminology (for oncology, genetics, etc.) for coding, annotating data, and facilitating semantic interoperability.",
-      "integration_parents": [
+      "Resource_tags": [
         "NCI Metathesaurus (NCIm)",
         "UMLS"
       ]
@@ -863,7 +863,7 @@
         "Clinical Research"
       ],
       "typical_use_cases": "Requesting de-identified data and associated genetic samples for studies on inherited ocular conditions; research on genotype-phenotype correlations.",
-      "integration_parents": []
+      "Resource_tags": []
     },
     "lifecycle_curation": {
       "status": "Active",
@@ -936,7 +936,7 @@
         "Bioinformatics"
       ],
       "typical_use_cases": "Integrated gene expression and multi-omic data analysis for eye tissues (e.g., via eyeIntegration, PLAE).",
-      "integration_parents": [
+      "Resource_tags": [
         "eyeIntegration",
         "PLAE"
       ]
@@ -1008,7 +1008,7 @@
         "Programming (Optional)"
       ],
       "typical_use_cases": "Analyzing retinal imaging data obtained from adaptive optics systems for individual nerve cell resolution and function measurement.",
-      "integration_parents": []
+      "Resource_tags": []
     },
     "lifecycle_curation": {
       "status": "Active",
@@ -1078,7 +1078,7 @@
         "Genetics"
       ],
       "typical_use_cases": "Evaluating the impact of mutations on protein structure for eye-relevant genes; analyzing protein changes related to genetic eye diseases.",
-      "integration_parents": [
+      "Resource_tags": [
         "NEI Data Commons"
       ]
     },
@@ -1156,7 +1156,7 @@
         "Vision Science"
       ],
       "typical_use_cases": "Accessing publicly shared datasets and analysis code from NEI AGI projects (e.g., AMD Integrative Biology, single-cell eye atlas) to study vision restoration and regeneration.",
-      "integration_parents": [
+      "Resource_tags": [
         "NEI Data Commons"
       ]
     },
@@ -1227,7 +1227,7 @@
         "Scoring/Interpretation"
       ],
       "typical_use_cases": "Measuring the self-reported vision-targeted health status and quality of life in chronic eye disease research and clinical practice.",
-      "integration_parents": []
+      "Resource_tags": []
     },
     "lifecycle_curation": {
       "status": "Active",
@@ -1297,7 +1297,7 @@
         "Genomics"
       ],
       "typical_use_cases": "Accessing and comparing gene expression and sequence data for various eye tissues and animal models.",
-      "integration_parents": []
+      "Resource_tags": []
     },
     "lifecycle_curation": {
       "status": "Active",
@@ -1366,7 +1366,7 @@
         "Clinical Genetics"
       ],
       "typical_use_cases": "Obtaining biospecimens (DNA, cell lines) and clinical data from patients with inherited eye diseases to study genetic causes.",
-      "integration_parents": []
+      "Resource_tags": []
     },
     "lifecycle_curation": {
       "status": "Active",
@@ -1436,7 +1436,7 @@
         "Statistical Analysis"
       ],
       "typical_use_cases": "Accessing individual-level data and biospecimens from major NHLBI studies (e.g., Framingham, CARDIA) for secondary analysis to drive new discoveries.",
-      "integration_parents": []
+      "Resource_tags": []
     },
     "lifecycle_curation": {
       "status": "Active",
@@ -1509,7 +1509,7 @@
         "Data Science"
       ],
       "typical_use_cases": "Securely storing, cross-linking, and analyzing large-scale genomic, clinical, and imaging datasets (e.g., TOPMed) in a cloud environment.",
-      "integration_parents": [
+      "Resource_tags": [
         "dbGaP",
         "STRIDES"
       ]
@@ -1580,7 +1580,7 @@
         "Data Science"
       ],
       "typical_use_cases": "Provision and orchestration layer that lets researchers stage, transform, and analyze NHLBI BioData Catalyst datasets in secure workspaces.",
-      "integration_parents": []
+      "Resource_tags": []
     },
     "lifecycle_curation": {
       "status": "Active",
@@ -1652,7 +1652,7 @@
         "Statistical Genetics"
       ],
       "typical_use_cases": "Accessing controlled-access human genetic and phenotypic data (including NHLBI TOPMed datasets) for secondary analysis.",
-      "integration_parents": [
+      "Resource_tags": [
         "NCBI",
         "NLM",
         "NHLBI"
@@ -1724,7 +1724,7 @@
         "Statistical Analysis"
       ],
       "typical_use_cases": "Downloading publicly available data summaries or limited datasets from long-term NHLBI cohort studies (e.g., Framingham, Jackson Heart Study) for secondary analysis or teaching.",
-      "integration_parents": [
+      "Resource_tags": [
         "dbGaP Open Access"
       ]
     },
@@ -1793,7 +1793,7 @@
         "Data Analysis"
       ],
       "typical_use_cases": "Immediate download and analysis of publicly available subsets of de-identified study data from major NHLBI studies (e.g., for preliminary analysis or teaching).",
-      "integration_parents": [
+      "Resource_tags": [
         "BioLINCC"
       ]
     },
@@ -1863,7 +1863,7 @@
         "Study Design"
       ],
       "typical_use_cases": "Utilizing standardized tools (like Study Quality Assessment Tools) and documents (like CDEs and manuals from networks such as PETAL) to design and conduct rigorous clinical research.",
-      "integration_parents": []
+      "Resource_tags": []
     },
     "lifecycle_curation": {
       "status": "Active",
@@ -1935,7 +1935,7 @@
         "Bioinformatics"
       ],
       "typical_use_cases": "Accessing and analyzing large-scale genomic datasets (e.g., 1000 Genomes, GTEx) in a secure, compliant cloud environment.",
-      "integration_parents": [
+      "Resource_tags": [
         "STRIDES",
         "dbGaP"
       ]
@@ -2007,7 +2007,7 @@
         "Statistical Genetics"
       ],
       "typical_use_cases": "Searching for and downloading published Genome-Wide Association Study (GWAS) findings and summary statistics.",
-      "integration_parents": [
+      "Resource_tags": [
         "EMBL-EBI"
       ]
     },
@@ -2081,7 +2081,7 @@
         "Clinical Genetics"
       ],
       "typical_use_cases": "Curating and providing consensus interpretations of clinically relevant genes and variants to improve genetic testing and clinical practice.",
-      "integration_parents": []
+      "Resource_tags": []
     },
     "lifecycle_curation": {
       "status": "Active",
@@ -2155,7 +2155,7 @@
         "Bioinformatics"
       ],
       "typical_use_cases": "Accessing large functional genomics datasets (Encyclopedia of DNA Elements) for analyzing gene regulatory mechanisms and non-coding DNA.",
-      "integration_parents": []
+      "Resource_tags": []
     },
     "lifecycle_curation": {
       "status": "Active",
@@ -2222,7 +2222,7 @@
         "Bioinformatics"
       ],
       "typical_use_cases": "Serving as the definitive reference genome assembly for aligning sequencing reads and annotating genetic variations in human research.",
-      "integration_parents": [
+      "Resource_tags": [
         "NCBI",
         "UCSC Genome Browser"
       ]
@@ -2297,7 +2297,7 @@
         "Statistical Analysis"
       ],
       "typical_use_cases": "Analyzing long-term trends in health, economic status, and aging processes in a large American cohort.",
-      "integration_parents": []
+      "Resource_tags": []
     },
     "lifecycle_curation": {
       "status": "Active",
@@ -2369,7 +2369,7 @@
         "Statistical Analysis"
       ],
       "typical_use_cases": "Accessing centralized clinical and neuropathological data from NIA-funded Alzheimer's Disease Research Centers for analysis.",
-      "integration_parents": []
+      "Resource_tags": []
     },
     "lifecycle_curation": {
       "status": "Active",
@@ -2439,7 +2439,7 @@
         "Statistical Genetics"
       ],
       "typical_use_cases": "Accessing and analyzing genetic and omics data for Alzheimer's and related dementias for discovery and variant analysis.",
-      "integration_parents": []
+      "Resource_tags": []
     },
     "lifecycle_curation": {
       "status": "Active",
@@ -2513,7 +2513,7 @@
         "Clinical Research"
       ],
       "typical_use_cases": "Accessing multimodal longitudinal data to study disease progression, identify biomarkers, and validate imaging techniques for Alzheimer's disease.",
-      "integration_parents": []
+      "Resource_tags": []
     },
     "lifecycle_curation": {
       "status": "Active",
@@ -2587,7 +2587,7 @@
         "Epidemiology"
       ],
       "typical_use_cases": "Studying disability, caregiving, and health trajectories among older U.S. Medicare beneficiaries using annual longitudinal surveys.",
-      "integration_parents": [
+      "Resource_tags": [
         "ICPSR",
         "CMS"
       ]
@@ -2661,7 +2661,7 @@
         "Epidemiology"
       ],
       "typical_use_cases": "Analyzing nationally representative midlife cohort data that link psychosocial measures with biomarkers and cognitive testing.",
-      "integration_parents": [
+      "Resource_tags": [
         "ICPSR",
         "UW-Madison"
       ]
@@ -2735,7 +2735,7 @@
         "Epidemiology"
       ],
       "typical_use_cases": "Requesting access to the nation\u2019s longest-running study of human aging for analyses of clinical, imaging, and biomarker trajectories.",
-      "integration_parents": [
+      "Resource_tags": [
         "NIA"
       ]
     },
@@ -2806,7 +2806,7 @@
         "Neuroinformatics"
       ],
       "typical_use_cases": "Accessing and integrating complex behavioral, cognitive, and molecular data from NIA-funded projects through the NIH data archive ecosystem.",
-      "integration_parents": [
+      "Resource_tags": [
         "NIMH Data Archive (NDA)",
         "AMP-AD Knowledge Portal"
       ]
@@ -2883,7 +2883,7 @@
         "Rodent Handling"
       ],
       "typical_use_cases": "Obtaining cell lines from the Aging Cell Repository (Coriell) or aged mice/rats for studies on aging mechanisms and longevity.",
-      "integration_parents": [
+      "Resource_tags": [
         "Coriell Institute"
       ]
     },
@@ -2955,7 +2955,7 @@
         "Data Management Planning"
       ],
       "typical_use_cases": "Obtaining free guidance, policy information, and templates for creating data management and sharing plans in compliance with NIH policies.",
-      "integration_parents": []
+      "Resource_tags": []
     },
     "lifecycle_curation": {
       "status": "Active",
@@ -3025,7 +3025,7 @@
         "Policy Analysis"
       ],
       "typical_use_cases": "Querying and downloading detailed information on U.S. alcohol laws and policies (e.g., state laws on underage drinking, taxation) for policy research and public health studies.",
-      "integration_parents": []
+      "Resource_tags": []
     },
     "lifecycle_curation": {
       "status": "Active",
@@ -3094,7 +3094,7 @@
         "Statistical Analysis"
       ],
       "typical_use_cases": "Secondary analysis of human subjects data from completed NIAAA-funded clinical trials and epidemiological studies on alcohol use and addiction.",
-      "integration_parents": [
+      "Resource_tags": [
         "NIMH Data Archive (NDA)"
       ]
     },
@@ -3165,7 +3165,7 @@
         "Statistical Analysis"
       ],
       "typical_use_cases": "Obtaining and analyzing legacy NIAAA datasets (e.g., NESARC) for public use and secondary analysis of alcohol consumption and related outcomes.",
-      "integration_parents": [
+      "Resource_tags": [
         "ICPSR"
       ]
     },
@@ -3240,7 +3240,7 @@
         "Regulatory Compliance"
       ],
       "typical_use_cases": "Using freely downloadable forms and guidelines (e.g., DSMC templates, assessment forms, GCP resources) to enhance the quality and safety of alcohol clinical trials.",
-      "integration_parents": []
+      "Resource_tags": []
     },
     "lifecycle_curation": {
       "status": "Active",
@@ -3312,7 +3312,7 @@
         "None"
       ],
       "typical_use_cases": "Accessing public data on trends in alcohol consumption and outcomes (e.g., Surveillance Reports) and evidence-based interventions (e.g., College Drinking Prevention curriculum).",
-      "integration_parents": []
+      "Resource_tags": []
     },
     "lifecycle_curation": {
       "status": "Active",
@@ -3383,7 +3383,7 @@
         "Animal Husbandry"
       ],
       "typical_use_cases": "Obtaining NIAAA-supported research reagents (e.g., animal models of alcohol metabolism) for use in basic and translational alcohol research studies.",
-      "integration_parents": []
+      "Resource_tags": []
     },
     "lifecycle_curation": {
       "status": "Active",
@@ -3455,7 +3455,7 @@
         "Bioinformatics"
       ],
       "typical_use_cases": "Accessing and reusing clinical and mechanistic data from NIAID-funded immunology and infectious disease studies; performing in-portal data analysis.",
-      "integration_parents": []
+      "Resource_tags": []
     },
     "lifecycle_curation": {
       "status": "Active",
@@ -3525,7 +3525,7 @@
         "Immunoinformatics"
       ],
       "typical_use_cases": "Searching for known epitopes by pathogen or disease; using integrated epitope prediction algorithms for vaccine development.",
-      "integration_parents": []
+      "Resource_tags": []
     },
     "lifecycle_curation": {
       "status": "Active",
@@ -3595,7 +3595,7 @@
         "Bio-safety Compliance"
       ],
       "typical_use_cases": "Obtaining research-grade biological materials, including biodefense and emerging disease agents, for infectious disease studies.",
-      "integration_parents": []
+      "Resource_tags": []
     },
     "lifecycle_curation": {
       "status": "Active",
@@ -3670,7 +3670,7 @@
         "Genomics"
       ],
       "typical_use_cases": "Interrogate integrated omics datasets for parasites, vectors, and related pathogens with built-in comparative and visualization tools.",
-      "integration_parents": [
+      "Resource_tags": [
         "VEuPathDB",
         "BV-BRC",
         "LANL"
@@ -3746,7 +3746,7 @@
         "Genomics"
       ],
       "typical_use_cases": "Manage bacterial and viral genome projects, run annotation pipelines, and share Jupyter-based analyses through the BV-BRC workspace.",
-      "integration_parents": [
+      "Resource_tags": [
         "VEuPathDB",
         "BV-BRC",
         "LANL"
@@ -3821,7 +3821,7 @@
         "Genomics"
       ],
       "typical_use_cases": "Download curated HIV sequence alignments and use specialized tools for vaccine and diagnostics research.",
-      "integration_parents": [
+      "Resource_tags": [
         "VEuPathDB",
         "BV-BRC",
         "LANL"
@@ -3893,7 +3893,7 @@
         "Clinical Epidemiology"
       ],
       "typical_use_cases": "Performing secondary analysis of de-identified data from completed clinical trials focused on HIV/AIDS and infectious diseases (e.g., ACTG, HPTN networks).",
-      "integration_parents": [
+      "Resource_tags": [
         "ACTG",
         "HPTN"
       ]
@@ -3964,7 +3964,7 @@
         "Laboratory Methods"
       ],
       "typical_use_cases": "Accessing standardized protocols for specific research areas (e.g., allergen research via ASP, microbial research via EMME) and toxicology test methods/data.",
-      "integration_parents": [
+      "Resource_tags": [
         "NIEHS (ICCVAM-NICEATM)"
       ]
     },
@@ -4036,7 +4036,7 @@
         "Bioinformatics"
       ],
       "typical_use_cases": "Using tools like NetMHC for predicting T-cell epitopes, analyzing influenza virus data via FluDB, and determining HLA types for research studies.",
-      "integration_parents": [
+      "Resource_tags": [
         "IEDB"
       ]
     },
@@ -4109,7 +4109,7 @@
         "Epidemiology"
       ],
       "typical_use_cases": "Accessing multimodal data to study osteoarthritis progression, risk factors, and imaging biomarkers.",
-      "integration_parents": [
+      "Resource_tags": [
         "NDA"
       ]
     },
@@ -4182,7 +4182,7 @@
         "Autoimmunity Research"
       ],
       "typical_use_cases": "Obtaining cell lines, DNA, and associated clinical data for studies on autoimmune and musculoskeletal disorders (e.g., Lupus Family Registry).",
-      "integration_parents": []
+      "Resource_tags": []
     },
     "lifecycle_curation": {
       "status": "Active",
@@ -4253,7 +4253,7 @@
         "Statistical Analysis"
       ],
       "typical_use_cases": "Accessing clinical data from intramural natural history studies and external consortia (e.g., IMACS) for disease analysis.",
-      "integration_parents": [
+      "Resource_tags": [
         "IMACS"
       ]
     },
@@ -4322,7 +4322,7 @@
         "Animal Husbandry"
       ],
       "typical_use_cases": "Obtaining specialized mouse strains (e.g., arthritis models) for studies on musculoskeletal disease mechanisms.",
-      "integration_parents": [
+      "Resource_tags": [
         "Jackson Laboratory"
       ]
     },
@@ -4394,7 +4394,7 @@
         "Data Discovery"
       ],
       "typical_use_cases": "Discovering and accessing NIAMS-relevant data hosted on NIH Common Fund resources and large external repositories (e.g., FaceBase, dbGaP).",
-      "integration_parents": [
+      "Resource_tags": [
         "FaceBase",
         "Metabolomics Workbench",
         "dbGaP"
@@ -4470,7 +4470,7 @@
         "None"
       ],
       "typical_use_cases": "Utilizing standardized pain/function questionnaires and free patient education handouts/toolkits for studies and clinical practice.",
-      "integration_parents": []
+      "Resource_tags": []
     },
     "lifecycle_curation": {
       "status": "Active",
@@ -4542,7 +4542,7 @@
         "Data Science"
       ],
       "typical_use_cases": "Accessing and analyzing critical care patient data (MIMIC) and physiological waveforms for algorithm development and research.",
-      "integration_parents": [
+      "Resource_tags": [
         "NIBIB",
         "NIH Common Fund"
       ]
@@ -4620,7 +4620,7 @@
         "None"
       ],
       "typical_use_cases": "Downloading ready-to-print anatomical, molecular, or lab equipment models; creating custom models from protein/imaging data.",
-      "integration_parents": []
+      "Resource_tags": []
     },
     "lifecycle_curation": {
       "status": "Active",
@@ -4689,7 +4689,7 @@
         "Image Processing"
       ],
       "typical_use_cases": "Developing custom applications for image segmentation, registration, and analysis in medical imaging research.",
-      "integration_parents": []
+      "Resource_tags": []
     },
     "lifecycle_curation": {
       "status": "Active",
@@ -4758,7 +4758,7 @@
         "Image Analysis"
       ],
       "typical_use_cases": "Quantifying and analyzing biomedical images (e.g., microscopy, gels) using an open-source, public domain platform.",
-      "integration_parents": [
+      "Resource_tags": [
         "NIH Image"
       ]
     },
@@ -4831,7 +4831,7 @@
         "Nanotechnology"
       ],
       "typical_use_cases": "Finding and submitting standardized data on nanoparticle characteristics and their biological/environmental effects.",
-      "integration_parents": []
+      "Resource_tags": []
     },
     "lifecycle_curation": {
       "status": "Active",
@@ -4899,7 +4899,7 @@
         "Medical Device R&D"
       ],
       "typical_use_cases": "Accessing information, protocols, and reference datasets for the evaluation and validation of point-of-care diagnostic devices.",
-      "integration_parents": []
+      "Resource_tags": []
     },
     "lifecycle_curation": {
       "status": "Active",
@@ -4970,7 +4970,7 @@
         "Biomechanics"
       ],
       "typical_use_cases": "Utilizing specialized open-source software (e.g., FEBio) for finite element modeling and simulation in biomedical research.",
-      "integration_parents": [
+      "Resource_tags": [
         "FEBio"
       ]
     },
@@ -5043,7 +5043,7 @@
         "Image Analysis"
       ],
       "typical_use_cases": "Obtaining large, anonymized imaging datasets from NIH Clinical Centers for training and testing machine learning algorithms (e.g., for tumor segmentation).",
-      "integration_parents": [
+      "Resource_tags": [
         "SPIE-AAPM-NCI Challenges"
       ]
     },
@@ -5117,7 +5117,7 @@
         "Statistical Analysis"
       ],
       "typical_use_cases": "Accessing de-identified data and requesting biospecimens from dozens of NICHD-funded maternal/child health studies for secondary analysis.",
-      "integration_parents": [
+      "Resource_tags": [
         "NDA"
       ]
     },
@@ -5189,7 +5189,7 @@
         "Computational Modeling"
       ],
       "typical_use_cases": "Finding pharmacokinetic data and simulation models focused on pregnancy, lactation, and pediatric drug dosing.",
-      "integration_parents": []
+      "Resource_tags": []
     },
     "lifecycle_curation": {
       "status": "Active",
@@ -5261,7 +5261,7 @@
         "Survey Analysis"
       ],
       "typical_use_cases": "Secondary analysis of long-term studies like Fragile Families and the Stillbirth Collaborative Research Network (SCRN).",
-      "integration_parents": [
+      "Resource_tags": [
         "ICPSR"
       ]
     },
@@ -5333,7 +5333,7 @@
         "Genomics"
       ],
       "typical_use_cases": "Accessing autism and related developmental data from NICHD-funded studies housed in the NIH Data Archive (NDA).",
-      "integration_parents": [
+      "Resource_tags": [
         "NIMH Data Archive (NDA)",
         "NDAR"
       ]
@@ -5407,7 +5407,7 @@
         "Animal Husbandry"
       ],
       "typical_use_cases": "Obtaining model organisms (zebrafish mutant lines, mouse ES cells) for developmental biology and pediatric disease modeling.",
-      "integration_parents": [
+      "Resource_tags": [
         "Zebrafish International Resource Center"
       ]
     },
@@ -5477,7 +5477,7 @@
         "Survey Administration"
       ],
       "typical_use_cases": "Downloading and using validated instruments (e.g., developmental screening tools) for free in research protocols.",
-      "integration_parents": []
+      "Resource_tags": []
     },
     "lifecycle_curation": {
       "status": "Active",
@@ -5545,7 +5545,7 @@
         "Data Management"
       ],
       "typical_use_cases": "Adopting standardized definitions (CDEs) in study protocols to harmonize data collection across pediatric research studies.",
-      "integration_parents": [
+      "Resource_tags": [
         "NLM (NIH CDE Repository)"
       ]
     },
@@ -5619,7 +5619,7 @@
         "Statistical Genetics"
       ],
       "typical_use_cases": "Querying integrated audiology, genetic, and imaging data to study genotype-phenotype correlations in pediatric hearing loss.",
-      "integration_parents": []
+      "Resource_tags": []
     },
     "lifecycle_curation": {
       "status": "Active",
@@ -5689,7 +5689,7 @@
         "Linguistic Analysis"
       ],
       "typical_use_cases": "Accessing speech samples and transcripts to study fluency development, stuttering, or perform linguistic analysis.",
-      "integration_parents": [
+      "Resource_tags": [
         "TalkBank"
       ]
     },
@@ -5761,7 +5761,7 @@
         "Linguistic Analysis"
       ],
       "typical_use_cases": "Accessing recorded narratives and test scores to study language production, rehabilitation, and linguistic patterns in aphasia.",
-      "integration_parents": [
+      "Resource_tags": [
         "TalkBank"
       ]
     },
@@ -5834,7 +5834,7 @@
         "Data Discovery"
       ],
       "typical_use_cases": "Discovering and accessing large, publicly available datasets (like NHANES) relevant to communication disorders epidemiology and population health.",
-      "integration_parents": [
+      "Resource_tags": [
         "NHANES",
         "CDC",
         "ICPSR"
@@ -5907,7 +5907,7 @@
         "Medical Genetics"
       ],
       "typical_use_cases": "Investigating known gene localizations and mutations for monogenic nonsyndromic hearing impairment.",
-      "integration_parents": []
+      "Resource_tags": []
     },
     "lifecycle_curation": {
       "status": "Active",
@@ -5978,7 +5978,7 @@
         "Molecular Biology"
       ],
       "typical_use_cases": "Obtaining unique animal models (e.g., mouse vestibular mutants, ferret models of hearing loss) for research on communication disorders.",
-      "integration_parents": [
+      "Resource_tags": [
         "Jackson Laboratory"
       ]
     },
@@ -6050,7 +6050,7 @@
         "Clinical Research Methods"
       ],
       "typical_use_cases": "Downloading and using standardized, validated questionnaires for outcome measurement in clinical trials and research studies.",
-      "integration_parents": []
+      "Resource_tags": []
     },
     "lifecycle_curation": {
       "status": "Active",
@@ -6121,7 +6121,7 @@
         "Bioinformatics"
       ],
       "typical_use_cases": "Searching and downloading extensive datasets on craniofacial development and disorders; using the integrated 3D visualization tools.",
-      "integration_parents": []
+      "Resource_tags": []
     },
     "lifecycle_curation": {
       "status": "Active",
@@ -6193,7 +6193,7 @@
         "Omics Analysis"
       ],
       "typical_use_cases": "Accessing standardized data on the human salivary proteome and oral microbiome for biomarker discovery and disease mechanism studies.",
-      "integration_parents": [
+      "Resource_tags": [
         "NCBI",
         "Human Microbiome Project"
       ]
@@ -6267,7 +6267,7 @@
         "Bioinformatics"
       ],
       "typical_use_cases": "Accessing genomic data for cleft lip/palate, dentinogenesis imperfecta (via dbGaP), and querying the Craniofacial Gene Ontology (Craneo).",
-      "integration_parents": [
+      "Resource_tags": [
         "dbGaP",
         "Craneo"
       ]
@@ -6339,7 +6339,7 @@
         "Epidemiology"
       ],
       "typical_use_cases": "Secondary analysis of large datasets (e.g., OPPERA) on TMD pain to pursue new hypotheses about chronic pain mechanisms.",
-      "integration_parents": [
+      "Resource_tags": [
         "dbGaP"
       ]
     },
@@ -6409,7 +6409,7 @@
         "Bioinformatics"
       ],
       "typical_use_cases": "Using the 3D Facial Landmarking Tool on external image data or exploring craniofacial developmental genes via the Genome Browser.",
-      "integration_parents": [
+      "Resource_tags": [
         "FaceBase"
       ]
     },
@@ -6477,7 +6477,7 @@
         "Clinical Research Methods"
       ],
       "typical_use_cases": "Accessing data from trials and projects in dental tissue engineering (e.g., tooth regeneration, biomaterials) for replication or secondary analysis.",
-      "integration_parents": [
+      "Resource_tags": [
         "NIH Common Repositories"
       ]
     },
@@ -6546,7 +6546,7 @@
         "Epidemiology"
       ],
       "typical_use_cases": "Accessing key public datasets (e.g., CDC's National Oral Health Surveillance System) for dental public health and epidemiological studies.",
-      "integration_parents": [
+      "Resource_tags": [
         "CDC",
         "MEPS"
       ]
@@ -6617,7 +6617,7 @@
         "Clinical Standardization"
       ],
       "typical_use_cases": "Generating resources like consensus diagnostic criteria (for periodontal diseases) and classification images to improve research consistency and training.",
-      "integration_parents": []
+      "Resource_tags": []
     },
     "lifecycle_curation": {
       "status": "Active",
@@ -6686,7 +6686,7 @@
         "Statistical Analysis"
       ],
       "typical_use_cases": "Requesting datasets and/or samples from major NIDDK trials (e.g., DPP, EDIC, CRIC) for secondary analysis to test new hypotheses.",
-      "integration_parents": []
+      "Resource_tags": []
     },
     "lifecycle_curation": {
       "status": "Active",
@@ -6755,7 +6755,7 @@
         "None"
       ],
       "typical_use_cases": "Instantly downloading summary data or trial metadata from NIDDK studies for preliminary analysis, teaching, or non-committee review.",
-      "integration_parents": [
+      "Resource_tags": [
         "NIDDK Central Repository"
       ]
     },
@@ -6825,7 +6825,7 @@
         "Data Discovery"
       ],
       "typical_use_cases": "Discovering data, tools, animal models, and antibodies relevant to diabetes, kidney, and digestive diseases; locating specific omics datasets via the DKOMICS catalog.",
-      "integration_parents": [
+      "Resource_tags": [
         "DKOMICS"
       ]
     },
@@ -6897,7 +6897,7 @@
         "Statistical Analysis"
       ],
       "typical_use_cases": "Accessing and performing secondary analysis on data from large NIDDK-funded clinical trials (e.g., TrialNet, TONIC) which are shared via public repositories.",
-      "integration_parents": [
+      "Resource_tags": [
         "ClinicalTrials.gov",
         "NIDDK-CR"
       ]
@@ -6971,7 +6971,7 @@
         "Genetics"
       ],
       "typical_use_cases": "Analyzing T1D genetics and genomics (T1DBase) or accessing beta cell biology data and histology images from consortia.",
-      "integration_parents": [
+      "Resource_tags": [
         "T1DBase",
         "Beta Cell Biology Consortium"
       ]
@@ -7043,7 +7043,7 @@
         "Genetics"
       ],
       "typical_use_cases": "Studying the impact of APOL1 gene variants on long-term kidney transplant outcomes.",
-      "integration_parents": []
+      "Resource_tags": []
     },
     "lifecycle_curation": {
       "status": "Active/Sharing Planned",
@@ -7112,7 +7112,7 @@
         "IRB/Ethics"
       ],
       "typical_use_cases": "Obtaining biosamples (serum, tissue) from completed studies (e.g., DPP, CRIC) for use in new laboratory-based studies.",
-      "integration_parents": [
+      "Resource_tags": [
         "NIDDK Central Repository"
       ]
     },
@@ -7186,7 +7186,7 @@
         "Biostatistics"
       ],
       "typical_use_cases": "Using tools like the Pediatric Z-Score Calculator for growth metrics, Body Weight Planner, or CRISP kidney pathology scoring software for clinical and research purposes.",
-      "integration_parents": []
+      "Resource_tags": []
     },
     "lifecycle_curation": {
       "status": "Active",
@@ -7254,7 +7254,7 @@
         "Statistical Analysis"
       ],
       "typical_use_cases": "Secondary analysis of de-identified data from completed NIDA Clinical Trials Network (CTN) studies on substance use interventions.",
-      "integration_parents": [
+      "Resource_tags": [
         "NIDA CTN"
       ]
     },
@@ -7328,7 +7328,7 @@
         "Social Science Methods"
       ],
       "typical_use_cases": "Curating and distributing social/behavioral science datasets related to drug use, addiction, and HIV risk for research or teaching purposes.",
-      "integration_parents": [
+      "Resource_tags": [
         "ICPSR"
       ]
     },
@@ -7403,7 +7403,7 @@
         "Statistical Analysis"
       ],
       "typical_use_cases": "Tracking brain and behavior development in adolescents; analyzing the impact of substance use on youth development using the ABCD Study data.",
-      "integration_parents": [
+      "Resource_tags": [
         "NIMH",
         "ABCD Study"
       ]
@@ -7475,7 +7475,7 @@
         "Data Discovery"
       ],
       "typical_use_cases": "Discovering drug-abuse-related data (like optogenetics experiments) and other neuroscience resources and tools across various domains.",
-      "integration_parents": [
+      "Resource_tags": [
         "SciCrunch"
       ]
     },
@@ -7548,7 +7548,7 @@
         "Bioinformatics"
       ],
       "typical_use_cases": "Accessing genetic data (e.g., GWAS of opioid addiction) and transcriptomic analyses of drug-exposed brain tissue for secondary research.",
-      "integration_parents": [
+      "Resource_tags": [
         "dbGaP",
         "NCBI GEO"
       ]
@@ -7622,7 +7622,7 @@
         "Regulatory Compliance (DEA)"
       ],
       "typical_use_cases": "Obtaining research-grade controlled substances (e.g., marijuana components, reference standards) that are otherwise restricted, for approved research studies.",
-      "integration_parents": []
+      "Resource_tags": []
     },
     "lifecycle_curation": {
       "status": "Active",
@@ -7694,7 +7694,7 @@
         "Counseling"
       ],
       "typical_use_cases": "Using validated instruments (e.g., ASSIST) to screen patients for drug use or implementing evidence-based therapy protocols in clinical settings.",
-      "integration_parents": []
+      "Resource_tags": []
     },
     "lifecycle_curation": {
       "status": "Active",
@@ -7767,7 +7767,7 @@
         "Neuroimaging Analysis"
       ],
       "typical_use_cases": "Running simulations for drug epidemic spread (NetLogo), implementing standard neuroimaging tasks (fMRI), or using tools for data harmonization (Ontology).",
-      "integration_parents": [
+      "Resource_tags": [
         "NITRC",
         "OpenNeuro"
       ]
@@ -7844,7 +7844,7 @@
         "Bioinformatics"
       ],
       "typical_use_cases": "Detailing how environmental chemicals affect gene expression and contribute to diseases; analyzing mechanistic links between pollutants and health outcomes.",
-      "integration_parents": []
+      "Resource_tags": []
     },
     "lifecycle_curation": {
       "status": "Active",
@@ -7915,7 +7915,7 @@
         "Data Discovery"
       ],
       "typical_use_cases": "Finding recommended NIH/external repositories (GEO, PubChem, ClinicalTrials.gov) where NIEHS-funded data have been deposited, ensuring compliance with data sharing policy.",
-      "integration_parents": [
+      "Resource_tags": [
         "NCBI GEO",
         "PubChem",
         "ClinicalTrials.gov"
@@ -7992,7 +7992,7 @@
         "GIS"
       ],
       "typical_use_cases": "Accessing data and publications related to environmental contamination and remediation activities at hazardous waste sites.",
-      "integration_parents": [
+      "Resource_tags": [
         "EPA"
       ]
     },
@@ -8067,7 +8067,7 @@
         "GIS Analysis"
       ],
       "typical_use_cases": "Querying combined exposure metrics (HEALS) or using GIS mapping tools (Exposure Science Toolbox) for fish consumption advisories and other exposure factors.",
-      "integration_parents": [
+      "Resource_tags": [
         "HEALS Database"
       ]
     },
@@ -8141,7 +8141,7 @@
         "Statistical Analysis"
       ],
       "typical_use_cases": "Requesting de-identified data from large cohorts (e.g., Sister Study) to investigate gene-environment interactions and long-term health outcomes.",
-      "integration_parents": []
+      "Resource_tags": []
     },
     "lifecycle_curation": {
       "status": "Active",
@@ -8212,7 +8212,7 @@
         "Environmental Science"
       ],
       "typical_use_cases": "Accessing curated literature (Literature Portal) on climate change impacts or utilizing risk assessment tools (BRACE framework) for health planning.",
-      "integration_parents": [
+      "Resource_tags": [
         "CDC (BRACE)"
       ]
     },
@@ -8287,7 +8287,7 @@
         "R/Python"
       ],
       "typical_use_cases": "Using harmonized Omics protocols, ontology tools (EHLCC) to standardize terminology, and GitHub code repositories for analyzing environmental health data.",
-      "integration_parents": [
+      "Resource_tags": [
         "EHLCC",
         "GitHub"
       ]
@@ -8362,7 +8362,7 @@
         "Data Analysis"
       ],
       "typical_use_cases": "Downloading high-throughput screening data (Tox21) on thousands of chemicals to predict potential human health effects and risks.",
-      "integration_parents": [
+      "Resource_tags": [
         "PubChem",
         "EPA ToxCast",
         "NCATS"
@@ -8442,7 +8442,7 @@
         "Molecular Modeling"
       ],
       "typical_use_cases": "Searching for and downloading 3D structures of proteins and nucleic acids for research, analysis, and drug design.",
-      "integration_parents": []
+      "Resource_tags": []
     },
     "lifecycle_curation": {
       "status": "Active",
@@ -8515,7 +8515,7 @@
         "Genetics"
       ],
       "typical_use_cases": "Querying how genetic variation affects drug response, retrieving curated gene-drug associations, and accessing dosing guidelines.",
-      "integration_parents": [
+      "Resource_tags": [
         "NHGRI"
       ]
     },
@@ -8590,7 +8590,7 @@
         "Molecular Biology"
       ],
       "typical_use_cases": "Obtaining cell lines and DNA from individuals with genetic disorders for research into rare diseases and genetic mechanisms.",
-      "integration_parents": [
+      "Resource_tags": [
         "Coriell Institute"
       ]
     },
@@ -8664,7 +8664,7 @@
         "Molecular Dynamics"
       ],
       "typical_use_cases": "Accessing comprehensive protein sequence databases (UniProt mirrors) and utilizing molecular dynamics simulation packages (CHARMM/AMBER) for computational modeling.",
-      "integration_parents": [
+      "Resource_tags": [
         "UniProt"
       ]
     },
@@ -8739,7 +8739,7 @@
         "Model Organism Genetics"
       ],
       "typical_use_cases": "Accessing genetic and genomic data on common model species (FlyBase, WormBase) to inform research on general biological processes.",
-      "integration_parents": [
+      "Resource_tags": [
         "FlyBase",
         "WormBase"
       ]
@@ -8811,7 +8811,7 @@
         "Medical Genetics"
       ],
       "typical_use_cases": "Accessing the Online Mendelian Inheritance in Man (OMIM) catalog for genetic diseases or exploring comparative genetics via the Alliance of Genome Resources.",
-      "integration_parents": [
+      "Resource_tags": [
         "OMIM",
         "Alliance of Genome Resources"
       ]
@@ -8885,7 +8885,7 @@
         "Drug Discovery"
       ],
       "typical_use_cases": "Accessing chemical structures and bioassay data via PubChem, and querying protein-ligand binding affinities via BindingDB for drug discovery and modeling.",
-      "integration_parents": [
+      "Resource_tags": [
         "PubChem",
         "BindingDB"
       ]
@@ -8960,7 +8960,7 @@
         "Programming"
       ],
       "typical_use_cases": "Performing molecular docking simulations (AutoDock) or visualizing complex biological network interactions (Cytoscape) in research.",
-      "integration_parents": [
+      "Resource_tags": [
         "AutoDock",
         "Cytoscape"
       ]
@@ -9036,7 +9036,7 @@
         "Teaching/Pedagogy"
       ],
       "typical_use_cases": "Accessing and using tutorials on quantitative biology, chemical kinetics simulations, and other educational materials to improve biomedical education.",
-      "integration_parents": []
+      "Resource_tags": []
     },
     "lifecycle_curation": {
       "status": "Active",
@@ -9109,7 +9109,7 @@
         "Data Science"
       ],
       "typical_use_cases": "Accessing integrated, large-scale data (e.g., ABCD Study, NDAR) for research on the etiology, diagnosis, and treatment of mental illnesses.",
-      "integration_parents": [
+      "Resource_tags": [
         "NDAR",
         "RDoCdb",
         "NIDA (ABCD)"
@@ -9184,7 +9184,7 @@
         "Molecular Biology"
       ],
       "typical_use_cases": "Obtaining well-characterized patient samples (DNA, cell lines) for schizophrenia, bipolar disorder, and autism research to accelerate psychiatric genetics.",
-      "integration_parents": []
+      "Resource_tags": []
     },
     "lifecycle_curation": {
       "status": "Active",
@@ -9254,7 +9254,7 @@
         "Molecular Biology"
       ],
       "typical_use_cases": "Obtaining post-mortem human brain tissue specimens for research on the underlying biology of psychiatric and neurodevelopmental disorders.",
-      "integration_parents": [
+      "Resource_tags": [
         "NINDS",
         "NICHD"
       ]
@@ -9328,7 +9328,7 @@
         "Statistical Analysis"
       ],
       "typical_use_cases": "Performing secondary analysis on data from large, completed NIMH clinical trials (e.g., STARD, CATIE) to study treatment efficacy and outcomes.",
-      "integration_parents": [
+      "Resource_tags": [
         "NDA"
       ]
     },
@@ -9401,7 +9401,7 @@
         "Clinical Assessment"
       ],
       "typical_use_cases": "Adopting standard instruments (like PHQ-9 depression scale) and definitions in research protocols to ensure data consistency and comparability.",
-      "integration_parents": [
+      "Resource_tags": [
         "NIH CDE Repository"
       ]
     },
@@ -9473,7 +9473,7 @@
         "Regulatory Affairs"
       ],
       "typical_use_cases": "Using free templates and guidance (e.g., protocol templates, data management plans) to improve the quality and compliance of mental health research studies.",
-      "integration_parents": []
+      "Resource_tags": []
     },
     "lifecycle_curation": {
       "status": "Active",
@@ -9543,7 +9543,7 @@
         "Programming"
       ],
       "typical_use_cases": "Performing fMRI data analysis (AFNI) or visualizing connectome data (Connectome Workbench) for neuroscience research.",
-      "integration_parents": [
+      "Resource_tags": [
         "AFNI",
         "Connectome Workbench"
       ]
@@ -9616,7 +9616,7 @@
         "None"
       ],
       "typical_use_cases": "Accessing free e-learning resources on research design and statistical methods to improve rigor in mental health studies.",
-      "integration_parents": []
+      "Resource_tags": []
     },
     "lifecycle_curation": {
       "status": "Active",
@@ -9687,7 +9687,7 @@
         "None"
       ],
       "typical_use_cases": "Accessing and visualizing health disparity statistics by race/ethnicity, geography, and socio-demographics; identifying evidence-based interventions to address disparities.",
-      "integration_parents": []
+      "Resource_tags": []
     },
     "lifecycle_curation": {
       "status": "Active",
@@ -9756,7 +9756,7 @@
         "Study Design"
       ],
       "typical_use_cases": "Designing studies that address multi-level disparity factors (biological, behavioral, socio-cultural, environmental, health system) using a standardized framework.",
-      "integration_parents": []
+      "Resource_tags": []
     },
     "lifecycle_curation": {
       "status": "Active",
@@ -9825,7 +9825,7 @@
         "Data Discovery"
       ],
       "typical_use_cases": "Accessing and compiling public data (CDC, Census) to analyze health behaviors and socioeconomic factors in minority communities; finding data on small minority populations.",
-      "integration_parents": [
+      "Resource_tags": [
         "CDC REACH",
         "US Census"
       ]
@@ -9898,7 +9898,7 @@
         "Public Health"
       ],
       "typical_use_cases": "Utilizing tools (e.g., Neighborhood Social Vulnerability Index) or data dashboards developed by NIMHD-funded Centers of Excellence to study local health disparities.",
-      "integration_parents": []
+      "Resource_tags": []
     },
     "lifecycle_curation": {
       "status": "Active",
@@ -9967,7 +9967,7 @@
         "Program Planning"
       ],
       "typical_use_cases": "Searching for evidence-based interventions by topic or minority population to address specific health disparities in community settings.",
-      "integration_parents": [
+      "Resource_tags": [
         "HDPulse"
       ]
     },
@@ -10041,7 +10041,7 @@
         "Teaching/Pedagogy"
       ],
       "typical_use_cases": "Downloading and using free cultural competency training tools and health disparity science curricula (e.g., Unconscious Bias modules) in academic and research settings.",
-      "integration_parents": []
+      "Resource_tags": []
     },
     "lifecycle_curation": {
       "status": "Active",
@@ -10109,7 +10109,7 @@
         "None"
       ],
       "typical_use_cases": "Compiling and accessing NIH multilingual health resources (e.g., Spanish-language materials) for use with non-English-speaking populations and community outreach.",
-      "integration_parents": [
+      "Resource_tags": [
         "NIH"
       ]
     },
@@ -10180,7 +10180,7 @@
         "TBI Research"
       ],
       "typical_use_cases": "Querying and downloading de-identified patient-level data (neuroimaging, outcomes) from multiple TBI studies in a harmonized format for pooled analysis.",
-      "integration_parents": [
+      "Resource_tags": [
         "DOD"
       ]
     },
@@ -10253,7 +10253,7 @@
         "Molecular Biology"
       ],
       "typical_use_cases": "Obtaining post-mortem human brain tissue specimens for research on the underlying biology of neurological disorders (e.g., Parkinson's, ALS, epilepsy).",
-      "integration_parents": [
+      "Resource_tags": [
         "NIMH",
         "NICHD"
       ]
@@ -10330,7 +10330,7 @@
         "Clinical Operations"
       ],
       "typical_use_cases": "Adopting standardized data definitions and forms (CRFs) for neurological studies (stroke, epilepsy, TBI) to ensure data compatibility and increase research efficiency.",
-      "integration_parents": [
+      "Resource_tags": [
         "NIH CDE Repository"
       ]
     },
@@ -10402,7 +10402,7 @@
         "Genetic Research"
       ],
       "typical_use_cases": "Obtaining DNA and cell lines from patients with neurological diseases (e.g., Huntington's, Parkinson's) to advance genetic research.",
-      "integration_parents": [
+      "Resource_tags": [
         "Coriell Cell Repositories"
       ]
     },
@@ -10478,7 +10478,7 @@
         "Clinical Research"
       ],
       "typical_use_cases": "Accessing de-identified clinical, imaging, and bio-sample metadata from the Parkinson's Disease Biomarkers Program (PDBP) for secondary analysis and biomarker discovery.",
-      "integration_parents": [
+      "Resource_tags": [
         "FITBIR",
         "NDA",
         "dbGaP"
@@ -10553,7 +10553,7 @@
         "Software Development"
       ],
       "typical_use_cases": "Downloading and utilizing free, open-source software tools and test datasets for MRI, EEG, and other neuroimaging data analysis.",
-      "integration_parents": [
+      "Resource_tags": [
         "NIMH"
       ]
     },
@@ -10627,7 +10627,7 @@
         "Clinical Research Methods"
       ],
       "typical_use_cases": "Accessing the free online Clinical Trials Methods course or obtaining common metrics (e.g., NIH Stroke Scale materials) for clinical study design and outcome measurement.",
-      "integration_parents": []
+      "Resource_tags": []
     },
     "lifecycle_curation": {
       "status": "Active",
@@ -10696,7 +10696,7 @@
         "Statistical Analysis"
       ],
       "typical_use_cases": "Accessing nursing research data (genomic, behavioral) deposited in NIH-wide platforms like dbGaP, NDA, or NICHD DASH for secondary analysis.",
-      "integration_parents": [
+      "Resource_tags": [
         "dbGaP",
         "NDA",
         "DASH"
@@ -10771,7 +10771,7 @@
         "Statistical Analysis"
       ],
       "typical_use_cases": "Accessing de-identified intramural study data (e.g., symptom cluster trials) for secondary analysis in symptom science research.",
-      "integration_parents": []
+      "Resource_tags": []
     },
     "lifecycle_curation": {
       "status": "Active",
@@ -10842,7 +10842,7 @@
         "Psychometrics"
       ],
       "typical_use_cases": "Selecting and administering PROMIS item banks and short forms for symptom and function assessment.",
-      "integration_parents": [
+      "Resource_tags": [
         "PROMIS",
         "NIH Toolbox"
       ]
@@ -10916,7 +10916,7 @@
         "Psychometrics"
       ],
       "typical_use_cases": "Using standardized cognition, motor, sensory, and emotional health measures across the lifespan.",
-      "integration_parents": [
+      "Resource_tags": [
         "PROMIS",
         "NIH Toolbox"
       ]
@@ -10991,7 +10991,7 @@
         "Research Methods"
       ],
       "typical_use_cases": "Accessing guidelines, competencies, and toolkits (e.g., 'Conversations Matter') to improve end-of-life care and obtain trial data for secondary analysis.",
-      "integration_parents": []
+      "Resource_tags": []
     },
     "lifecycle_curation": {
       "status": "Active",
@@ -11061,7 +11061,7 @@
         "Research Methods"
       ],
       "typical_use_cases": "Locating and using measurement tools (e.g., caregiving burden scales) published by NINR-funded studies for reuse in new research protocols.",
-      "integration_parents": []
+      "Resource_tags": []
     },
     "lifecycle_curation": {
       "status": "Active (Dissemination)",
@@ -11131,7 +11131,7 @@
         "Research Methods"
       ],
       "typical_use_cases": "Accessing training webinars and compiled psychosocial variable data from NINR-funded Centers for use in research or training programs.",
-      "integration_parents": []
+      "Resource_tags": []
     },
     "lifecycle_curation": {
       "status": "Active",
@@ -11202,7 +11202,7 @@
         "EHR Analysis"
       ],
       "typical_use_cases": "Leveraging large-scale, diverse EHR and genomic data from the All of Us Research Program for inclusive population health and precision medicine studies.",
-      "integration_parents": [
+      "Resource_tags": [
         "All of Us Research Program"
       ]
     },
@@ -11276,7 +11276,7 @@
         "Information Retrieval"
       ],
       "typical_use_cases": "Searching and accessing over 34 million citations and abstracts from MEDLINE and other biomedical sources.",
-      "integration_parents": [
+      "Resource_tags": [
         "NLM",
         "NCBI"
       ]
@@ -11349,7 +11349,7 @@
         "Text Mining (Optional)"
       ],
       "typical_use_cases": "Accessing and reading full-text biomedical articles, including all NIH-funded research articles (after 12 months), for research and public dissemination.",
-      "integration_parents": [
+      "Resource_tags": [
         "NCBI"
       ]
     },
@@ -11423,7 +11423,7 @@
         "Clinical Research"
       ],
       "typical_use_cases": "Searching for information on clinical studies globally, tracking trial progress, and downloading posted study results and outcome data.",
-      "integration_parents": []
+      "Resource_tags": []
     },
     "lifecycle_curation": {
       "status": "Active",
@@ -11498,7 +11498,7 @@
         "Genomic Analysis"
       ],
       "typical_use_cases": "Searching sequences (BLAST), accessing genomic data (GenBank), downloading raw sequencing reads (SRA), and obtaining controlled-access genetic data (dbGaP).",
-      "integration_parents": []
+      "Resource_tags": []
     },
     "lifecycle_curation": {
       "status": "Active",
@@ -11571,7 +11571,7 @@
         "Information Science"
       ],
       "typical_use_cases": "Using NLM's controlled vocabulary for indexing articles in PubMed/MEDLINE, enhancing literature searches, and organizing information.",
-      "integration_parents": []
+      "Resource_tags": []
     },
     "lifecycle_curation": {
       "status": "Active",
@@ -11641,7 +11641,7 @@
         "Informatics"
       ],
       "typical_use_cases": "Linking and mapping various biomedical vocabularies (SNOMED, MeSH, ICD) to support NLP, data standardization, and complex information retrieval applications.",
-      "integration_parents": []
+      "Resource_tags": []
     },
     "lifecycle_curation": {
       "status": "Active",
@@ -11711,7 +11711,7 @@
         "None"
       ],
       "typical_use_cases": "Providing consumer-friendly, reliable information on diseases, conditions, and drugs to the public and patients.",
-      "integration_parents": []
+      "Resource_tags": []
     },
     "lifecycle_curation": {
       "status": "Active",
@@ -11781,7 +11781,7 @@
         "None"
       ],
       "typical_use_cases": "Reading medical textbooks, reference works, and official NIH clinical guidelines online at no charge.",
-      "integration_parents": [
+      "Resource_tags": [
         "NCBI"
       ]
     },
@@ -11852,7 +11852,7 @@
         "Toxicology"
       ],
       "typical_use_cases": "Accessing chemical toxicity and hazardous substance data, now primarily through PubChem and other specialized NLM data portals.",
-      "integration_parents": [
+      "Resource_tags": [
         "PubChem"
       ]
     },
@@ -11925,7 +11925,7 @@
         "Shell Scripting"
       ],
       "typical_use_cases": "Programmatically retrieving and incorporating data from NCBI, PubMed, and ClinicalTrials.gov into automated workflows and applications.",
-      "integration_parents": [
+      "Resource_tags": [
         "NCBI"
       ]
     },
@@ -11998,7 +11998,7 @@
         "Image Analysis"
       ],
       "typical_use_cases": "Utilizing the Chest X-ray8 image dataset and other specific collections for machine learning research and algorithm development.",
-      "integration_parents": [
+      "Resource_tags": [
         "Kaggle",
         "NIH"
       ]
@@ -12068,7 +12068,7 @@
         "Computational Modeling"
       ],
       "typical_use_cases": "Accessing the Biowulf supercomputing cluster for advanced data analysis (genomic analysis, imaging) related to Clinical Center protocols, provided at no cost to external collaborators.",
-      "integration_parents": [
+      "Resource_tags": [
         "CIT (Center for Information Technology)"
       ]
     },
@@ -12141,7 +12141,7 @@
         "Clinical Research Methods"
       ],
       "typical_use_cases": "Accessing the Introduction to the Principles and Practice of Clinical Research (IPPCR) course online to gain foundational knowledge in study design and ethics.",
-      "integration_parents": []
+      "Resource_tags": []
     },
     "lifecycle_curation": {
       "status": "Active",
@@ -12211,7 +12211,7 @@
         "Regulatory Affairs"
       ],
       "typical_use_cases": "Using NIH best-practice templates for designing studies, drafting informed consent documents, and preparing case report forms (CRFs).",
-      "integration_parents": [
+      "Resource_tags": [
         "NIH Office of Clinical Research"
       ]
     },
@@ -12281,7 +12281,7 @@
         "AI/ML Development"
       ],
       "typical_use_cases": "Utilizing CC-curated datasets (e.g., a planned COVID-19 dataset) for AI training and model development in medical research, provided without fees.",
-      "integration_parents": []
+      "Resource_tags": []
     },
     "lifecycle_curation": {
       "status": "Planning/Dissemination",
@@ -12352,7 +12352,7 @@
         "Radiology"
       ],
       "typical_use_cases": "Accessing de-identified imaging datasets (e.g., PET/CT for tumor segmentation, BRATS challenge data) to participate in public challenges and develop AI models.",
-      "integration_parents": [
+      "Resource_tags": [
         "BRATS",
         "SPIE"
       ]
@@ -12425,7 +12425,7 @@
         "FHIR/Data Standards"
       ],
       "typical_use_cases": "Using the synthetic dataset for the Biomedical Translational Research Information System (BTRIS) to allow external developers to test queries and build research applications.",
-      "integration_parents": [
+      "Resource_tags": [
         "BTRIS",
         "FHIR"
       ]
@@ -12497,7 +12497,7 @@
         "None"
       ],
       "typical_use_cases": "Accessing the archives of the Clinical Center Grand Rounds presentations (webcast publicly) and open-access journal content for professional development and education.",
-      "integration_parents": []
+      "Resource_tags": []
     },
     "lifecycle_curation": {
       "status": "Active",
@@ -12566,7 +12566,7 @@
         "HPC Management"
       ],
       "typical_use_cases": "Running large-scale genomic analyses, complex image processing, and AI modeling tasks that require significant computational power.",
-      "integration_parents": []
+      "Resource_tags": []
     },
     "lifecycle_curation": {
       "status": "Active",
@@ -12636,7 +12636,7 @@
         "Data Engineering"
       ],
       "typical_use_cases": "Accessing subsidized commercial cloud computing services (Google/AWS) for data storage and analysis of large NIH-funded datasets (e.g., TOPMed, All of Us).",
-      "integration_parents": [
+      "Resource_tags": [
         "Google",
         "AWS"
       ]
@@ -12709,7 +12709,7 @@
         "Data Management"
       ],
       "typical_use_cases": "Searching and downloading standardized data definitions (CDEs) from various institutes (e.g., NINDS, NIMH) to ensure consistent data collection across studies.",
-      "integration_parents": [
+      "Resource_tags": [
         "NLM",
         "NINDS"
       ]
@@ -12783,7 +12783,7 @@
         "None"
       ],
       "typical_use_cases": "Accessing the NIH VideoCast archive to watch past seminars, meetings, and major events (e.g., Wednesday Afternoon Lecture Series) for free education and information.",
-      "integration_parents": []
+      "Resource_tags": []
     },
     "lifecycle_curation": {
       "status": "Active",
@@ -12852,7 +12852,7 @@
         "Data Management"
       ],
       "typical_use_cases": "Utilizing open-source tools like ImageJ (NIH Image) for image analysis or accessing utility software released by CIT on GitHub for data management.",
-      "integration_parents": [
+      "Resource_tags": [
         "ImageJ",
         "GitHub"
       ]
@@ -12923,7 +12923,7 @@
         "Security Protocols"
       ],
       "typical_use_cases": "Securely transmitting sensitive data (SEMS) and large files (ASPERA) between NIH researchers and outside academic partners, with costs covered by NIH.",
-      "integration_parents": []
+      "Resource_tags": []
     },
     "lifecycle_curation": {
       "status": "Active",
@@ -12992,7 +12992,7 @@
         "Administration"
       ],
       "typical_use_cases": "Using ASSIST to prepare and submit NIH grant applications electronically and using Commons to manage the grant lifecycle (status, reporting).",
-      "integration_parents": []
+      "Resource_tags": []
     },
     "lifecycle_curation": {
       "status": "Active",
@@ -13062,7 +13062,7 @@
         "Data Discovery"
       ],
       "typical_use_cases": "Accessing datasets and materials posted by NIH intramural scientists on general data repositories like NIH Figshare or via Science Data Portal prototypes.",
-      "integration_parents": [
+      "Resource_tags": [
         "NIH Figshare"
       ]
     },
@@ -13136,7 +13136,7 @@
         "Bioinformatics"
       ],
       "typical_use_cases": "Accessing the extensive, publicly available Biowulf User Guide and code recipes for bioinformatics to learn and implement analysis workflows.",
-      "integration_parents": []
+      "Resource_tags": []
     },
     "lifecycle_curation": {
       "status": "Active",
@@ -13204,7 +13204,7 @@
         "Grant Writing"
       ],
       "typical_use_cases": "Studying successful grant proposals (R01, R21) and reviewers' critiques to understand review expectations and improve application quality.",
-      "integration_parents": [
+      "Resource_tags": [
         "NIAID",
         "NIH"
       ]
